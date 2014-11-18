@@ -3,6 +3,10 @@
 Wat: 		Brainstormen over user stories game 1 & 2. 
 Tijdsduur: 	40 min.
 
+Datum: 18-11-2014
+wat: 		samenwerkings contract
+tijdsduur:	150 min. 
+
 
 
 ==Roy van den Heuvel==
