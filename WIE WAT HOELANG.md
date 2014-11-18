@@ -10,8 +10,11 @@ Tijdsduur: 	40 min.
 Wat: 		Brainstormen over user stories game 1 & 2. 
 Tijdsduur: 	40 min.
 
+Wat: 		Github opzetten en regelen.
+Tijdsduur:	20 min.
+
 Wat:		Vergaderen over samenwerkingscontract en brainstormen user stories game 1 & 2.
-Tijdsduur:	
+Tijdsduur:	150 min. 
 
 
 
@@ -19,6 +22,9 @@ Tijdsduur:
 ======================
 Wat: 		Brainstormen over user stories game 1 & 2. 
 Tijdsduur: 	40 min.
+
+Wat: 		Github opzetten en regelen.
+Tijdsduur:	20 min.
 
 
 
