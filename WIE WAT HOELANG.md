@@ -24,11 +24,12 @@ Tijdsduur:	150 min.
 
 ======Johan Bos=======
 ======================
-Wat: 		Brainstormen over user stories game 1 & 2. 
-Tijdsduur: 	40 min.
-
 Wat: 		Github opzetten en regelen.
-Tijdsduur:	20 min.
+Tijdsduur:	20 min
+
+Wat: 		Vergaderen over samenwerkingscontract & Brainstormen over user stories game 1 & 2 & software op de computer zetten.
+Tijdsduur:	130 min.
+
 
 
 
