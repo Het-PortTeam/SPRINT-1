@@ -37,6 +37,9 @@ Tijdsduur:	20 min.
 Wat: 		Brainstormen over user stories game 1 & 2. 
 Tijdsduur: 	40 min.
 
+Wat: 		Vergaderen over samenwerkingscontract & Brainstormen over user stories game 1 & 2 & software op de computer zetten.
+Tijdsduur:	150 min.
+
 
 
 ===Wishal Santokhi====
