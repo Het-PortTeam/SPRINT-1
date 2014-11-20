@@ -12,24 +12,30 @@ tijdsduur:	150 min.
 ==Roy van den Heuvel==
 ======================
 Wat: 		Brainstormen over user stories game 1 & 2. 
+Datum:		17/11/2014
 Tijdsduur: 	40 min.
 
 Wat: 		Github opzetten en regelen.
+Datum: 		17/11/2014
 Tijdsduur:	20 min.
 
 Wat:		Vergaderen over samenwerkingscontract en brainstormen user stories game 1 & 2.
+Datum: 		18/11/2014
 Tijdsduur:	150 min. 
 
 Wat: 		Projectles
+Datum:		20/11/2014
 Tijdsduur:	150 min. 	
 
 
 ======Johan Bos=======
 ======================
 Wat: 		Github opzetten en regelen.
+Datum:		17/11/2014
 Tijdsduur:	20 min
 
 Wat: 		Vergaderen over samenwerkingscontract & Brainstormen over user stories game 1 & 2 & software op de computer zetten.
+Datum:		18/11/2014
 Tijdsduur:	130 min.
 
 
@@ -38,9 +44,11 @@ Tijdsduur:	130 min.
 ===Oscar Veldman======
 ======================
 Wat: 		Brainstormen over user stories game 1 & 2. 
+Datum:		17/11/2014
 Tijdsduur: 	40 min.
 
 Wat: 		Vergaderen over samenwerkingscontract & Brainstormen over user stories game 1 & 2 & software op de computer zetten.
+Datum:		18/11/2014
 Tijdsduur:	150 min.
 
 
