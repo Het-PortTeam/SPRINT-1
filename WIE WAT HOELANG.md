@@ -1,11 +1,20 @@
 ===Kevin Verweij=====
 =====================
+Datum:		18-11-2014
 Wat: 		Brainstormen over user stories game 1 & 2. 
 Tijdsduur: 	40 min.
 
-Datum: 18-11-2014
+Datum: 		18-11-2014
 wat: 		samenwerkings contract
-tijdsduur:	150 min. 
+tijdsduur:	150 min.
+
+Datum: 		19-11-2014
+Wat: 		Schets gemaakt
+Tijd: 		20 min
+
+Datum:		20-11-2014
+wat:		Vergadering overzicht
+tijd:		10 min
 
 
 
