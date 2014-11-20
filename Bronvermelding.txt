@@ -1,7 +1,7 @@
 In dit document staan de gebruikte bronnen vermeldt. 
 ========================
 
-Auteur bron: Greenfoot
+Auteur bron: Davin McCall
 URL: http://www.greenfoot.org/files/javadoc/greenfoot/Greenfoot.html
 Datum geraadpleegd: 20-11-2014
 Datum plaatsing bron: -
