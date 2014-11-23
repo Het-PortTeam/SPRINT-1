@@ -55,6 +55,10 @@ Wat: 		Vergaderen over samenwerkingscontract & Brainstormen over user stories ga
 Datum:		18/11/2014
 Tijdsduur:	130 min.
 
+Wat:		Vergaderen over welke game 3 & 4, sprint 1 afgerond.
+Datum: 		23/11/2014	
+Tijdsduur:	115 min.
+
 
 
 
