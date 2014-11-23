@@ -34,7 +34,11 @@ Tijdsduur:	150 min.
 
 Wat: 		Projectles
 Datum:		20/11/2014
-Tijdsduur:	150 min. 	
+Tijdsduur:	150 min. 
+
+Wat:		Vergaderen over welke game 3 & 4, epics geschreven, sprint 1 afgerond.
+Datum: 		23/11/2014	
+Tijdsduur:	120 min.
 
 
 ======Johan Bos=======
@@ -59,6 +63,10 @@ Tijdsduur: 	40 min.
 Wat: 		Vergaderen over samenwerkingscontract & Brainstormen over user stories game 1 & 2 & software op de computer zetten.
 Datum:		18/11/2014
 Tijdsduur:	150 min.
+
+Wat:		Vergaderen over welke game 3 & 4, epics geschreven, sprint 1 afgerond.
+Datum: 		23/11/2014	
+Tijdsduur:	120 min.
 
 
 
