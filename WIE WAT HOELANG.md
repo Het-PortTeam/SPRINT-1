@@ -16,6 +16,10 @@ Datum:		20-11-2014
 wat:		Vergadering overzicht
 tijd:		10 min
 
+Datum:		23-11-2014
+Wat:		Vergaderen over welke game 3 & 4, epics geschreven, sprint 1 afgerond.
+tijdsduur:	120 min.		
+
 
 
 ==Roy van den Heuvel==
