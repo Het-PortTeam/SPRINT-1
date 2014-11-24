@@ -18,7 +18,11 @@ tijd:		10 min
 
 Datum:		23-11-2014
 Wat:		Vergaderen over welke game 3 & 4, epics geschreven, sprint 1 afgerond.
-tijdsduur:	120 min.		
+tijdsduur:	120 min.	
+
+Wat:		Pokerplanning
+Datum: 		24/11/2014
+Tijdsduur: 	60 min. 	
 
 
 
@@ -44,6 +48,10 @@ Wat:		Vergaderen over welke game 3 & 4, epics geschreven, sprint 1 afgerond.
 Datum: 		23/11/2014	
 Tijdsduur:	120 min.
 
+Wat:		Pokerplanning
+Datum: 		24/11/2014
+Tijdsduur: 	60 min. 
+
 
 ======Johan Bos=======
 ======================
@@ -59,7 +67,9 @@ Wat:		Vergaderen over welke game 3 & 4, sprint 1 afgerond.
 Datum: 		23/11/2014	
 Tijdsduur:	115 min.
 
-
+Wat:		Pokerplanning
+Datum: 		24/11/2014
+Tijdsduur: 	60 min. 
 
 
 ===Oscar Veldman======
@@ -75,6 +85,10 @@ Tijdsduur:	150 min.
 Wat:		Vergaderen over welke game 3 & 4, epics geschreven, sprint 1 afgerond.
 Datum: 		23/11/2014	
 Tijdsduur:	120 min.
+
+Wat:		Pokerplanning
+Datum: 		24/11/2014
+Tijdsduur: 	60 min. 
 
 
 
