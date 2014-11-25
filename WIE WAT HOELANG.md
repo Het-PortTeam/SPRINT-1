@@ -90,7 +90,5 @@ Wat:		Pokerplanning
 Datum: 		24/11/2014
 Tijdsduur: 	60 min. 
 
-Wat: 		Vergadering
-Datum:		25/11/2014
-Tijdsduur:	180 min.
+
 
