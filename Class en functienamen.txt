@@ -2,7 +2,8 @@ In dit bestand staan alle al gebruikte classes en functienamen, een korte beschr
 Ook staat in dit bestand wie deze class/functienaam in gebruik heeft genomen.
 =====================
 
-Naam:			
-Gebruikt door:		
-Beschrijving:	
-Locatie: 		
+Naam:			input		
+Gebruikt door:		Kevin
+Beschrijving:		Input velden	
+Locatie: 		invullen gebruikers gegevens
+
