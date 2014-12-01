@@ -1,23 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 
-/**
- * Write a description of class menu here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class menu extends World
 {
-
-    /**
-     * Constructor for objects of class menu.
-     * 
-     */
     public menu()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(2560, 1440, 1); 
-        
-       
+        super(1280, 720, 1); 
+        addObject(new VOMenu(), 640, 360);
+        addObject(new CCMenu(), 640, 220);
     }
 }
