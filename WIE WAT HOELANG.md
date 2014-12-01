@@ -85,6 +85,10 @@ Wat:		Taken opstellen, bepalen welke ratio we nemen, hoe we het design gaan make
 Datum: 		27/11/2014
 Tijdsduur: 	90 min. 
 
+Wat:		Achtergrond maken
+Datum: 		30/11/2014
+Tijdsduur: 	40 min. 
+
 
 ===Oscar Veldman======
 ======================
