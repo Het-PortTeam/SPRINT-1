@@ -24,7 +24,13 @@ Wat:		Pokerplanning
 Datum: 		24/11/2014
 Tijdsduur: 	60 min. 	
 
+Wat:		Taken opstellen, bepalen welke ratio we nemen, hoe we het design gaan maken
+Datum: 		27/11/2014
+Tijdsduur: 	90 min. 
 
+Wat:		input velden kunnen maken in greenfoot
+datum:		28/11/2014
+Tijdsduur:	90 min
 
 ==Roy van den Heuvel==
 ======================
@@ -52,6 +58,10 @@ Wat:		Pokerplanning
 Datum: 		24/11/2014
 Tijdsduur: 	60 min. 
 
+Wat:		Taken opstellen, bepalen welke ratio we nemen, hoe we het design gaan maken
+Datum: 		27/11/2014
+Tijdsduur: 	90 min. 
+
 
 ======Johan Bos=======
 ======================
@@ -70,6 +80,10 @@ Tijdsduur:	115 min.
 Wat:		Pokerplanning
 Datum: 		24/11/2014
 Tijdsduur: 	60 min. 
+
+Wat:		Taken opstellen, bepalen welke ratio we nemen, hoe we het design gaan maken
+Datum: 		27/11/2014
+Tijdsduur: 	90 min. 
 
 
 ===Oscar Veldman======
@@ -93,4 +107,8 @@ Tijdsduur: 	60 min.
 Wat: 		Vergadering
 Datum:		25/11/2014
 Tijdsduur:	180 min.
+
+Wat:		Taken opstellen, bepalen welke ratio we nemen, hoe we het design gaan maken
+Datum: 		27/11/2014
+Tijdsduur: 	90 min. 
 
