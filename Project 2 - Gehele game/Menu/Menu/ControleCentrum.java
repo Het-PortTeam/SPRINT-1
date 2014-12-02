@@ -19,5 +19,6 @@ public class ControleCentrum extends World
         super(1280, 720, 1); 
         addObject(new CCLand1(), 100, 495);
         addObject(new CCLand2(), 1180, 565);
+        addObject(new CCBoei(), 500, 300);
     }
 }

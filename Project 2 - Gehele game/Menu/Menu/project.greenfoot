@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Dec 02 13:56:05 CET 2014
+#Tue Dec 02 14:08:00 CET 2014
 target4.type=ClassTarget
 <<<<<<<=HEAD
 dependency3.from=menu
@@ -34,6 +34,7 @@ target6.naviview.expanded=true
 target4.editor.height=700
 target6.type=ClassTarget
 dependency1.to=Ship
+class.CCBoei.image=boei.png
 dependency5.from=menu
 target2.editor.height=700
 dependency2.to=Ship
