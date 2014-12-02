@@ -62,6 +62,10 @@ Wat:		Taken opstellen, bepalen welke ratio we nemen, hoe we het design gaan make
 Datum: 		27/11/2014
 Tijdsduur: 	90 min. 
 
+Wat:		Menu maken
+Datum:		01/12/2014
+Tijdsduur:	80 min.
+
 
 ======Johan Bos=======
 ======================
