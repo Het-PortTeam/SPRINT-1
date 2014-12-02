@@ -26,7 +26,7 @@ public class World1 extends World
         int age= ageInput.getIntInput();
         if((age > 23 ) || (age < 13 )){
             System.out.println("U bent te jong of te oud.");
-            exit game
+            exit game;
         }else{
             System.out.println("Start game");
         }
