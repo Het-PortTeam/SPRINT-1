@@ -66,6 +66,10 @@ Wat:		Menu maken
 Datum:		01/12/2014
 Tijdsduur:	80 min.
 
+Wat:		Begin CC, fixen problemen
+Datum: 		02/12/2014
+Tijdsduur:	180 min.
+
 
 ======Johan Bos=======
 ======================
