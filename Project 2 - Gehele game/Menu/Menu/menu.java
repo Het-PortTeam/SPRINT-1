@@ -5,7 +5,7 @@ public class menu extends World
     public menu()
     {    
         super(1280, 720, 1); 
-        addObject(new VOMenu(), 640, 360);
-        addObject(new CCMenu(), 640, 220);
+        addObject(new VOMenu(), 340, 360);
+        addObject(new CCMenu(), 740, 520);
     }
 }
