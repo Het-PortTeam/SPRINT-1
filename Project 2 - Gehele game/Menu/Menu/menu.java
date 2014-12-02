@@ -14,5 +14,6 @@ public class menu extends World
         
         addObject(new VOMenu(), 340, 360);
         addObject(new CCMenu(), 740, 520);
+        
     }
 }
