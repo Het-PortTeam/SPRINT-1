@@ -97,6 +97,10 @@ Wat:		Achtergrond maken
 Datum: 		30/11/2014
 Tijdsduur: 	40 min. 
 
+Wat:		Design maken
+Datum: 		2/12/2014
+Tijdsduur: 	3 uur  
+
 
 ===Oscar Veldman======
 ======================
