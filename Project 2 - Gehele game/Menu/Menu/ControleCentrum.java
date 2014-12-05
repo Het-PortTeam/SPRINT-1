@@ -7,19 +7,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class ControleCentrum extends World
-{
-
-    /**
-     * Constructor for objects of class ControleCentrum.
-     * 
-     */
-     
-
+{    
+    private String img;  
+    private GifImage gif = new GifImage("water_gif_test2.gif");  
+    
+    
     
     public ControleCentrum()
     {    
         super(1280, 720, 1); 
-        setBackground("water_gif_test.gif");
         addObject(new CCLand1(), 100, 495);
         addObject(new CCLand2(), 1180, 565);
         addObject(new CCBoei(), 400, 300);
@@ -33,5 +29,10 @@ public class ControleCentrum extends World
         addObject(new CCplek(), 527, 590);
         addObject(new CCplek(), 777, 590);
         addObject(new CCplek(), 1027, 590);
+    }
+    
+    public void act()
+    {
+        setBackground(gif.getCurrentImage());
     }
 }
