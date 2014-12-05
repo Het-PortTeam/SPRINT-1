@@ -19,7 +19,7 @@ public class CCBoei extends Actor
     public void act() {  
         final int X = getX();
         final int Y = getY();
-        if (actCounter > 30) {
+        if (actCounter > 40) {
             if (movingCounter <= 2) {  
                 setLocation(X + 1, Y);   //move right;  
             }  

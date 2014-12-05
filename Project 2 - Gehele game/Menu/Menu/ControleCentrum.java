@@ -13,10 +13,13 @@ public class ControleCentrum extends World
      * Constructor for objects of class ControleCentrum.
      * 
      */
+    GifImage gifImage = new GifImage("water_gif_test.gif"); 
+    
+    
     public ControleCentrum()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1280, 720, 1); 
+        setImage(gifImage.getCurrentImage());     
         addObject(new CCLand1(), 100, 495);
         addObject(new CCLand2(), 1180, 565);
         addObject(new CCBoei(), 400, 300);
