@@ -13,13 +13,13 @@ public class ControleCentrum extends World
      * Constructor for objects of class ControleCentrum.
      * 
      */
-    GifImage gifImage = new GifImage("water_gif_test.gif"); 
-    
+     
+
     
     public ControleCentrum()
     {    
         super(1280, 720, 1); 
-        setImage(gifImage.getCurrentImage());     
+        setBackground("water_gif_test.gif");
         addObject(new CCLand1(), 100, 495);
         addObject(new CCLand2(), 1180, 565);
         addObject(new CCBoei(), 400, 300);
