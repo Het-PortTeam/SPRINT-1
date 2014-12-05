@@ -14,6 +14,18 @@ public class VOCrane extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        int Xspeed = 3;   
+       if(Greenfoot.isKeyDown("a")){
+            setLocation(getX() -Xspeed, getY());
+    } 
+     if(Greenfoot.isKeyDown("d")){
+            setLocation(getX() +Xspeed, getY());
+    }
+    if(Greenfoot.isKeyDown("left")){
+        setLocation(getX() -Xspeed, getY());
+    }
+    if(Greenfoot.isKeyDown("right")){
+        setLocation(getX() +Xspeed, getY());
+    }
     }    
 }
