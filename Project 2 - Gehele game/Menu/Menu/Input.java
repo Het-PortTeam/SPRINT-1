@@ -9,6 +9,7 @@ import javax.swing.JInternalFrame;
  * @version 1.0
  */
   public class Input{
+      /*
       private String input;
        
       public Input(String _input){
@@ -22,5 +23,6 @@ import javax.swing.JInternalFrame;
         public int getIntInput(){
             return Integer.parseInt(this.input);
         }
-        
+    */    
     }
+    
