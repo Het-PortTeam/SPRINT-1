@@ -19,7 +19,7 @@ public class ControleCentrum extends World
     public ControleCentrum()
     {    
         super(1280, 720, 1); 
-        setImage(gifImage.getCurrentImage());     
+       setImage(gifImage.getCurrentImage());     
         addObject(new CCLand1(), 100, 495);
         addObject(new CCLand2(), 1180, 565);
         addObject(new CCBoei(), 400, 300);
