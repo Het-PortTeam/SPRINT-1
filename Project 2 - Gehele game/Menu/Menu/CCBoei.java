@@ -16,15 +16,14 @@ public class CCBoei extends Actor
     private int actCounter = 0;
       
     public void act() {  
-        
+        final int X = getX();
+        final int Y = getY();
         if (actCounter > 15) {
-        
-        
             if (movingCounter < 10) {  
-                setLocation(getX() + 1, getY());//move right;  
+                setLocation(X + 1, Y);   //move right;  
             }  
             else if (movingCounter < 20) {  
-                setLocation(getX() - 1, getY());//move left;  
+                setLocation(X - 1, Y);   //move left;  
             }  
             else {  
                 movingCounter = 0;  
