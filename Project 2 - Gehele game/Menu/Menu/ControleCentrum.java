@@ -16,15 +16,15 @@ public class ControleCentrum extends World
     public ControleCentrum()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1280, 720, 1); 
-        addObject(new CCLand1(), 100, 495);
-        addObject(new CCLand2(), 1180, 565);
-        addObject(new CCBoei(), 400, 300);
-        addObject(new CCBoei(), 650, 300);
-        addObject(new CCBoei(), 900, 300);
-        addObject(new CCKade(), 400, 570); 
-        addObject(new CCKade(), 650, 570);
-        addObject(new CCKade(), 900, 570);
-        addObject(new CCSchip(), 900, 200);
+        super(128, 72, 10); 
+        addObject(new CCLand1(), 9, 50);
+        addObject(new CCLand2(), 120, 58);
+        addObject(new CCBoei(), 40, 30);
+        addObject(new CCBoei(), 65, 30);
+        addObject(new CCBoei(), 90, 30);
+        addObject(new CCKade(), 40, 57); 
+        addObject(new CCKade(), 65, 57);
+        addObject(new CCKade(), 90, 57);
+        addObject(new CCSchip(), 90, 20);
     }
 }
