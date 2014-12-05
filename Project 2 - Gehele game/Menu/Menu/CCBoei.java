@@ -17,6 +17,7 @@ public class CCBoei extends Actor
    
       
     public void act() {  
+        /*
         final int X = getX();
         final int Y = getY();
         if (actCounter > 40) {
@@ -35,5 +36,6 @@ public class CCBoei extends Actor
             else {
             actCounter++;
             }
+            */
     }  
 } 
