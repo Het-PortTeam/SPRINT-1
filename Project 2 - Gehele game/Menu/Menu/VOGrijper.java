@@ -14,7 +14,7 @@ public class VOGrijper extends Actor
      */
     public void act() 
     {
-        int Xspeed = 3;   
+       int Xspeed = 3;   
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());
     } 
@@ -47,5 +47,6 @@ public class VOGrijper extends Actor
         setLocation(getX(), getY() +Xspeed);
     }
     } 
+    
 }
 }
