@@ -29,6 +29,7 @@ public class ControleCentrum extends World
         addObject(new CCplek(), 527, 590);
         addObject(new CCplek(), 777, 590);
         addObject(new CCplek(), 1027, 590);
+
     }
         
         

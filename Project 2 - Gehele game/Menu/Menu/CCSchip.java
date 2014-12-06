@@ -7,6 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 
+
 public class CCSchip extends Actor
 {
     /**
@@ -18,18 +19,32 @@ public class CCSchip extends Actor
     MouseInfo pointer = Greenfoot.getMouseInfo();
 if(pointer != null)
 {
-     int mouseX = pointer.getX();
+    int mouseX = pointer.getX();
     int mouseY = pointer.getY();
     turnTowards(mouseX, mouseY);
     int button = pointer.getButton();
+    setLocation(mouseX, mouseY);
     if(button == 1)
     {
         // setLocation(mouseX, mouseY);
          move(4);
     }
 }
+
+Actor plek = getOneIntersectingObject( CCplek.class );
+ if ( plek != null )
+ {
+     
+     setRotation(270);
+    
+ }
+ else
+ { 
+} 
         
-        
+if ( getY() >= 0 && getY() <= 299) { setRotation(0); } 
+
+if ( getY() == 300) { setRotation(270); }       
         
         
         
