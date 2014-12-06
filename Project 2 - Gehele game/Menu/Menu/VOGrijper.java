@@ -22,10 +22,14 @@ public class VOGrijper extends Actor
             setLocation(getX() +Xspeed, getY());
     }
     if(Greenfoot.isKeyDown("w")){
+        if(getY() <= 245){} else {
         setLocation(getX(), getY() -Xspeed);
     }
+    }
     if(Greenfoot.isKeyDown("s")){
+        if(getY() >= 575){}  else {
         setLocation(getX(), getY() +Xspeed);
+    }
     }
     if(Greenfoot.isKeyDown("left")){
         setLocation(getX() -Xspeed, getY());
@@ -34,10 +38,14 @@ public class VOGrijper extends Actor
         setLocation(getX() +Xspeed, getY());
     }
     if(Greenfoot.isKeyDown("up")){
+        if(getY() <= 245){} else {
         setLocation(getX(), getY() -Xspeed);
     }
+    }
     if(Greenfoot.isKeyDown("down")){
+        if(getY() >= 575){}  else {
         setLocation(getX(), getY() +Xspeed);
     }
-    }    
+    } 
+}
 }
