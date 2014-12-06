@@ -347,6 +347,7 @@ target25.editor.x=0
 target25.editor.y=0
 target25.height=50
 target25.name=VOCrane
+target25.naviview.expanded=true
 target25.showInterface=false
 target25.type=ClassTarget
 target25.typeParameters=
