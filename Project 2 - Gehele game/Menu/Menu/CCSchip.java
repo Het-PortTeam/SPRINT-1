@@ -6,6 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class CCSchip extends Actor
 {
     /**
@@ -14,7 +15,26 @@ public class CCSchip extends Actor
      */
     public void act() 
     {
-        int Speed = 1;
+    MouseInfo pointer = Greenfoot.getMouseInfo();
+if(pointer != null)
+{
+     int mouseX = pointer.getX();
+    int mouseY = pointer.getY();
+    turnTowards(mouseX, mouseY);
+    int button = pointer.getButton();
+    if(button == 1)
+    {
+        // setLocation(mouseX, mouseY);
+         move(4);
+    }
+}
+        
+        
+        
+        
+        
+        
+      /*  int Speed = 1;
         int X = getX();
         int Y = getY();
         if(Greenfoot.isKeyDown("w")) setLocation(X, Y - Speed);
@@ -26,5 +46,6 @@ public class CCSchip extends Actor
         if(Greenfoot.isKeyDown("w")) setRotation(90);
         if(Greenfoot.isKeyDown("d")) setRotation(180);
         if(Greenfoot.isKeyDown("a")) setRotation(0);
-    }    
+        */
+       }    
 }
