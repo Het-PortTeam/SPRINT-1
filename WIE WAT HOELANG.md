@@ -101,6 +101,10 @@ Wat:		Design maken
 Datum: 		2/12/2014
 Tijdsduur: 	3 uur  
 
+Wat:		Werken aan Controle Centrum
+Datum: 		5/12/2014
+Tijdsduur: 	2 uur 30 minuten
+
 
 ===Oscar Veldman======
 ======================
