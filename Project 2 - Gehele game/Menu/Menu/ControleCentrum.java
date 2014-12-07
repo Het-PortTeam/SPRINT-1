@@ -10,9 +10,7 @@ public class ControleCentrum extends World
 {    
     private String img;  
     private GifImage gif = new GifImage("water_gif_test2.gif");  
-    
-    
-    
+
     public ControleCentrum()
     {    
         super(1280, 720, 1); 

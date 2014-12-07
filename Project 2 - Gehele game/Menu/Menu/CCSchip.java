@@ -21,13 +21,12 @@ if(pointer != null)
 {
     int mouseX = pointer.getX();
     int mouseY = pointer.getY();
-    turnTowards(mouseX, mouseY);
+    //turnTowards(mouseX, mouseY);
     int button = pointer.getButton();
-    setLocation(mouseX, mouseY);
     if(button == 1)
     {
-        // setLocation(mouseX, mouseY);
-         move(4);
+        setLocation(mouseX, mouseY);
+   
     }
 }
 
@@ -38,29 +37,11 @@ Actor plek = getOneIntersectingObject( CCplek.class );
      setRotation(270);
     
  }
- else
- { 
-} 
+
         
 if ( getY() >= 0 && getY() <= 299) { setRotation(0); } 
 
 if ( getY() == 300) { setRotation(270); }       
-        
-        
-        
-        
-      /*  int Speed = 1;
-        int X = getX();
-        int Y = getY();
-        if(Greenfoot.isKeyDown("w")) setLocation(X, Y - Speed);
-        if(Greenfoot.isKeyDown("a")) setLocation(X - Speed, Y);
-        if(Greenfoot.isKeyDown("s")) setLocation(X, Y + Speed);
-        if(Greenfoot.isKeyDown("d")) setLocation(X + Speed, Y);
-        
-        if(Greenfoot.isKeyDown("s")) setRotation(270);
-        if(Greenfoot.isKeyDown("w")) setRotation(90);
-        if(Greenfoot.isKeyDown("d")) setRotation(180);
-        if(Greenfoot.isKeyDown("a")) setRotation(0);
-        */
+
        }    
 }
