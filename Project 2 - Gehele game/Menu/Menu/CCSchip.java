@@ -17,20 +17,27 @@ public class CCSchip extends Actor
     public void act() 
     {
     MouseInfo pointer = Greenfoot.getMouseInfo();
+    Actor plek = getOneIntersectingObject( CCplek.class );
+    int x = getX();
+    int y = getY();
 if(pointer != null)
 {
+   
     int mouseX = pointer.getX();
     int mouseY = pointer.getY();
-    //turnTowards(mouseX, mouseY);
     int button = pointer.getButton();
-    if(button == 1)
+    
+    //turnTowards(mouseX, mouseY);
+    //setLocation(mouseX, mouseY);
+    if( Greenfoot.mousePressed(this))
     {
-        setLocation(mouseX, mouseY);
+        
+        move(-4);
    
     }
+    
 }
 
-Actor plek = getOneIntersectingObject( CCplek.class );
  if ( plek != null )
  {
      
@@ -38,10 +45,10 @@ Actor plek = getOneIntersectingObject( CCplek.class );
     
  }
 
-        
 if ( getY() >= 0 && getY() <= 299) { setRotation(0); } 
 
-if ( getY() == 300) { setRotation(270); }       
+if ( getY() >= 300) { setRotation(270); } 
 
-       }    
-}
+if( x == 280 && y  == 200 ) { turn(270); move(0); }
+
+ }    }
