@@ -70,6 +70,15 @@ Wat:		Begin CC, fixen problemen
 Datum: 		02/12/2014
 Tijdsduur:	180 min.
 
+Wat:		Werken project
+Datum:		05/12/2014
+Tijdsduur:	240 min.
+
+Wat: 		Afmaken mijlpaalproducten en vergaderen
+Datum: 		07/12/2014
+Tijdsduur:	60 min.
+
+
 
 ======Johan Bos=======
 ======================
