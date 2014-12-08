@@ -43,6 +43,7 @@ if(pointer != null)
  {
      
      setRotation(270);
+     
     
  }
 
