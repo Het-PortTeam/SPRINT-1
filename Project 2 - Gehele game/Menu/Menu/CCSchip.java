@@ -26,13 +26,14 @@ if(pointer != null)
     int mouseX = pointer.getX();
     int mouseY = pointer.getY();
     int button = pointer.getButton();
+     move(-4);
     
     //turnTowards(mouseX, mouseY);
     //setLocation(mouseX, mouseY);
-    if( Greenfoot.mousePressed(this))
+    if( button == 1)
     {
         
-        move(-4);
+        move(0);
    
     }
     
@@ -45,9 +46,9 @@ if(pointer != null)
     
  }
 
-if ( getY() >= 0 && getY() <= 299) { setRotation(0); } 
+//if ( getY() >= 0 && getY() <= 299) { setRotation(0); } 
 
-if ( getY() >= 300) { setRotation(270); } 
+//if ( getY() >= 300) { setRotation(270); } 
 
 if( x == 280 && y  == 200 ) { turn(270); move(0); }
 
