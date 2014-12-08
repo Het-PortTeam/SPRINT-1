@@ -20,29 +20,34 @@ public class CCSchip extends Actor
     Actor plek = getOneIntersectingObject( CCplek.class );
     int x = getX();
     int y = getY();
+    int speed = 7;
+    
 if(pointer != null)
 {
    
     int mouseX = pointer.getX();
     int mouseY = pointer.getY();
     int button = pointer.getButton();
-     move(-4);
+    turnTowards(mouseX, mouseY);
+    
     
     //turnTowards(mouseX, mouseY);
     //setLocation(mouseX, mouseY);
     if( button == 1)
     {
         
-        move(0);
+        move(speed);
+       
    
     }
-    
+
 }
 
  if ( plek != null )
  {
      
      setRotation(270);
+     move(0);
      
     
  }
