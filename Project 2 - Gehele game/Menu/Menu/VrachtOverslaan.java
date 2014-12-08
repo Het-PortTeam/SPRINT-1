@@ -1,7 +1,11 @@
 import greenfoot.*; 
 
+
 public class VrachtOverslaan extends World
 {
+    private String img;  
+    private GifImage gif = new GifImage("water_gif_test2.gif");
+    
     public VrachtOverslaan()
     {    
         super(1280, 720, 1); 
@@ -25,5 +29,9 @@ public class VrachtOverslaan extends World
         addObject(new VOCrane(), 640, 360);
         addObject(new VOGrijper2(), 500, 130);
         addObject(new VOCrane2(), 500, 360);
+    }
+    public void act()
+    {
+        setBackground(gif.getCurrentImage());
     }
 }
