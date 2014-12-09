@@ -12,7 +12,7 @@ public class VrachtOverslaan extends World
        
         addObject(new Kade(), 640, 360);
         addObject(new Rails(), 640, 360);
-        addObject(new VOSchip(), 640,440);
+        addObject(new VOSchip(), 640,442);
         addObject(new VOSchip2(), 640, 250);
         // De containers:
         addObject(new VOConB(), 990, 400);
