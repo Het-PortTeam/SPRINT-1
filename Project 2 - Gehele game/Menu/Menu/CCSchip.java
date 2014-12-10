@@ -28,7 +28,7 @@ public class CCSchip extends Actor
    
    if( x >281) { setLocation(getX() -2, getY() );} 
    if( x == 280) { setRotation(270); setLocation(getX(), getY()+1 ); }
-   if( plek != null) { setLocation(280, 590 ); }
+   if( x== 280 && y == 590) { setLocation(280, 590 ); }
    
   }
 }
