@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.List;
 /**
  * Write a description of class CCSchip here.
  * 
@@ -16,19 +16,20 @@ public class CCSchip extends Actor
      */
     public void act() 
     {
-    MouseInfo pointer = Greenfoot.getMouseInfo();
-    Actor plek = getOneIntersectingObject( CCplek.class );
-    int x = getX();
-    int y = getY();
-    //int mouseX = pointer.getX();
-    //int mouseY = pointer.getY();
-    //int button = pointer.getButton();
-    //int count = pointer.getClickCount();
-
-   
-   if( x >281) { setLocation(getX() -2, getY() );} 
+        MouseInfo mouse = Greenfoot.getMouseInfo();
+        Actor plek = getOneIntersectingObject( CCplek.class );
+        int mX = mouse.getX();
+        int mY = mouse.getY();
+        int x = getX();
+        int y = getY();
+ 
+   if (mouse != null && mX > 220 && mX < 340 && mY > 500 && mY < 680) {
+   if( x > 281) { setLocation(getX() -2, getY() );} 
    if( x == 280) { setRotation(270); setLocation(getX(), getY()+1 ); }
-   if( x== 280 && y == 590) { setLocation(280, 590 ); }
-   
-  }
+   if( x == 280 && y == 590) { setLocation(280, 590 ); }
+
+ }
 }
+
+}
+
