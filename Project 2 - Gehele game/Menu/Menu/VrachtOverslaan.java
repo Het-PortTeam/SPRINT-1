@@ -21,7 +21,7 @@ public class VrachtOverslaan extends World
         addObject(new VOSchip2(), 640, 250);
         // De containers schip1:
         addObject(new VOConB(), 990, 400);
-        addObject(new VOConM(), 1005, 443 );
+        addObject(new VOConM(), 1005, 443);
         addObject(new VOConS(), 1020, 485);
         addObject(new VOConB(), 945, 485);
         addObject(new VOConS(), 945, 443);
@@ -37,7 +37,7 @@ public class VrachtOverslaan extends World
         // Tot hier!
         addObject(new VOGrijper(), 640,360);
         addObject(new VOCrane(), 640, 360);
-        addObject(new VOGrijper2(), 500, 130);
+        addObject(new VOgrijper20(), 500, 130);
         addObject(new VOCrane2(), 500, 360);
     }
     public void act()

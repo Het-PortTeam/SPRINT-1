@@ -14,10 +14,19 @@ public class VOCrane2 extends Actor
      */
     public void act() 
     {
-        while (getX() < 800) {
+        int A = 0;
+        if (A == 0) {
+        if (getX() < 1000) {
+            setLocation(getX() +3, getY());
+            if (getX() == 999) {A = 1;}
+        }
+    }
+        if(A == 1) {
+        if (getX() > 500) {
             setLocation(getX() -3, getY());
         }
-    }    
+        
+    } }   
     
     public void ai()
     {
