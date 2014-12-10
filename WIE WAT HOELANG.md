@@ -114,6 +114,10 @@ Wat:		Werken aan Controle Centrum
 Datum: 		5/12/2014
 Tijdsduur: 	2 uur 30 minuten
 
+Wat:		Projectles
+Datum: 		9/12/2014
+Tijdsduur: 	2 uur 50 minuten
+
 
 ===Oscar Veldman======
 ======================
