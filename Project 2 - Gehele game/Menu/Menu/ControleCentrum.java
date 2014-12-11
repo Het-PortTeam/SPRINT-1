@@ -22,7 +22,7 @@ public class ControleCentrum extends World
         addObject(new CCKade(), 400, 570); 
         addObject(new CCKade(), 650, 570);
         addObject(new CCKade(), 900, 570);
-        addObject(new CCSchip(), 900, 200);
+        addObject(new CCSchip(), 1200, 200);
         addObject(new CCplek(), 280, 590); 
         addObject(new CCplek(), 527, 590);
         addObject(new CCplek(), 777, 590);
