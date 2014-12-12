@@ -35,6 +35,7 @@ public class ControleCentrum extends World
     public void act()
     {
         setBackground(gif.getCurrentImage());
+       // Greenfoot.playSound("CC.mp3");
     }
     
 }

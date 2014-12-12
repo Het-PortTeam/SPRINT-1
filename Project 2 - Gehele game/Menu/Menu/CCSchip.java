@@ -21,14 +21,14 @@ public class CCSchip extends Actor
     {
         MouseInfo mouse = Greenfoot.getMouseInfo();
         Actor plek = getOneIntersectingObject( CCplek.class );
-        int mX = mouse.getX();
-        int mY = mouse.getY();
+        int mouseX = mouse.getX();
+        int mouseY = mouse.getY();
         int x = getX();
         int y = getY();
  
         
     if(!ShipInHarbor){     
-    if ( mouse != null && mX > 220 && mX < 340 && mY > 440 && mY < 725) {
+    if ( mouse != null && mouseX > 220 && mouseX < 340 && mouseY > 440 && mouseY < 725) {
     if( x > 281) { setLocation(getX() -2, getY() );} 
     if( x == 280) { setRotation(270); setLocation(getX(), getY()+1 ); }
     }}
@@ -36,7 +36,7 @@ public class CCSchip extends Actor
     if(x == 280 && y == 590){ShipInHarbor = true;}
  
     if(!ShipInHarbor){
-    if ( mouse != null && mX > 468 && mX < 588 && mY > 440 && mY < 725) {
+    if ( mouse != null && mouseX > 468 && mouseX < 588 && mouseY > 440 && mouseY < 725) {
     if( x > 528) { setLocation(getX() -2, getY() );} 
     if( x == 528) { setRotation(270); setLocation(getX(), getY()+1 ); }
     }}
@@ -44,7 +44,7 @@ public class CCSchip extends Actor
     if(x == 528 && y == 590){ShipInHarbor = true;}
  
     if(!ShipInHarbor){
-    if( mouse != null && mX > 716 && mX < 836 && mY > 440 && mY < 725) {
+    if( mouse != null && mouseX > 716 && mouseX < 836 && mouseY > 440 && mouseY < 725) {
     if( x > 776) { setLocation(getX() -2, getY() );} 
     if( x == 776) { setRotation(270); setLocation(getX(), getY()+1 ); }
     }}
@@ -52,7 +52,7 @@ public class CCSchip extends Actor
     if(x == 776 && y == 590){ShipInHarbor = true;}
 
     if(!ShipInHarbor){
-    if( mouse != null && mX > 964 && mX < 1084 && mY > 440 && mY < 725) {
+    if( mouse != null && mouseX > 964 && mouseX < 1084 && mouseY > 440 && mouseY < 725) {
     if( x > 1024) { setLocation(getX() -2, getY() );} 
     if( x == 1024) { setRotation(270); setLocation(getX(), getY()+1 ); }
     }}
