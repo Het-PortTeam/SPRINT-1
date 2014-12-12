@@ -18,7 +18,6 @@ public class VOCrane2 extends Actor
         if (A == 0) {
         if (getX() < 1000) {
             setLocation(getX() +3, getY());
-            if (getX() == 999) {A = 1;}
         }
     }
         if(A == 1) {
@@ -28,9 +27,6 @@ public class VOCrane2 extends Actor
         
     } }   
     
-    public void ai()
-    {
-
-    }
+    
     
 }

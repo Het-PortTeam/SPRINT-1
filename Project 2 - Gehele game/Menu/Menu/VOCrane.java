@@ -27,5 +27,8 @@ public class VOCrane extends Actor
     if(Greenfoot.isKeyDown("right")){
         setLocation(getX() +Xspeed, getY());
     }
-    }    
+    }  
+
 }
+
+
