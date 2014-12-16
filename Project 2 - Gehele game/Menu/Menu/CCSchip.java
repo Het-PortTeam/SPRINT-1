@@ -15,6 +15,7 @@ public class CCSchip extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private boolean ShipInHarbor;
+    public int score;
     
     
     public void act() 
@@ -63,7 +64,7 @@ public class CCSchip extends Actor
     if(x == 528 && y == 590) { ShipInHarbor = true;}
     if(x == 280 && y == 590) { ShipInHarbor = true;}
    
-    if(ShipInHarbor == true) {setLocation(x, y );}
+    if(ShipInHarbor == true) {setLocation(x, y ); score++;}
     }
   }
 
