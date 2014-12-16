@@ -14,6 +14,9 @@ public class menu extends World
          */
         addObject(new VOMenu(), 340, 360);
         addObject(new CCMenu(), 740, 520);
+        //addObject(new BEMenu(), 500, 500);
+        //addObject(new DMenu(), 300, 700);
+        //addObject(new HMenu(), 900, 500);
 
         prepare();
     }
