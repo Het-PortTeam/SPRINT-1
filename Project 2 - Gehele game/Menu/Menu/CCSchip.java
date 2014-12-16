@@ -64,7 +64,14 @@ public class CCSchip extends Actor
     if(x == 528 && y == 590) { ShipInHarbor = true;}
     if(x == 280 && y == 590) { ShipInHarbor = true;}
    
-    if(ShipInHarbor == true) {setLocation(x, y ); score++;}
+    if(ShipInHarbor == true) 
+    {
+    setLocation(x, y ); 
+    score++;
+    
+    World W = getWorld();
+    W.removeObjects(W.getObjects(CCSchip.class)); 
+    }
     }
   }
 
