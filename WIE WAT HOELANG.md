@@ -78,6 +78,14 @@ Wat: 		Afmaken mijlpaalproducten en vergaderen
 Datum: 		07/12/2014
 Tijdsduur:	60 min.
 
+Wat:		Werken aan CC
+Datum:		12/12/2014
+Tijdsduur:	60 min.
+
+Wat:		Projectles
+Datum:		16/12/2014
+Tijdsduur:	150 min.
+
 
 
 ======Johan Bos=======
