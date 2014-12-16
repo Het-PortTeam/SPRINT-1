@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Dec 16 13:56:28 CET 2014
+#Tue Dec 16 14:02:06 CET 2014
 target16.name=VOSchip
 class.VOLocomotief.image=Locomotief.png
 target26.width=80
@@ -34,6 +34,7 @@ dependency29.from=VrachtOverslaan
 target15.height=50
 target7.type=ClassTarget
 target15.typeParameters=
+class.Douane.superclass=greenfoot.World
 target11.width=120
 target21.type=ClassTarget
 dependency25.to=CCSchip
@@ -477,6 +478,7 @@ target17.editor.width=900
 target15.naviview.expanded=true
 target8.y=190
 target8.x=190
+class.Highscores.superclass=greenfoot.World
 target3.editor.width=900
 target12.width=80
 dependency2.type=UsesDependency
