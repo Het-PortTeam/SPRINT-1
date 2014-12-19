@@ -16,5 +16,7 @@ public class Douane extends World
     public Douane()
     {    
         super(1280, 720, 1); 
+        //einde
+        addObject(new BackButton(), 75, 50);
     }
 }
