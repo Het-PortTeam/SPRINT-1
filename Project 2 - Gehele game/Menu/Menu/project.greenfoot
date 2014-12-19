@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Fri Dec 19 13:44:40 CET 2014
+#Fri Dec 19 13:53:21 CET 2014
 target16.name=VOCrane
 class.VOLocomotief.image=Locomotief.png
 target26.width=80
@@ -219,8 +219,8 @@ target5.editor.width=900
 target17.showInterface=false
 target8.showInterface=false
 dependency27.to=VOLocomotief
-class.BEMenu.image=Balastengeneer.png
 target30.height=50
+class.BEMenu.image=Balastengeneer.png
 target29.width=80
 dependency3.from=menu
 target11.typeParameters=
@@ -231,6 +231,7 @@ target7.editor.y=20
 target7.editor.x=40
 target9.typeParameters=
 target25.width=80
+class.BackButton.image=Back-Button.png
 target16.height=50
 target19.editor.height=700
 target7.width=80
@@ -287,6 +288,7 @@ target6.height=50
 target7.editor.width=900
 target29.y=70
 target29.x=70
+class.BackButton.superclass=greenfoot.Actor
 target24.width=80
 class.VOCrane.image=Kraan1.png
 target25.y=310
