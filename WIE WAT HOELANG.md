@@ -86,6 +86,10 @@ Wat:		Projectles
 Datum:		16/12/2014
 Tijdsduur:	150 min.
 
+Wat:		Menu maken
+Datum:		19/12/2014
+Tijdsduur:	80 min.
+
 
 
 ======Johan Bos=======
