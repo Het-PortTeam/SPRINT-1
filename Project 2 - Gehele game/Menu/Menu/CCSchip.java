@@ -16,6 +16,8 @@ public class CCSchip extends Actor
      */
     private boolean ShipInHarbor;
     public int score;
+    public long currentTime = System.currentTimeMillis();
+    public int timer = 0;
     
     
     public void act() 
@@ -60,14 +62,21 @@ public class CCSchip extends Actor
    
     World W = getWorld();
     
-    if(x == 1024 && y == 590){ShipInHarbor = true; W.removeObjects(W.getObjects(CCSchip.class));}
+    if(x == 1024 && y == 590){ ShipInHarbor = true; W.removeObjects(W.getObjects(CCSchip.class));}
     if(x == 776 && y == 590) { ShipInHarbor = true; W.removeObjects(W.getObjects(CCSchip.class));}
     if(x == 528 && y == 590) { ShipInHarbor = true; W.removeObjects(W.getObjects(CCSchip.class));}
     if(x == 280 && y == 590) { ShipInHarbor = true; W.removeObjects(W.getObjects(CCSchip.class));}
    
     if(ShipInHarbor == true) {setLocation(x, y ); score++;} 
+    
+    if(currentTime + 5000 < System.currentTimeMillis());} 
+    {
+    timer += 1;
+    System.currentTimeMillis();
     }
-  }
+    
+    }
+ 
 
 
 
