@@ -17,6 +17,11 @@ public class CCSchip extends Actor
     private boolean ShipInHarbor;
     public int score;
     
+   
+    public long currentTime = System.currentTimeMillis();   // Later (for example in an act() method), do:
+    public int timer = 0;
+
+    
     
     public void act() 
     {
@@ -66,8 +71,18 @@ public class CCSchip extends Actor
     if(x == 280 && y == 590) { ShipInHarbor = true; W.removeObjects(W.getObjects(CCSchip.class));}
    
     if(ShipInHarbor == true) {setLocation(x, y ); score++;} 
+    
+    if( currentTime + 1000 <  System.currentTimeMillis() )
+    {
+        timer += 1;
+    }
+    
+    if( timer == 5)
+    {
+        System.out.println("Cool");
     }
   }
+}
 
 
 
