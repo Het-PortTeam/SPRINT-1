@@ -8,12 +8,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DVrachtwagen extends Actor
 {
-    /**
-     * Act - do whatever the DVrachtwagen wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
+    boolean click;
     public void act() 
     {
-        // Add your action code here.
+        if(getX() < 850) {
+            setLocation(getX() + 3, getY());
+        }
+        
+        if(Greenfoot.mouseClicked(DDoorgaan.class)){
+            click = true;
+        }
+        
+        if(click == true){
+            setLocation(getX() + 3, getY());
+        }
     }    
+    
+    public void driveAway(){
+        if(getX() < 1000) {
+            setLocation(getX() + 3, getY());
+        }
+    }
 }
