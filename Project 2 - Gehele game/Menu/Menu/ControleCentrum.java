@@ -10,11 +10,12 @@ public class ControleCentrum extends World
 {    
     private String img;  
     private GifImage gif = new GifImage("water_gif_test2.gif");  
+    public long currentTime = System.currentTimeMillis();   // Later (for example in an act() method), do:
+    public int timer = 0;
 
     public ControleCentrum()
     {    
         super(1280, 720, 1); 
-        addObject(new BackButton(), 75, 50);
         addObject(new CCLand1(), 100, 495);
         addObject(new CCLand2(), 1190, 565);
         addObject(new CCBoei(), 400, 300);
@@ -37,6 +38,18 @@ public class ControleCentrum extends World
     {
         setBackground(gif.getCurrentImage());
        // Greenfoot.playSound("CC.mp3");
+       
+       if( currentTime + 1000 <  System.currentTimeMillis() )
+    {
+        timer += 1;
+    }
+    
+    if( timer == 300)
+    {
+        addObject(new CCSchip2(), 1200, 200);
+    }
     }
     
 }
+
+
