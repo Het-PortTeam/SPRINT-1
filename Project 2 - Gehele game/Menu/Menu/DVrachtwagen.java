@@ -10,10 +10,14 @@ public class DVrachtwagen extends Actor
 {
     
     boolean click;
+    boolean ready = true;
     public void act() 
     {
-        if(getX() < 850) {
+        if(getX() < 850 && ready == true) {
             setLocation(getX() + 3, getY());
+            if(getX() == 849) {
+                ready = false;
+            }
         }
         
         if(Greenfoot.mouseClicked(DDoorgaan.class)){
