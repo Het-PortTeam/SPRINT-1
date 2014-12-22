@@ -13,7 +13,7 @@ public class CCSchip extends Actor
     /**
      * Act - do whatever the CCSchip wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+     **/
     private boolean ShipInHarbor;
     public int score;
 
