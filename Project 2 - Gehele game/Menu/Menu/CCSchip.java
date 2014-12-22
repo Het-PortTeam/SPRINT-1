@@ -5,30 +5,20 @@ public class CCSchip extends Actor
 {
   private boolean ShipInHarbor;
   public int score;
-  public long currentTime = System.currentTimeMillis();   // Later (for example in an act() method), do:
-  public int timer = 0;
   public boolean clicked;
-  Actor plek = getOneIntersectingObject( CCplek.class ); 
+   
     
   public void act() 
   {   
+      Actor plek = getOneIntersectingObject( CCplek.class );
+      
       if(Greenfoot.mouseClicked(plek)){ 
           clicked=true; 
-      }
-        
-      if( currentTime + 1000 <  System.currentTimeMillis() )
-      {
-            timer += 1;
-      }
-    
-      if( timer == 5)
-      {
-            System.out.println("Cool");
       }
     
       if(clicked==true)
       {
-            Actor plek = getOneIntersectingObject( CCplek.class );    
+            
             MouseInfo mouse = Greenfoot.getMouseInfo();
             int mouseX = mouse.getX();
             int mouseY = mouse.getY();
