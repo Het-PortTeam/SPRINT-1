@@ -12,10 +12,10 @@ public class menu extends World
         Input ageInput = new Input("Wat is uw leeftijd?");
         int age= ageInput.getIntInput();
          */
-        addObject(new VOMenu(), 250, 310);
-        addObject(new CCMenu(), 740, 220);
-        addObject(new BEMenu(), 500, 180);
-        addObject(new DMenu(), 700, 50);
+        addObject(new VOMenu(), 270, 340);
+        addObject(new CCMenu(), 740, 290);
+        addObject(new BEMenu(), 500, 220);
+        addObject(new DMenu(), 700, 70);
         addObject(new HMenu(), 900, 540);
 
         prepare();

@@ -37,13 +37,12 @@ public class CCSchip extends Actor
   */
     public void mouseClicked()
     { 
-           
-        int x = getX();
-        int y = getY();
         MouseInfo mouse = Greenfoot.getMouseInfo();
         int mouseX = mouse.getX();
         int mouseY = mouse.getY();
         while(ShipInHarbor == false) {
+            int x = getX();
+            int y = getY();
             if(!ShipInHarbor){     
                 if (mouseX > 220 && mouseX < 340 && mouseY > 440 && mouseY < 725) {
                     if( x > 281) { setLocation(getX() -2, getY() );} 
