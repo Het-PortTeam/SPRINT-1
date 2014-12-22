@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Dec 22 14:30:24 CET 2014
+#Mon Dec 22 14:39:23 CET 2014
 target24.type=ClassTarget
 target16.name=CCMenu
 target13.editor.width=900
@@ -21,12 +21,14 @@ target15.editor.y=0
 target15.editor.x=0
 target11.type=ClassTarget
 class.CCLand2.superclass=greenfoot.Actor
+class.DScanner.superclass=greenfoot.Actor
 dependency33.to=Douane
 dependency18.from=ControleCentrum
 target30.name=CCSchip
 target6.editor.height=700
 target17.typeParameters=
 dependency20.from=VrachtOverslaan
+class.DControle.image=Controle.png
 dependency27.to=VOLocomotief
 target6.name=BEMenu
 target31.height=50
@@ -103,6 +105,7 @@ target14.editor.width=900
 target2.type=ClassTarget
 dependency36.type=UsesDependency
 target20.editor.height=700
+class.DScanner.image=Scanner.png
 class.DVrachtwagen.image=Vrachtwagen.png
 target29.typeParameters=
 target25.showInterface=false

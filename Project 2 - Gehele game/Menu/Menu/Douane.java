@@ -19,6 +19,7 @@ public class Douane extends World
         addObject(new BackButton(), 75, 50);
         addObject(new DVrachtwagen(), 200, 350);
         addObject(new DDoorgaan(), 300, 600);
-        addObject(new DControle(), 600, 600);
+        addObject(new DControle(), 1000, 600);
+        addObject(new DScanner(), 500, 350);
     }
 }
