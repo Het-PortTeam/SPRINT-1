@@ -1,23 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class VOGrijper here.
+ * Write a description of class VOConB1 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class VOGrijper extends Actor
+public class VOConB1 extends VOConB
 {
     /**
-     * Act - do whatever the VOGrijper wants to do. This method is called whenever
+     * Act - do whatever the VOConB1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
-    private VOConB container;
-    
     public void act() 
     {
-        int Xspeed = 3;   
+        if (Greenfoot.isKeyDown("q")){
+             int Xspeed = 3;   
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());
     } 
@@ -50,6 +48,6 @@ public class VOGrijper extends Actor
         setLocation(getX(), getY() +Xspeed);
     }
 }
-
-}
+        }
+    }    
 }
