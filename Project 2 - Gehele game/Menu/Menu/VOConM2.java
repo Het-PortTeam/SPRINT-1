@@ -1,20 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class VOConB1 here.
+ * Write a description of class VOConM2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class VOConB1 extends VOConB
+public class VOConM2 extends VOConM
 {
     /**
-     * Act - do whatever the VOConB1 wants to do. This method is called whenever
+     * Act - do whatever the VOConM2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        if (Greenfoot.isKeyDown("q")){
+       if (Greenfoot.isKeyDown("q")){
              int Xspeed = 3;   
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());
@@ -44,6 +44,6 @@ public class VOConB1 extends VOConB
         if(Greenfoot.isKeyDown("down")){
             setLocation(getX(), getY() +Xspeed);
         }
-        }  
+        }
     }    
 }
