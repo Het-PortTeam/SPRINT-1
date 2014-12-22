@@ -14,6 +14,7 @@ public class ControleCentrum extends World
     public ControleCentrum()
     {    
         super(1280, 720, 1); 
+        addObject(new BackButton(), 75, 50);
         addObject(new CCLand1(), 100, 495);
         addObject(new CCLand2(), 1190, 565);
         addObject(new CCBoei(), 400, 300);
