@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Dec 22 14:30:24 CET 2014
+#Mon Dec 22 14:37:59 CET 2014
 target24.type=ClassTarget
 target16.name=CCMenu
 target13.editor.width=900
@@ -401,6 +401,7 @@ dependency34.to=BEMenu
 target34.width=80
 dependency5.from=ControleCentrum
 target2.typeParameters=
+class.VOConB1.superclass=VOConB
 dependency28.type=UsesDependency
 target16.typeParameters=
 target1.editor.width=900
@@ -416,6 +417,7 @@ target12.name=VOMenu
 target26.typeParameters=
 dependency27.from=VrachtOverslaan
 target30.width=80
+class.VOConB2.superclass=VOConB
 target25.width=80
 target8.typeParameters=
 dependency15.type=UsesDependency
@@ -423,6 +425,7 @@ class.VOConB.superclass=greenfoot.Actor
 target19.editor.height=700
 dependency23.to=VOGrijper2
 target32.type=ClassTarget
+class.VOConB3.superclass=VOConB
 target30.y=370
 target30.x=100
 dependency14.from=ControleCentrum
