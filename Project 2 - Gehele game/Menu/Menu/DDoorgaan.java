@@ -14,6 +14,8 @@ public class DDoorgaan extends Actor
      */
     public void act() 
     {
-        
+        if(Greenfoot.mouseClicked(this)){
+            DVrachtwagen.driveAway();
+        }
     }    
 }

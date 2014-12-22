@@ -9,13 +9,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class DVrachtwagen extends Actor
 {
     
-    boolean click;
+    boolean click = false;
     boolean ready = true;
+    public static int x;
     public void act() 
     {
         if(getX() < 850 && ready == true) {
             setLocation(getX() + 3, getY());
-            if(getX() == 849) {
+            if(getX() >= 845) {
                 ready = false;
             }
         }
@@ -29,9 +30,7 @@ public class DVrachtwagen extends Actor
         }
     }    
     
-    public void driveAway(){
-        if(getX() < 1000) {
-            setLocation(getX() + 3, getY());
+    public static int driveAway(){
+            return x;
         }
     }
-}
