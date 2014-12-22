@@ -26,10 +26,9 @@ public class CCSchip extends Actor
         int mouseY = mouse.getY();
         int x = getX();
         int y = getY();
- 
         
     if(!ShipInHarbor){     
-    if (mouseX > 220 && mouseX < 340 && mouseY > 440 && mouseY < 725) {
+    if (mouseX > 220 && mouseX < 340 && mouseY > 440 && mouseY < 725 ) {
     if( x > 281 && y == 200) { setLocation(getX() -2, getY() );} 
     if( x == 280 && y >= 200) { setRotation(270); setLocation(x, y+1 ); }
     }}
@@ -37,7 +36,7 @@ public class CCSchip extends Actor
     if(x == 280 && y == 590){ShipInHarbor = true;}
  
     if(!ShipInHarbor){
-    if (mouseX > 468 && mouseX < 588 && mouseY > 440 && mouseY < 725) {
+    if (mouseX > 468 && mouseX < 588 && mouseY > 440 && mouseY < 725 ) {
     if( x > 528 && y == 200) { setLocation(getX() -2, getY() );} 
     if( x == 528 && y >= 200) { setRotation(270); setLocation(x, y+1 ); }
     }}
@@ -45,7 +44,7 @@ public class CCSchip extends Actor
     if(x == 528 && y == 590){ShipInHarbor = true;}
  
     if(!ShipInHarbor){
-    if(mouseX > 716 && mouseX < 836 && mouseY > 440 && mouseY < 725) {
+    if(mouseX > 716 && mouseX < 836 && mouseY > 440 && mouseY < 725 ) {
     if( x > 776 && y == 200) { setLocation(getX() -2, getY() );} 
     if( x == 776  && y >= 200)  { setRotation(270); setLocation(x, y+1 ); }
     }}
@@ -53,7 +52,7 @@ public class CCSchip extends Actor
     if(x == 776 && y == 590){ShipInHarbor = true;}
 
     if(!ShipInHarbor){
-    if(mouseX > 964 && mouseX < 1084 && mouseY > 440 && mouseY < 725) {
+    if(mouseX > 964 && mouseX < 1084 && mouseY > 440 && mouseY < 725 ) {
     if( x > 1024 && y == 200) { setLocation(getX() -2, getY() );} 
     if( x == 1024  && y >= 200) { setRotation(270); setLocation(x, y+1 ); }
     }}
