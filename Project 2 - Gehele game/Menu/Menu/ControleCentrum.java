@@ -48,6 +48,8 @@ public class ControleCentrum extends World
     {
         addObject(new CCSchip2(), 1200, 200);
     }
+
+    
     }
     
 }
