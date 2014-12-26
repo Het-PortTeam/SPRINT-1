@@ -21,9 +21,7 @@ public class CCSchip extends Actor
     private boolean clicked4;
     
     
-    public void act(){move(); }
-
-     public void move()
+     public void act()
      {
         MouseInfo mouse = Greenfoot.getMouseInfo();
         Actor plek = getOneIntersectingObject( CCplek.class );
