@@ -90,6 +90,10 @@ Wat:		Menu maken
 Datum:		19/12/2014
 Tijdsduur:	80 min.
 
+Wat:		Werken aan CC
+Datum:		22/12/2014
+Tijdsduur:	200 min.
+
 
 
 ======Johan Bos=======
