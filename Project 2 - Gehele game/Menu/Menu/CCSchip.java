@@ -16,6 +16,7 @@ public class CCSchip extends Actor
     private boolean clicked2;
     private boolean clicked3;
     private boolean clicked4;
+    
    
     /**
      * Act - do whatever the CCSchip wants to do. This method is called whenever
@@ -25,21 +26,25 @@ public class CCSchip extends Actor
 
     public void act()
     {   
-        move();   
+        move();  
     }
 
      public void move()
      {
         MouseInfo mouse = Greenfoot.getMouseInfo();
+        if(mouse != null){
         int mouseY = mouse.getY();
         int mouseX = mouse.getX(); 
-        int y = getY();
+        
         int x = getX();
+        int y = getY();
+
+        
         Actor plek = getOneIntersectingObject( CCplek.class );
-  
+         
+        
     if(!ShipInHarbor){
-        if(mouse != null){
-    if(mouseX > 221 && mouseX < 341 && mouseY > 440 && mouseY < 725 && Greenfoot.mouseClicked(plek) ){clicked1 = true;}}
+    if(mouseX > 221 && mouseX < 341 && mouseY > 440 && mouseY < 725 && Greenfoot.mouseClicked(plek) ){clicked1 = true;}
     if(clicked1 == true){
     if( x > 281) { setLocation(getX() -2, getY() );} 
     if( x == 280 && y >= 200) { setRotation(270); setLocation(x, y+1 ); }}}
@@ -49,8 +54,7 @@ public class CCSchip extends Actor
  
 
     if(!ShipInHarbor){
-         if(mouse != null){
-    if(mouseX > 468 && mouseX < 588 && mouseY > 440 && mouseY < 725 && Greenfoot.mouseClicked(plek) ){clicked2 = true;}}
+    if(mouseX > 468 && mouseX < 588 && mouseY > 440 && mouseY < 725 && Greenfoot.mouseClicked(plek) ){clicked2 = true;}
     if(clicked2 == true){
     if( x > 528) { setLocation(getX() -2, getY() );} 
     if( x == 528 && y >= 200) { setRotation(270); setLocation(x, y+1 ); }}}
@@ -59,9 +63,8 @@ public class CCSchip extends Actor
     if(x == 528 && y == 590){ShipInHarbor = true;}
             
     
-    if(!ShipInHarbor){
-         if(mouse != null){
-    if(mouseX > 716 && mouseX < 836 && mouseY > 440 && mouseY < 725 && Greenfoot.mouseClicked(plek) ){clicked3 = true;}}
+    if(!ShipInHarbor){   
+    if(mouseX > 716 && mouseX < 836 && mouseY > 440 && mouseY < 725 && Greenfoot.mouseClicked(plek) ){clicked3 = true;}
     if(clicked3 == true){
     if( x > 776) { setLocation(getX() -2, getY() );} 
     if( x == 776 && y >= 200) { setRotation(270); setLocation(x, y+1 ); }}}
@@ -71,8 +74,7 @@ public class CCSchip extends Actor
 
             
     if(!ShipInHarbor){
-         if(mouse != null){
-    if(mouseX > 964 && mouseX < 1084 && mouseY > 440 && mouseY < 725 && Greenfoot.mouseClicked(plek) ){clicked4 = true;}}
+    if(mouseX > 964 && mouseX < 1084 && mouseY > 440 && mouseY < 725 && Greenfoot.mouseClicked(plek) ){clicked4 = true;}
     if(clicked4 == true){
     if( x > 1024) { setLocation(getX() -2, getY() );} 
     if( x == 1024 && y >= 200) { setRotation(270); setLocation(x, y+1 ); }}}
@@ -88,4 +90,5 @@ public class CCSchip extends Actor
     if(ShipInHarbor == true) {setLocation(x, y );} 
 
   }
+}
 }
