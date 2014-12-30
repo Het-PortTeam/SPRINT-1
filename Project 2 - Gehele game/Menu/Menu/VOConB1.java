@@ -28,7 +28,9 @@ public class VOConB1 extends VOConB
     }
     }
     if(Greenfoot.isKeyDown("s")){
+        if(getY() >= 575){}  else {
         setLocation(getX(), getY() +Xspeed);
+    }
     }
     if(Greenfoot.isKeyDown("left")){
         setLocation(getX() -Xspeed, getY());
@@ -41,9 +43,11 @@ public class VOConB1 extends VOConB
         setLocation(getX(), getY() -Xspeed);
     }
     }
-        if(Greenfoot.isKeyDown("down")){
-            setLocation(getX(), getY() +Xspeed);
+    if(Greenfoot.isKeyDown("down")){
+        if(getY() >= 575){}  else {
+        setLocation(getX(), getY() +Xspeed);
+    }
+}
         }
-        }  
     }    
 }

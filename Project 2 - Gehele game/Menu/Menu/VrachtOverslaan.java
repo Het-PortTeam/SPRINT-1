@@ -25,7 +25,7 @@ public class VrachtOverslaan extends World
         addObject(new VOConS(), 1020, 485);
         addObject(new VOConB2(), 945, 485);
         addObject(new VOConS(), 945, 443);
-        addObject(new VOConM2(), 900, 400);
+        addObject(new VOConM(), 900, 400);
         addObject(new VOConS(), 840, 402);
         addObject(new VOConB3(), 870, 443);
         addObject(new VOConM(), 855, 485);
