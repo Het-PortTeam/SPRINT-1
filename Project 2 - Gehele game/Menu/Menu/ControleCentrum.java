@@ -31,6 +31,7 @@ public class ControleCentrum extends World
         addObject(new CCplek(), 777, 590);
         addObject(new CCplek(), 1027, 590);
         addObject(new BackButton(), 75, 50);
+        addObject(new Counter(), 600, 75);
     }
         
         
@@ -54,7 +55,7 @@ public class ControleCentrum extends World
         addObject(new CCSchip(), 1200, 200);
     }
     }
-    
+
 }
 
 
