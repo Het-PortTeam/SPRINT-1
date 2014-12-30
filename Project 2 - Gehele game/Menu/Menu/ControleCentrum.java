@@ -12,6 +12,7 @@ public class ControleCentrum extends World
     private GifImage gif = new GifImage("water_gif_test2.gif");  
     public long currentTime = System.currentTimeMillis();   // Later (for example in an act() method), do:
     public int timer = 0;
+    public int explainOnce = 1;
 
     public ControleCentrum()
     {    
@@ -37,7 +38,10 @@ public class ControleCentrum extends World
     public void act()
     {
         setBackground(gif.getCurrentImage());
-       // Greenfoot.playSound("CC.mp3");
+       if(explainOnce == 1) {
+           Greenfoot.playSound("CC.mp3");
+           explainOnce = 0;
+       }
        
        if( currentTime + 1000 <  System.currentTimeMillis() )
     {
