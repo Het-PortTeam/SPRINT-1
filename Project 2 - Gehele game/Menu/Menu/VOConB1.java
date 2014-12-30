@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
 /**
  * Write a description of class VOConB1 here.
@@ -7,15 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class VOConB1 extends VOConB
-{
+{ int x;
+  int Xspeed = 0;
     /**
      * Act - do whatever the VOConB1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        if (Greenfoot.isKeyDown("q")){
-             int Xspeed = 3;   
+        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(5, VOGrijper.class).isEmpty()){
+             Xspeed = 3;   
+             
+             if (getObjectsInRange(5, VOGrijper.class).isEmpty()){
+                 Xspeed = 4;
+                }
+             
+             
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());
     } 

@@ -18,11 +18,11 @@ public class VOCrane2 extends Actor
         if (A == 0) {
         if (getX() < 1000) {
             setLocation(getX() +3, getY());
-            if (getX() == 999) {A = 1;}
+            if (getX() == 1000) {A = 1; }
         }
     }
         if(A == 1) {
-        if (getX() > 500) {
+        if (getX() > 0) {
             setLocation(getX() -3, getY());
         }
         
