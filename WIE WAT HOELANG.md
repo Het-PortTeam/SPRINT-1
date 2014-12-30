@@ -134,6 +134,10 @@ Wat:		Projectles
 Datum: 		9/12/2014
 Tijdsduur: 	2 uur 50 minuten
 
+Wat:		Werken aan Controlecentrum
+Datum: 		30/12/2014
+Tijdsduur: 	3 uur
+
 
 ===Oscar Veldman======
 ======================
