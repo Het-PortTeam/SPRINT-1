@@ -49,8 +49,9 @@ public class ControleCentrum extends World
         timer = 0;
         addObject(new CCSchip(), 1200, 200);
     }
-    }
     
+   
+}
 }
 
 
