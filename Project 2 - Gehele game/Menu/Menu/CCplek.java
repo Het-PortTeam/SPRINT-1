@@ -14,7 +14,7 @@ public class CCplek extends Actor
      */
     public void act() 
     {
-        getImage().setTransparency(100);
+        getImage().setTransparency(255);
         
         
         
