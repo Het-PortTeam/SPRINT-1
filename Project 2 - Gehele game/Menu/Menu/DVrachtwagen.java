@@ -9,28 +9,33 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class DVrachtwagen extends Actor
 {
     
-    boolean click = false;
+    boolean click;
     boolean ready = true;
     public static int x;
     public void act() 
     {
-        if(getX() < 850 && ready == true) {
+        Actor door = getOneIntersectingObject(DDoorgaan.class);
+        if(getX() < 850) {
             setLocation(getX() + 3, getY());
             if(getX() >= 845) {
-                ready = false;
             }
         }
         
-        if(Greenfoot.mouseClicked(DDoorgaan.class)){
+        if(Greenfoot.mouseClicked(door) && getX() >= 845){
             click = true;
         }
         
-        if(click == true){
+        if(click == true && getX() <= 4000){
             setLocation(getX() + 3, getY());
+        }
+        
+        if(getX() > 1200) {
+            World world;
+            world = getWorld();
+            world.removeObjects(world.getObjects(DVrachtwagen.class));
         }
     }    
     
-    public static int driveAway(){
-            return x;
-        }
+
+   
     }

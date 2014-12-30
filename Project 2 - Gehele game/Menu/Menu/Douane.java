@@ -9,10 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Douane extends World
 {
 
-    /**
-     * Constructor for objects of class Douane.
-     * 
-     */
+    public long currentTime = System.currentTimeMillis();   // Later (for example in an act() method), do:
+    public int timer = 0;
     public Douane()
     {    
         super(1280, 720, 1); 
@@ -22,4 +20,23 @@ public class Douane extends World
         addObject(new DControle(), 1000, 600);
         addObject(new DScanner(), 850, 310);
     }
+    
+    public void act()
+    {
+
+       if( currentTime + 1000 <  System.currentTimeMillis() )
+    {
+        timer += 1;
+    }
+    
+    if( timer == 500)
+    {
+        addObject(new DVrachtwagen(), 200, 350);
+        timer = 0;
+    }
+    }
+    
 }
+
+
+
