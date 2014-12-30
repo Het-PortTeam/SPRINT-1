@@ -16,7 +16,6 @@ public class CCSchip extends Actor
     private boolean clicked2;
     private boolean clicked3;
     private boolean clicked4;
-    private boolean shipclick;
     
    
     /**
@@ -42,12 +41,8 @@ public class CCSchip extends Actor
 
         
         Actor plek = getOneIntersectingObject( CCplek.class );
+         
         
-        
-        if(Greenfoot.mouseClicked(this)){shipclick = true;}
-        
-        if(shipclick == true){
-
     if(!ShipInHarbor){
     if(mouseX > 221 && mouseX < 341 && mouseY > 440 && mouseY < 725 && Greenfoot.mouseClicked(plek) ){clicked1 = true;}
     if(clicked1 == true){
@@ -95,6 +90,5 @@ public class CCSchip extends Actor
     if(ShipInHarbor == true) {setLocation(x, y );} 
 
   }
-}
 }
 }
