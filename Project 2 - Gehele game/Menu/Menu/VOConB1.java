@@ -16,11 +16,11 @@ public class VOConB1 extends VOConB
      */
     public void act() 
     {
-        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(5, VOGrijper.class).isEmpty()){
+        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
              Xspeed = 3;   
              
              if (getObjectsInRange(5, VOGrijper.class).isEmpty()){
-                 Xspeed = 4;
+                 Xspeed = 10;
                 }
              
              
