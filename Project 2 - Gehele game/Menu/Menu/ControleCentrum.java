@@ -13,6 +13,7 @@ public class ControleCentrum extends World
     public long currentTime = System.currentTimeMillis();   // Later (for example in an act() method), do:
     public int timer = 0;
     public int explainOnce = 1;
+    Counter point = new Counter();
 
     public ControleCentrum()
     {    
@@ -25,14 +26,17 @@ public class ControleCentrum extends World
         addObject(new CCKade(), 400, 570); 
         addObject(new CCKade(), 650, 570);
         addObject(new CCKade(), 900, 570);
-        addObject(new CCSchip(), 1200, 200);
+        addObject(new Counter(), 600, 75);
+        addObject(new CCSchip(point), 1200, 200);
         addObject(new CCplek(), 280, 590); 
         addObject(new CCplek(), 527, 590);
         addObject(new CCplek(), 777, 590);
         addObject(new CCplek(), 1027, 590);
         addObject(new BackButton(), 75, 50);
-        addObject(new Counter(), 600, 75);
+        
         addObject(new CCEind(), 136, 202);
+        
+        
     }
         
         
@@ -53,7 +57,7 @@ public class ControleCentrum extends World
     if( timer == 500)
     {
         timer = 0;
-        addObject(new CCSchip(), 1200, 200);
+        addObject(new CCSchip(point), 1200, 200);
     }
     }
 

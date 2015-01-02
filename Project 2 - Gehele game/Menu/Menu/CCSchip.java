@@ -11,13 +11,19 @@ import java.util.List;
 public class CCSchip extends Actor
 {
     private boolean ShipInHarbor;
-    public int score;
     private boolean clicked1;
     private boolean clicked2;
     private boolean clicked3;
     private boolean clicked4;
     private boolean shipclick;
     private boolean back;
+    private Counter counter;
+    
+    
+    public CCSchip(Counter pointCounter)
+    {
+        counter = pointCounter;
+    }
     
    
     /**
@@ -102,9 +108,10 @@ public class CCSchip extends Actor
     if(back == true){ setLocation(getX(), getY()-2 );}
     if((x <= 1024 && y == 200) || (x <= 776 && y == 200) || (x <= 528 && y == 200) || (x <= 280 && y == 200)){setRotation(0); setLocation(getX() -2, y );}}
     
-    if(x == 136 && y == 200){W.removeObjects(W.getObjects(CCSchip.class)); score++;}
+    
 
   }
+  if(x <= 136 && y == 200){counter.add(5); }
 }
 }
 }
