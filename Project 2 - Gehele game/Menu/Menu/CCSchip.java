@@ -17,6 +17,7 @@ public class CCSchip extends Actor
     private boolean clicked3;
     private boolean clicked4;
     private boolean shipclick;
+    private boolean back;
     
    
     /**
@@ -42,6 +43,7 @@ public class CCSchip extends Actor
 
         
         Actor plek = getOneIntersectingObject( CCplek.class );
+        Actor eind = getOneIntersectingObject( CCEind.class );
         
         
         if(Greenfoot.mouseClicked(this)){shipclick = true;}
@@ -93,6 +95,14 @@ public class CCSchip extends Actor
     if(x == 280 && y == 590) { ShipInHarbor = true; /*W.removeObjects(W.getObjects(CCSchip.class));*/}
 
     if(ShipInHarbor == true) {setLocation(x, y );} 
+    
+
+    if(ShipInHarbor == true){
+    if(mouseX > 76 && mouseX < 196 && mouseY > 162 && mouseY < 262 && Greenfoot.mouseClicked(eind) ){back = true;}
+    if(back == true){ setLocation(getX(), getY()-2 );}
+    if((x <= 1024 && y == 200) || (x <= 776 && y == 200) || (x <= 528 && y == 200) || (x <= 280 && y == 200)){setRotation(0); setLocation(getX() -2, y );}}
+    
+    if(x == 136 && y == 200){W.removeObjects(W.getObjects(CCSchip.class)); score++;}
 
   }
 }

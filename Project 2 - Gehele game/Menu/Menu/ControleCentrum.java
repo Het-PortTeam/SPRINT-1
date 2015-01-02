@@ -32,6 +32,7 @@ public class ControleCentrum extends World
         addObject(new CCplek(), 1027, 590);
         addObject(new BackButton(), 75, 50);
         addObject(new Counter(), 600, 75);
+        addObject(new CCEind(), 136, 202);
     }
         
         
@@ -39,10 +40,10 @@ public class ControleCentrum extends World
     public void act()
     {
         setBackground(gif.getCurrentImage());
-       if(explainOnce == 1) {
+      /* if(explainOnce == 1) {
            Greenfoot.playSound("CC.mp3");
            explainOnce = 0;
-       }
+       }*/
        
        if( currentTime + 1000 <  System.currentTimeMillis() )
     {
