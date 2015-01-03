@@ -94,6 +94,14 @@ Wat:		Werken aan CC
 Datum:		22/12/2014
 Tijdsduur:	200 min.
 
+Wat:		Werken aan CC
+Datum:		27/12/2014
+Tijdsduur: 	180 min.
+
+Wat:		Werken aan CC
+Datum:		03/01/2014
+Tijdsduur:	120 min.
+
 
 
 ======Johan Bos=======
