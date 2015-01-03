@@ -10,6 +10,7 @@ import java.util.List;
 
 public class CCSchip extends Actor
 {
+    World W = getWorld();
     private boolean ShipInHarbor;
     private boolean clicked1;
     private boolean clicked2;
@@ -35,8 +36,16 @@ public class CCSchip extends Actor
     public void act()
     {   
         move();  
+        checkIsAtEnd();
     }
 
+    public void checkIsAtEnd()
+    {
+        if (isAtEdge())  
+        {  
+             getWorld().removeObject(this);  
+        }  
+    }
      public void move()
      {
         MouseInfo mouse = Greenfoot.getMouseInfo();
@@ -93,7 +102,7 @@ public class CCSchip extends Actor
     if( x == 1024 && y >= 200) { setRotation(270); setLocation(x, y+1 ); }}}
    
     
-    World W = getWorld();
+    
     
     if(x == 1024 && y == 590){ShipInHarbor = true; /*W.removeObjects(W.getObjects(CCSchip.class));*/}
     if(x == 776 && y == 590) { ShipInHarbor = true; /*W.removeObjects(W.getObjects(CCSchip.class));*/}
