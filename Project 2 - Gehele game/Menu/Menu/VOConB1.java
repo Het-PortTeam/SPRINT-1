@@ -19,8 +19,8 @@ public class VOConB1 extends VOConB
         if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
              Xspeed = 3;   
              
-             if (getObjectsInRange(5, VOGrijper.class).isEmpty()){
-                 Xspeed = 10;
+             if (getObjectsInRange(5, VOGrijper.class).isEmpty() && (Greenfoot.isKeyDown("e"))){
+                 Xspeed = 0;
                 }
              
              
@@ -36,7 +36,7 @@ public class VOConB1 extends VOConB
     }
     }
     if(Greenfoot.isKeyDown("s")){
-        if(getY() >= 575){}  else {
+        if(getY() >= 690){}  else {
         setLocation(getX(), getY() +Xspeed);
     }
     }
@@ -52,7 +52,7 @@ public class VOConB1 extends VOConB
     }
     }
     if(Greenfoot.isKeyDown("down")){
-        if(getY() >= 575){}  else {
+        if(getY() >= 690){}  else {
         setLocation(getX(), getY() +Xspeed);
     }
 }

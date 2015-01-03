@@ -29,14 +29,16 @@ public class VrachtOverslaan extends World
         addObject(new VOConS(), 840, 402);
         addObject(new VOConB3(), 870, 443);
         addObject(new VOConM(), 855, 485);
+        VOConB1 VOConB4 = new VOConB1();
+        addObject(VOConB4, 765, 400);
         // Tot hier!
         // De containers schip2:
         addObject(new VOConB(), 992, 203);
         addObject(new VOConM(), 1007, 246);
         addObject(new VOConS(), 1022, 290);
         // Tot hier!
-        addObject(new VOGrijper(), 640,360);
-        addObject(new VOCrane(), 640, 360);
+        addObject(new VOGrijper(), 640,550);
+        addObject(new VOCrane(), 640, 550);
         addObject(new VOgrijper20(), 500, 130);
         addObject(new VOCrane2(), 500, 360);
         //Einde
