@@ -8,4 +8,5 @@ comment2.params=
 comment2.target=void\ checkIsAtEnd()
 comment3.params=
 comment3.target=void\ move()
+comment3.text=\r\n\ \ \ \ public\ void\ addScore()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ if\ (\!getWorld().getObjects(Counter.class).isEmpty())\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ ((Counter)\ getWorld().getObjects(Counter.class).get(0)).add(1);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n
 numComments=4
