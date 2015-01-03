@@ -14,6 +14,6 @@ public class CCEind extends Actor
      */
     public void act() 
     {
-        getImage().setTransparency(100);
+        getImage().setTransparency(0);
     }    
 }
