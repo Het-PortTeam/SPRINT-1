@@ -18,7 +18,11 @@ public class CCSchip extends Actor
     private boolean clicked4;
     private boolean shipclick;
     private boolean back;
-    public Counter counter;
+    private boolean collision; 
+    private Counter counter;
+    private int HP = 5;
+    
+    
     public void giveScoreValue()
     {
         
@@ -64,6 +68,8 @@ public class CCSchip extends Actor
         
         Actor plek = getOneIntersectingObject( CCplek.class );
         Actor eind = getOneIntersectingObject( CCEind.class );
+        
+        
         
         
             if(Greenfoot.mouseClicked(this)){shipclick = true;}
@@ -125,6 +131,11 @@ public class CCSchip extends Actor
     
 
             }
+            
+            if(this.isTouching( CCSchip.class) == true) {collision = true;}
+            if(collision == true) {HP--;}
+            if(HP == 0){System.out.print("You Lose!");}
+            
         }
     }
 }
