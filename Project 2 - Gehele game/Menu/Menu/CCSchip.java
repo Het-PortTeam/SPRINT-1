@@ -18,7 +18,7 @@ public class CCSchip extends Actor
     private boolean clicked4;
     private boolean shipclick;
     private boolean back;
-    private Counter counter;
+    public Counter counter;
     
     
     public CCSchip(Counter pointCounter)
@@ -44,6 +44,7 @@ public class CCSchip extends Actor
         if (isAtEdge())  
         {  
              getWorld().removeObject(this);  
+             counter.add(5);
              //addScore();
         }  
     }
@@ -130,7 +131,6 @@ public class CCSchip extends Actor
     
 
             }
-            if(x <= 136 && y == 200){counter.add(5); }
         }
     }
 }
