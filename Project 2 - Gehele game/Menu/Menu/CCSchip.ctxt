@@ -1,13 +1,12 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ giveScoreValue()
-comment1.params=pointCounter
-comment1.target=CCSchip(Counter)
+comment0.params=pointCounter
+comment0.target=CCSchip(Counter)
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ CCSchip\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
-comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ CCSchip\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.target=void\ checkIsAtEnd()
 comment3.params=
-comment3.target=void\ checkIsAtEnd()
-comment4.params=
-comment4.target=void\ move()
-numComments=5
+comment3.target=void\ move()
+comment3.text=\r\n\ \ \ \ public\ void\ addScore()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ if\ (\!getWorld().getObjects(Counter.class).isEmpty())\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ ((Counter)\ getWorld().getObjects(Counter.class).get(0)).add(1);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n
+numComments=4
