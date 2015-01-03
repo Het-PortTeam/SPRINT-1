@@ -13,6 +13,7 @@ public class ControleCentrum extends World
     public long currentTime = System.currentTimeMillis();   // Later (for example in an act() method), do:
     public int timer = 0;
     public int explainOnce = 1;
+    public int Difficulty = 1; 
     Counter Counter = new Counter();
 
     public ControleCentrum()
@@ -43,16 +44,16 @@ public class ControleCentrum extends World
     
     public void act()
     {
-       int Difficulty = 1; 
+       
        int CounterValue = Counter.getValue();
        setBackground(gif.getCurrentImage());
        /* if(explainOnce == 1) {
            Greenfoot.playSound("CC.mp3");
            explainOnce = 0;
        }*/
-       if(CounterValue > 50)
+       if(CounterValue / 25 > 0)
        {
-           Difficulty = CounterValue / 25;
+           Difficulty++;
        }
        
        if( currentTime + 1000 <  System.currentTimeMillis() )
@@ -64,6 +65,7 @@ public class ControleCentrum extends World
        {
            timer = 0;
            addObject(new CCSchip(Counter), 1200, 200);
+           System.out.print(Difficulty);
        }
     }
 
