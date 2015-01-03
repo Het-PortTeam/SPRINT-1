@@ -43,22 +43,28 @@ public class ControleCentrum extends World
     
     public void act()
     {
-        setBackground(gif.getCurrentImage());
-      /* if(explainOnce == 1) {
+       int Difficulty = 1; 
+       int CounterValue = Counter.getValue();
+       setBackground(gif.getCurrentImage());
+       /* if(explainOnce == 1) {
            Greenfoot.playSound("CC.mp3");
            explainOnce = 0;
        }*/
+       if(CounterValue > 50)
+       {
+           Difficulty = CounterValue / 25;
+       }
        
-  /*     if( currentTime + 1000 <  System.currentTimeMillis() )
-    {
-        timer += 1;
-    }
+       if( currentTime + 1000 <  System.currentTimeMillis() )
+       {
+           timer += Difficulty;
+       }
     
-    if( timer == 500)
-    {
-        timer = 0;
-        addObject(new CCSchip(point), 1200, 200);
-    }*/
+       if( timer == 500)
+       {
+           timer = 0;
+           addObject(new CCSchip(Counter), 1200, 200);
+       }
     }
 
 }

@@ -19,7 +19,10 @@ public class CCSchip extends Actor
     private boolean shipclick;
     private boolean back;
     public Counter counter;
-    
+    public void giveScoreValue()
+    {
+        
+    }
     
     public CCSchip(Counter pointCounter)
     {
@@ -45,18 +48,9 @@ public class CCSchip extends Actor
         {  
              getWorld().removeObject(this);  
              counter.add(5);
-             //addScore();
         }  
     }
-    /*
-    public void addScore()
-    {
-        if (!getWorld().getObjects(Counter.class).isEmpty())
-        {
-            ((Counter) getWorld().getObjects(Counter.class).get(0)).add(1);
-        }
-    }
-    */
+
      public void move()
      {
         MouseInfo mouse = Greenfoot.getMouseInfo();
