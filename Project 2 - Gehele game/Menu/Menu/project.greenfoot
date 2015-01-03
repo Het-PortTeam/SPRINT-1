@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Jan 03 14:43:33 CET 2015
+#Sat Jan 03 15:09:04 CET 2015
 target24.type=ClassTarget
 target16.name=VrachtOverslaan
 target13.editor.width=900
@@ -257,6 +257,7 @@ dependency50.from=Douane
 target42.showInterface=false
 target13.height=50
 target16.editor.width=900
+class.CCExit.superclass=greenfoot.Actor
 target11.editor.height=700
 dependency11.type=UsesDependency
 dependency13.to=VOSchip2
@@ -439,6 +440,7 @@ dependency10.to=Kade
 dependency4.from=VOMenu
 target33.height=50
 target16.width=120
+class.CCExit.image=exit.png
 target6.height=50
 dependency27.type=UsesDependency
 target12.editor.y=-9
