@@ -50,7 +50,7 @@ public class ControleCentrum extends World
            explainOnce = 0;
        }*/
        
-    if( currentTime + 1000 <  System.currentTimeMillis() )
+  /*     if( currentTime + 1000 <  System.currentTimeMillis() )
     {
         timer += 1;
     }
@@ -58,9 +58,8 @@ public class ControleCentrum extends World
     if( timer == 500)
     {
         timer = 0;
-        addObject(new CCSchip(Counter), 1200, 200);
-        System.out.print(Counter);
-    }
+        addObject(new CCSchip(point), 1200, 200);
+    }*/
     }
 
 }
