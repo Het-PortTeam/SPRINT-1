@@ -32,6 +32,7 @@ public class ControleCentrum extends World
         addObject(Counter, 600, 75);
         lives = new Lives("Levens: ");
         addObject(lives, 500, 75);
+        CCSchip CCSchip = new CCSchip(Counter,lives);
         addObject(new CCSchip(Counter,lives), 1200, 200);
         addObject(new CCplek(), 280, 590); 
         addObject(new CCplek(), 527, 590);
@@ -40,6 +41,7 @@ public class ControleCentrum extends World
         addObject(new BackButton(), 75, 50);
         addObject(new CCEind(), 106, 194);
         addObject(new CCExit(), 82, 300);
+
         
     }
         
@@ -63,8 +65,9 @@ public class ControleCentrum extends World
        if( timer == 500)
        {
            timer = 0;
+           
            addObject(new CCSchip(Counter, lives), 1200, 200);
-           System.out.print(Difficulty);
+           //System.out.print(Difficulty);
        }
        
               if(CounterValue % 25 == 0 && CounterValue > 0)

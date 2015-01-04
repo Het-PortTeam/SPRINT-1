@@ -21,6 +21,8 @@ public class CCSchip extends Actor
     private boolean collision; 
     private Counter counter;
     private Lives lives;
+
+    
     
     
     public void giveScoreValue()
@@ -69,6 +71,7 @@ public class CCSchip extends Actor
         
         Actor plek = getOneIntersectingObject( CCplek.class );
         Actor eind = getOneIntersectingObject( CCEind.class );
+
         
         
         
@@ -116,7 +119,7 @@ public class CCSchip extends Actor
     
     
     
-                                                if(x == 1024 && y == 590){ShipInHarbor = true;   /*W.removeObjects(W.getObjects(CCSchip.class));*/}
+                                                if(x == 1024 && y == 590){ShipInHarbor = true;  /*W.removeObjects(W.getObjects(CCSchip.class));*/}
                                                 if(x == 776 && y == 590) { ShipInHarbor = true; /*W.removeObjects(W.getObjects(CCSchip.class));*/}
                                                 if(x == 528 && y == 590) { ShipInHarbor = true; /*W.removeObjects(W.getObjects(CCSchip.class));*/}
                                                 if(x == 280 && y == 590) { ShipInHarbor = true; /*W.removeObjects(W.getObjects(CCSchip.class));*/}
@@ -129,9 +132,14 @@ public class CCSchip extends Actor
                                                     if(back == true){ setLocation(getX(), getY()-2 );}
                                                     if((x <= 1024 && y == 200) || (x <= 776 && y == 200) || (x <= 528 && y == 200) || (x <= 280 && y == 200)){setRotation(0); setLocation(getX() -2, y );}}
     
-    
+                                                        
 
              }
+             
+             if(this.isTouching(CCSchip.class)){collision = true;} 
+             if(collision == true){lives.del(1);}
+             if(lives.target == 4) {collision = false;}
+             if(collision == false){lives.del(0);}
         }
     }
 }
