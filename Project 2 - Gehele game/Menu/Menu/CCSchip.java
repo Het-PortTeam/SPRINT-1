@@ -19,7 +19,9 @@ public class CCSchip extends Actor
     private boolean shipclick;
     private boolean back;
     private Counter counter;
-    private Lives lives;
+    private int HP = 5;
+
+    
     
     
    
@@ -30,10 +32,10 @@ public class CCSchip extends Actor
         
     }
     
-    public CCSchip(Counter pointCounter, Lives life)
+    public CCSchip(Counter pointCounter)
     {
         counter = pointCounter;
-        lives = life;
+
     }
     
    
@@ -47,7 +49,7 @@ public class CCSchip extends Actor
     {   
         move();  
         checkIsAtEnd();
-        health();
+        loseHP();
     } 
     
 
@@ -60,11 +62,17 @@ public class CCSchip extends Actor
         }  
     }
     
-      public void health()
+      public void loseHP()
      {
          Actor touch = getOneIntersectingObject( CCSchip.class );
-        if(touch != null){lives.del(1);} 
-        if(lives.getValue() == 4) {lives.del(0);}
+
+         if(touch != null){HP--; showHP();}
+         if(HP == 0){getWorld().removeObject(this);}
+    }
+    
+    public int showHP()
+    {
+        return HP;
     }
     
      public void move()
@@ -128,10 +136,10 @@ public class CCSchip extends Actor
     
     
     
-                                                if(x == 1024 && y == 590){ShipInHarbor = true;  health(); /*W.removeObjects(W.getObjects(CCSchip.class));*/}
-                                                if(x == 776 && y == 590) { ShipInHarbor = true; health(); /*W.removeObjects(W.getObjects(CCSchip.class));*/}
-                                                if(x == 528 && y == 590) { ShipInHarbor = true; health(); /*W.removeObjects(W.getObjects(CCSchip.class));*/}
-                                                if(x == 280 && y == 590) { ShipInHarbor = true; health(); /*W.removeObjects(W.getObjects(CCSchip.class));*/}
+                                                if(x == 1024 && y == 590){ShipInHarbor = true;/*W.removeObjects(W.getObjects(CCSchip.class));*/}
+                                                if(x == 776 && y == 590) { ShipInHarbor = true;/*W.removeObjects(W.getObjects(CCSchip.class));*/}
+                                                if(x == 528 && y == 590) { ShipInHarbor = true;/*W.removeObjects(W.getObjects(CCSchip.class));*/}
+                                                if(x == 280 && y == 590) { ShipInHarbor = true;/*W.removeObjects(W.getObjects(CCSchip.class));*/}
 
                                                 if(ShipInHarbor == true) {setLocation(x, y );} 
     
