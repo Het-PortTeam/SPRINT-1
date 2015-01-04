@@ -17,12 +17,12 @@ public class VOConB2 extends VOConB
         public void act() 
     {
         if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
-             Xspeed = 3;   
+             Xspeed = 3;   }
              
              
              
              
-          if (getObjectsInRange(5, VOGrijper.class).isEmpty() && (Greenfoot.isKeyDown("e"))){
+          if ((Greenfoot.isKeyDown("e"))){
                  Xspeed = 0;
                 }
              
@@ -61,5 +61,4 @@ public class VOConB2 extends VOConB
 }
         }
     }    
-} 
 

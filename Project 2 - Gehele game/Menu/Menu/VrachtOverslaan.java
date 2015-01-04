@@ -47,6 +47,8 @@ public class VrachtOverslaan extends World
         addObject(VOConB6, 645, 443);
         VOConM VOConM6 = new VOConM();
         addObject(VOConM6, 630, 485);
+        VOConB1 VOConB7 = new VOConB1();
+        addObject(VOConB7, 540, 400);
         // Tot hier!
         // De containers schip2:
         addObject(new VOConB(), 992, 203);

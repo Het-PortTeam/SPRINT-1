@@ -18,7 +18,7 @@ public class VOConM extends Actor
         if (Greenfoot.isKeyDown("3") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
              Xspeed = 3;   }
 
-               if (getObjectsInRange(5, VOGrijper.class).isEmpty() && Greenfoot.isKeyDown("4")){
+               if (Greenfoot.isKeyDown("4")){
                  Xspeed = 0;
                 }
              
