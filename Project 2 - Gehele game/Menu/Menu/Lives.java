@@ -35,7 +35,7 @@ public class Lives extends Actor
 {
     private static final Color transparent = new Color(0,0,0,0);
     private GreenfootImage background;
-    private int value;
+    public int value;
     public int target;
     private String prefix;
     
@@ -75,6 +75,11 @@ public class Lives extends Actor
      * Add a new score to the current counter value.  This will animate
      * the counter over consecutive frames until it reaches the new value.
      */
+    public void add(int score)
+    {
+        target += score;
+    }
+    
     public void del(int score)
     {
         target -= score;
