@@ -20,7 +20,7 @@ public class CCSchip extends Actor
     private boolean back;
     private boolean collision; 
     private Counter counter;
-    private int HP = 5;
+    private Lives lives;
     
     
     public void giveScoreValue()
@@ -28,9 +28,10 @@ public class CCSchip extends Actor
         
     }
     
-    public CCSchip(Counter pointCounter)
+    public CCSchip(Counter pointCounter, Lives life)
     {
         counter = pointCounter;
+        lives = life;
     }
     
    
@@ -115,7 +116,7 @@ public class CCSchip extends Actor
     
     
     
-                                                if(x == 1024 && y == 590){ShipInHarbor = true; /*W.removeObjects(W.getObjects(CCSchip.class));*/}
+                                                if(x == 1024 && y == 590){ShipInHarbor = true;   /*W.removeObjects(W.getObjects(CCSchip.class));*/}
                                                 if(x == 776 && y == 590) { ShipInHarbor = true; /*W.removeObjects(W.getObjects(CCSchip.class));*/}
                                                 if(x == 528 && y == 590) { ShipInHarbor = true; /*W.removeObjects(W.getObjects(CCSchip.class));*/}
                                                 if(x == 280 && y == 590) { ShipInHarbor = true; /*W.removeObjects(W.getObjects(CCSchip.class));*/}
@@ -130,12 +131,7 @@ public class CCSchip extends Actor
     
     
 
-            }
-            
-            if(this.isTouching( CCSchip.class) == true) {collision = true;}
-            if(collision == true) {HP--;}
-            if(HP == 0){System.out.print("You Lose!");}
-            
+             }
         }
     }
 }
