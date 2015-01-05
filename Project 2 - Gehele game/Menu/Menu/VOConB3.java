@@ -23,6 +23,11 @@ public class VOConB3 extends VOConB
              if ((Greenfoot.isKeyDown("e"))){
                  Xspeed = 0;
                 }
+                
+                if (!getObjectsInRange(25, VOTrain.class).isEmpty()){
+                 Greenfoot.isKeyDown("t");
+                 Xspeed = 3;
+                }
              
              
        if(Greenfoot.isKeyDown("a")){

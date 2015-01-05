@@ -23,6 +23,17 @@ public class VOConB1 extends VOConB
                  Xspeed = 0;
                 }
              
+             if (!getObjectsInRange(25, VOTrain.class).isEmpty()){
+                 if (Greenfoot.isKeyDown("t") && getX() < 1100){
+                     setLocation(getX() + 3, getY());
+                    }
+                    if (getX() >= 1100){
+                        World world;
+                        world = getWorld();
+                        world.removeObjects(world.getObjects(VOConB1.class));
+                    }
+                }
+             
              
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());

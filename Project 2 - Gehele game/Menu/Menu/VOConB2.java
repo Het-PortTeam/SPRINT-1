@@ -26,6 +26,10 @@ public class VOConB2 extends VOConB
                  Xspeed = 0;
                 }
              
+                if (!getObjectsInRange(25, VOTrain.class).isEmpty()){
+                 Greenfoot.isKeyDown("t");
+                 Xspeed = 3;
+                }
              
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());
