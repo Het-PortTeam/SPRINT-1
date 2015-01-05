@@ -12,16 +12,20 @@ public class VrachtOverslaan extends World
     Counter Counter = new Counter();
     
     public VrachtOverslaan()
-    {    
-        super(1280, 720, 1); 
+    {
+        super(1280, 720, 1); //wereld
        
+        //kade
         addObject(new Kade(), 640, 360);
         addObject(new Rails(), 640, 360);
+        
         // De trein
         addObject(new VOLocomotief(), 640, 695);
         addObject(new VOTrain(), 523, 698);
         addObject(new VOTrain(), 383, 698);
         // Tot hier!
+        
+        //schepen
         addObject(new VOSchip(), 640,442);
         addObject(new VOSchip2(), 640, 250);
         
@@ -52,10 +56,17 @@ public class VrachtOverslaan extends World
         addObject(new VOConS6(), 615, 402);
        
         // Tot hier!
+        
         // De containers schip2:
+        //VOConB tegenstander "Rood"
         addObject(new VOConB(), 992, 203);
+        
+        //VOConM tegenstander "Groen"
         addObject(new VOConM(), 1007, 246);
+        
+        //VOConS tegenstander "Geel"
         addObject(new VOConS(), 1022, 290);
+        
         // Tot hier!
         addObject(new VOGrijper(), 640,550);
         addObject(new VOCrane(), 640, 550);
