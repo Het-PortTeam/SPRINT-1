@@ -68,6 +68,7 @@ public class VrachtOverslaan extends World
         //Einde
         addObject(new BackButton(), 75, 50);
     }
+ 
     public void act()
     {
         int CounterValue = Counter.getValue();
@@ -91,6 +92,6 @@ public class VrachtOverslaan extends World
               if(CounterValue % 25 == 0 && CounterValue > 0)
        {
            Difficulty = CounterValue / 25;
-       }
+        }
     }
 }
