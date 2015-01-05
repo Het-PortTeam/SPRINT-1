@@ -67,6 +67,10 @@ public class VrachtOverslaan extends World
         addObject(new VOCrane2(), 500, 360);
         //Einde
         addObject(new BackButton(), 75, 50);
+        
+        //counter
+        Counter = new Counter("Punten: ");
+        addObject(Counter, 600, 50);
     }
  
     public void act()

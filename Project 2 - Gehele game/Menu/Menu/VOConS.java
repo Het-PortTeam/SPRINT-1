@@ -6,13 +6,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class VOConS extends Actor
 {
     int Xspeed = 0;
+    private Counter counter;
+    
+    
+    
     /**
      * Act - do whatever the VOConS wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+      
     public void act() 
     {
         if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
@@ -30,6 +36,7 @@ public class VOConS extends Actor
                         World world;
                         world = getWorld();
                         world.removeObjects(world.getObjects(VOConS.class));
+                        counter.add(5);
                     }
                 }
              
@@ -60,10 +67,10 @@ public class VOConS extends Actor
         setLocation(getX(), getY() -Xspeed);
     }
     }
-    if(Greenfoot.isKeyDown("down")){
-        if(getY() >= 690){}  else {
-        setLocation(getX(), getY() +Xspeed);
+        if(Greenfoot.isKeyDown("down")){
+           if(getY() >= 690){}  else {
+             setLocation(getX(), getY() +Xspeed);
+         }
     }
-}
         }
     }    
