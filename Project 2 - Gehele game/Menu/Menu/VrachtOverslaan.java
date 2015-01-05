@@ -26,35 +26,31 @@ public class VrachtOverslaan extends World
         addObject(new VOSchip2(), 640, 250);
         
         // De containers schip1:
+        //VOConB "Rood"
         addObject(new VOConB1(), 990, 400);
-        addObject(new VOConM(), 1005, 443);
-        addObject(new VOConS(), 1020, 485);
         addObject(new VOConB2(), 945, 485);
-        addObject(new VOConS(), 945, 443);
-        addObject(new VOConM(), 900, 400);
-        addObject(new VOConS(), 840, 402);
         addObject(new VOConB3(), 870, 443);
-        addObject(new VOConM(), 855, 485);
-        VOConB VOConB4 = new VOConB();
-        addObject(VOConB4, 765, 400);
-        VOConM VOConM4 = new VOConM();
-        addObject(VOConM4, 780, 443);
-        VOConS VOConS4 = new VOConS();
-        addObject(VOConS4, 795, 485);
-        VOConB VOConB5 = new VOConB();
-        addObject(VOConB5, 720, 485);
-        VOConS VOConS5 = new VOConS();
-        addObject(VOConS5, 720, 443);  
-        VOConM VOConM5 = new VOConM();
-        addObject(VOConM5, 675, 400);
-        VOConS VOConS6 = new VOConS();
-        addObject(VOConS6, 615, 402);
-        VOConB VOConB6 = new VOConB();
-        addObject(VOConB6, 645, 443);
-        VOConM VOConM6 = new VOConM();
-        addObject(VOConM6, 630, 485);
-        VOConB VOConB7 = new VOConB();
-        addObject(VOConB7, 540, 400);
+        addObject(new VOConB4(), 765, 400);
+        addObject(new VOConB5(), 720, 485);
+        addObject(new VOConB6(), 645, 443);
+        addObject(new VOConB7(), 540, 400);
+        
+        //VOConM "Groen"
+        addObject(new VOConM1(), 1005, 443);
+        addObject(new VOConM2(), 900, 400);
+        addObject(new VOConM3(), 855, 485);
+        addObject(new VOConM4(), 780, 443);
+        addObject(new VOConM5(), 675, 400);
+        addObject(new VOConM6(), 630, 485);
+        
+        //VOConS "Geel"
+        addObject(new VOConS1(), 1020, 485);
+        addObject(new VOConS2(), 945, 443);
+        addObject(new VOConS3(), 840, 402);
+        addObject(new VOConS4(), 795, 485);
+        addObject(new VOConS5(), 720, 443);
+        addObject(new VOConS6(), 615, 402);
+       
         // Tot hier!
         // De containers schip2:
         addObject(new VOConB(), 992, 203);

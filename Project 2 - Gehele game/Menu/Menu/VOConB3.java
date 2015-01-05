@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class VOConB3 extends VOConB
 {
-    
-    int Xspeed = 0;
+    int x;
+  int Xspeed = 0;
     /**
      * Act - do whatever the VOConB3 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
