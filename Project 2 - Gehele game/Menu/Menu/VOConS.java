@@ -15,11 +15,22 @@ public class VOConS extends Actor
      */
     public void act() 
     {
-        if (Greenfoot.isKeyDown("1") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
+        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
              Xspeed = 3;   }
 
-               if ((Greenfoot.isKeyDown("2"))){
+               if ((Greenfoot.isKeyDown("e"))){
                  Xspeed = 0;
+                }
+                
+                if (!getObjectsInRange(25, VOTrain.class).isEmpty()){
+                 if (Greenfoot.isKeyDown("t") && getX() < 1100){
+                     setLocation(getX() + 3, getY());
+                    }
+                    if (getX() >= 1100){
+                        World world;
+                        world = getWorld();
+                        world.removeObjects(world.getObjects(VOConS.class));
+                    }
                 }
              
        if(Greenfoot.isKeyDown("a")){
