@@ -35,7 +35,6 @@ public class CCSchip extends Actor
     public CCSchip(Counter pointCounter)
     {
         counter = pointCounter;
-
     }
     
    
@@ -49,7 +48,6 @@ public class CCSchip extends Actor
     {   
         move();  
         checkIsAtEnd();
-        loseHP();
     } 
     
 
@@ -66,14 +64,9 @@ public class CCSchip extends Actor
      {
          Actor touch = getOneIntersectingObject( CCSchip.class );
 
-         if(touch != null){HP--; showHP();}
-         if(HP == 0){getWorld().removeObject(this);}
-    }
-    
-    public int showHP()
-    {
-        return HP;
-    }
+         if(!getIntersectingObjects(CCSchip.class).isEmpty()){HP--;}
+  
+      }
     
      public void move()
      {
@@ -153,5 +146,4 @@ public class CCSchip extends Actor
              }
         }
     }
-    
-}
+    }
