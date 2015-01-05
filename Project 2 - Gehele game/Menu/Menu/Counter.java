@@ -38,6 +38,7 @@ public class Counter extends Actor
     private int value;
     private int target;
     private String prefix;
+    int score = 0;
     
     public Counter()
     {
@@ -126,12 +127,18 @@ public class Counter extends Actor
         setImage(image);
     }
     
-    int score = 0;
     /**
      * Update container score
      */
     public void addScore()
     {
-       score++; 
+       if (score < 19)
+       {
+           score++; 
+        }
+        else
+        {
+            System.out.println("U Heeft de game gewonnen! Gefeliciteerd");
+        }
     }
 }
