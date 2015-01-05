@@ -28,10 +28,11 @@ public class VOConS4 extends VOConS
                      setLocation(getX() + 3, getY());
                     }
                     if (getX() >= 1100){
-                        World world;
-                        world = getWorld();
-                        world.removeObjects(world.getObjects(VOConS4.class));
-                        counter.add(5);
+                        World myWorld = getWorld();
+                        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
+                        Counter counter = VrachtOverslaan.getCounter();
+                        counter.addScore();
+                        myWorld.removeObject(this);
                     }
                 }
              

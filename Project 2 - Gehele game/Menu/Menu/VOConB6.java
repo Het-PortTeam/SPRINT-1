@@ -26,9 +26,11 @@ public class VOConB6 extends VOConB
                      setLocation(getX() + 3, getY());
                     }
                     if (getX() >= 1100){
-                        World world;
-                        world = getWorld();
-                        world.removeObjects(world.getObjects(VOConB6.class));
+                        World myWorld = getWorld();
+                        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
+                        Counter counter = VrachtOverslaan.getCounter();
+                        counter.addScore();
+                        myWorld.removeObject(this);
                     }
                 }
              

@@ -80,6 +80,11 @@ public class VrachtOverslaan extends World
         addObject(Counter, 600, 50);
     }
  
+    public Counter getCounter()
+    {
+        return Counter;
+    }
+    
     public void act()
     {
         int CounterValue = Counter.getValue();

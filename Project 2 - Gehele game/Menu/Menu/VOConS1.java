@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class VOConS1 extends VOConS
 {
     int Xspeed = 0;
-    private Counter counter;
     /**
      * Act - do whatever the VOConS1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -28,10 +27,11 @@ public class VOConS1 extends VOConS
                      setLocation(getX() + 3, getY());
                     }
                     if (getX() >= 1100){
-                        World world;
-                        world = getWorld();
-                        world.removeObjects(world.getObjects(VOConS1.class));
-                        counter.add(5);
+                        World myWorld = getWorld();
+                        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
+                        Counter counter = VrachtOverslaan.getCounter();
+                        counter.addScore();
+                        myWorld.removeObject(this);
                     }
                 }
              

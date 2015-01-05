@@ -125,4 +125,13 @@ public class Counter extends Actor
                         (image.getHeight()-text.getHeight())/2);
         setImage(image);
     }
+    
+    int score = 0;
+    /**
+     * Update container score
+     */
+    public void addScore()
+    {
+       score++; 
+    }
 }
