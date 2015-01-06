@@ -38,6 +38,7 @@ public class Counter extends Actor
     private int value;
     private int target;
     private String prefix;
+    int score = 0;
     
     public Counter()
     {
@@ -125,4 +126,15 @@ public class Counter extends Actor
                         (image.getHeight()-text.getHeight())/2);
         setImage(image);
     }
+    
+    /**
+     * Add score
+     */
+     public void addScore(){
+         if(score < 19){
+             score++;
+            }else{
+                System.out.print("U heeft Gewonnen!");
+            }
+        }
 }
