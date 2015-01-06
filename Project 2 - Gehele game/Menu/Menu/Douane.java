@@ -29,7 +29,7 @@ public class Douane extends World
         timer += 1;
     }
     
-    if( timer == 500)
+    if( timer == 5000)
     {
         addObject(new DVrachtwagen(), 200, 350);
         timer = 0;

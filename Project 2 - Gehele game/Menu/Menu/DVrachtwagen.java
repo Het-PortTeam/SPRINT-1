@@ -10,6 +10,7 @@ public class DVrachtwagen extends Actor
 {
     
     boolean click;
+    int Spul;
     boolean ready = true;
     public static int x;
     public void act() 
@@ -17,8 +18,11 @@ public class DVrachtwagen extends Actor
         Actor door = getOneIntersectingObject(DDoorgaan.class);
         if(getX() < 850) {
             setLocation(getX() + 3, getY());
-            if(getX() >= 845) {
-            }
+        }
+        
+        if(getX() > 850 && Greenfoot.mouseClicked(this)) {
+            Spul = Greenfoot.getRandomNumber(90);
+            System.out.println(Spul);
         }
         
         if(Greenfoot.mouseClicked(door) && getX() >= 845){
