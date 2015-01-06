@@ -66,7 +66,7 @@ public class ControleCentrum extends World
        {
            timer = 0;
            
-           addObject(new CCSchip2(Counter, liveCounter), 1200, 200);
+           addObject(new CCSchip(Counter, liveCounter), 1200, 200);
            //System.out.print(Difficulty);
        }
        

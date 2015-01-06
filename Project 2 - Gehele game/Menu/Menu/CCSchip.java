@@ -43,42 +43,37 @@ public class CCSchip extends Actor
 
     public void act()
     {   
-        move();  
-        checkIsAtEnd();
+        move();     
         loseHP();
+        checkIsAtEnd();
     } 
     
 
     public void checkIsAtEnd()
     {
-        if (isAtEdge())  
+        if(isAtEdge())  
         {  
-             getWorld().removeObject(this);  
-             counter.add(5);
-        }  
+            getWorld().removeObject(this);  
+            counter.add(5);
+        }    
     }
    
     public void loseHP()
     {
-    Actor touching = getOneObjectAtOffset(0, 2, CCSchip2.class);
-    Actor touched = getOneObjectAtOffset(0, 1, CCSchip2.class);
-    Actor touchedd = getOneObjectAtOffset(0, 0, CCSchip2.class);
+        
+        Actor touching = getOneIntersectingObject(CCSchip.class);
     
-    if(touching != null && touched == null && touchedd == null){liveCounter.add(-1); W.removeObjects(W.getObjects(CCSchip2.class));}
-    if(touching != null && touched != null && touchedd == null){liveCounter.add(0);}
-    if(touching != null && touched == null && touchedd != null){liveCounter.add(0);}
-    if(touching != null && touched != null && touchedd != null){liveCounter.add(0);}
-    if(touching == null && touched != null && touchedd != null){liveCounter.add(0);}
-    else{liveCounter.add(0);}
+        if(touching != null){liveCounter.add(-1); this.removeTouching(CCSchip.class);}
+        else{liveCounter.add(0);}
     
     
-    if(liveCounter.getValue() <= 0){getWorld().removeObject(this); W.removeObjects(W.getObjects(CCSchip2.class));}
+        if(liveCounter.getValue() <= 0){getWorld().removeObject(this); W.removeObjects(W.getObjects(CCSchip.class));}
 
     
     }
     
-     public void move()
-     {
+    public void move()
+    {
         MouseInfo mouse = Greenfoot.getMouseInfo();
         if(mouse != null){
         int mouseY = mouse.getY();
