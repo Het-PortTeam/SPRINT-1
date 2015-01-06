@@ -1,5 +1,17 @@
 ===Kevin Verweij=====
 =====================
+Wat:		Werken aan Overslag
+Datum: 		5/1/2015
+Tijdsduur: 	4 uur
+
+Wat:		Werken aan Overslag
+Datum: 		30/12/2014
+Tijdsduur: 	3 uur
+
+Wat:		Projectles
+Datum: 		9/12/2014
+Tijdsduur: 	2 uur 50 minuten
+
 Datum:		18-11-2014
 Wat: 		Brainstormen over user stories game 1 & 2. 
 Tijdsduur: 	40 min.
