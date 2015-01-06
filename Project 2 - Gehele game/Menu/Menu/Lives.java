@@ -35,8 +35,8 @@ public class Lives extends Actor
 {
     private static final Color transparent = new Color(0,0,0,0);
     private GreenfootImage background;
-    private int value;
-    private int target;
+    public int value;
+    public int target;
     private String prefix;
     
     public Lives()
@@ -79,7 +79,7 @@ public class Lives extends Actor
     {
         target += score;
     }
-
+    
     /**
      * Return the current counter value.
      */

@@ -15,6 +15,7 @@ public class ControleCentrum extends World
     public int explainOnce = 1;
     public double Difficulty = 1; 
     Counter Counter = new Counter();
+    Lives liveCounter = new Lives();
 
     public ControleCentrum()
     {    
@@ -29,8 +30,10 @@ public class ControleCentrum extends World
         addObject(new CCKade(), 900, 570);
         Counter = new Counter("Punten: ");
         addObject(Counter, 600, 75);
-        CCSchip CCSchip = new CCSchip(Counter);
-        addObject(new CCSchip(Counter), 1200, 200);
+        liveCounter = new Lives("Levens: ");
+        addObject(liveCounter, 500, 75);
+        CCSchip CCSchip = new CCSchip(Counter, liveCounter);
+        addObject(new CCSchip(Counter, liveCounter), 1200, 200);
         addObject(new CCplek(), 280, 590); 
         addObject(new CCplek(), 527, 590);
         addObject(new CCplek(), 777, 590);
@@ -63,7 +66,7 @@ public class ControleCentrum extends World
        {
            timer = 0;
            
-           addObject(new CCSchip(Counter), 1200, 200);
+           addObject(new CCSchip2(Counter, liveCounter), 1200, 200);
            //System.out.print(Difficulty);
        }
        

@@ -8,7 +8,7 @@ import java.util.List;
  */
 
 
-public class CCSchip extends Actor
+public class CCSchip2 extends Actor
 {
     World W = getWorld();
     private boolean ShipInHarbor;
@@ -28,7 +28,7 @@ public class CCSchip extends Actor
         
     }
     
-    public CCSchip(Counter pointCounter, Lives hpCounter)
+    public CCSchip2(Counter pointCounter, Lives hpCounter)
     {
         counter = pointCounter;
         liveCounter = hpCounter;
@@ -60,19 +60,12 @@ public class CCSchip extends Actor
    
     public void loseHP()
     {
-    Actor touching = getOneObjectAtOffset(0, 2, CCSchip2.class);
-    Actor touched = getOneObjectAtOffset(0, 1, CCSchip2.class);
-    Actor touchedd = getOneObjectAtOffset(0, 0, CCSchip2.class);
+    Actor touched = this.getOneObjectAtOffset(0, 0, CCSchip.class);
+    Actor touching = this.getOneObjectAtOffset(0, 1, CCSchip.class);
     
-    if(touching != null && touched == null && touchedd == null){liveCounter.add(-1); W.removeObjects(W.getObjects(CCSchip2.class));}
-    if(touching != null && touched != null && touchedd == null){liveCounter.add(0);}
-    if(touching != null && touched == null && touchedd != null){liveCounter.add(0);}
-    if(touching != null && touched != null && touchedd != null){liveCounter.add(0);}
-    if(touching == null && touched != null && touchedd != null){liveCounter.add(0);}
+    if(touching != null && (getX() == 280 && getY() == 589) || (getX() == 528 && getY() == 589) || (getX() == 776 && getY() == 589) || (getX() == 1024 && getY() == 589)){liveCounter.add(-1);}
+    if(touched != null && (getX() == 280 && getY() == 590) || (getX() == 528 && getY() == 590) || (getX() == 776 && getY() == 590) || (getX() == 1024 && getY() == 590)){liveCounter.add(0);}
     else{liveCounter.add(0);}
-    
-    
-    if(liveCounter.getValue() <= 0){getWorld().removeObject(this); W.removeObjects(W.getObjects(CCSchip2.class));}
 
     
     }
@@ -137,10 +130,10 @@ public class CCSchip extends Actor
     
     
     
-                                                if(x == 1024 && y == 590){ShipInHarbor = true;}
-                                                if(x == 776 && y == 590) { ShipInHarbor = true;}
-                                                if(x == 528 && y == 590) { ShipInHarbor = true;}
-                                                if(x == 280 && y == 590) { ShipInHarbor = true;}
+                                                if(x == 1024 && y == 590){ShipInHarbor = true;/*W.removeObjects(W.getObjects(CCSchip.class));*/}
+                                                if(x == 776 && y == 590) { ShipInHarbor = true;/*W.removeObjects(W.getObjects(CCSchip.class));*/}
+                                                if(x == 528 && y == 590) { ShipInHarbor = true;/*W.removeObjects(W.getObjects(CCSchip.class));*/}
+                                                if(x == 280 && y == 590) { ShipInHarbor = true;/*W.removeObjects(W.getObjects(CCSchip.class));*/}
 
                                                 if(ShipInHarbor == true) {setLocation(x, y );} 
     
