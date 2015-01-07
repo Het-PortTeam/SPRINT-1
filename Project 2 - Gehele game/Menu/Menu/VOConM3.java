@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class VOConM3 extends VOConM
 {
+    private Counter counter;
+    public boolean tClicked;
     /**
      * Act - do whatever the VOConM3 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -22,15 +24,18 @@ public class VOConM3 extends VOConM
                 }
                 
                 if (!getObjectsInRange(25, VOTrain.class).isEmpty()){
-                 if (Greenfoot.isKeyDown("t") && getX() < 1100){
-                     setLocation(getX() + 3, getY());
-                    }
-                    if (getX() >= 1100){
+                 if (Greenfoot.isKeyDown("t") && getX() < 1280){
+                        tClicked = true;           
+                    } 
+                    if (isAtEdge()){
                         World myWorld = getWorld();
                         VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
                         Counter counter = VrachtOverslaan.getCounter();
                         counter.add(1);
                         myWorld.removeObject(this);
+                    }
+                    if(tClicked == true){
+                        setLocation(getX() + 3, getY());
                     }
                 }
              

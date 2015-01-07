@@ -15,7 +15,7 @@ public class VOConB extends Actor
     
     int x;
     int Xspeed = 0;
-    
+    private Counter counter;
     public void act() 
     {
         if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){

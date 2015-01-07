@@ -10,6 +10,8 @@ import java.util.List;
 public class VOConB1 extends VOConB
 { int x;
   int Xspeed = 0;
+  private Counter counter;
+  public boolean tClicked;
     /**
      * Act - do whatever the VOConB1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,21 +19,25 @@ public class VOConB1 extends VOConB
     public void act() 
     {
         if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
-             Xspeed = 3;  }
-             
-             if ((Greenfoot.isKeyDown("e"))){
+             Xspeed = 3;   }
+
+               if ((Greenfoot.isKeyDown("e"))){
                  Xspeed = 0;
                 }
-             
-             if (!getObjectsInRange(25, VOTrain.class).isEmpty()){
-                 if (Greenfoot.isKeyDown("t") && getX() < 1100){
-                     setLocation(getX() + 3, getY());
+                
+                if (!getObjectsInRange(25, VOTrain.class).isEmpty()){
+                 if (Greenfoot.isKeyDown("t") && getX() < 1280){
+                        tClicked = true;           
+                    } 
+                    if (isAtEdge()){
+                        World myWorld = getWorld();
+                        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
+                        Counter counter = VrachtOverslaan.getCounter();
+                        counter.add(1);
+                        myWorld.removeObject(this);
                     }
-                    if (getX() >= 1100){
-                        World world;
-                        world = getWorld();
-      
-                        world.removeObjects(world.getObjects(VOConB1.class));
+                    if(tClicked == true){
+                        setLocation(getX() + 3, getY());
                     }
                 }
              
