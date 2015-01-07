@@ -17,39 +17,41 @@ public class VOGrijper extends Actor
     
     public void act() 
     {
-        int Xspeed = 3;   
-       if(Greenfoot.isKeyDown("a")){
-            setLocation(getX() -Xspeed, getY());
-    } 
-     if(Greenfoot.isKeyDown("d")){
-            setLocation(getX() +Xspeed, getY());
-    }
-    if(Greenfoot.isKeyDown("w")){
-        if(getY() <= 390){} else {
-        setLocation(getX(), getY() -Xspeed);
-    }
-    }
-    if(Greenfoot.isKeyDown("s")){
-        if(getY() >= 690){}  else {
-        setLocation(getX(), getY() +Xspeed);
-    }
-    }
-    if(Greenfoot.isKeyDown("left")){
-        setLocation(getX() -Xspeed, getY());
-    }
-    if(Greenfoot.isKeyDown("right")){
-        setLocation(getX() +Xspeed, getY());
-    }
-    if(Greenfoot.isKeyDown("up")){
-        if(getY() <= 390){} else {
-        setLocation(getX(), getY() -Xspeed);
-    }
-    }
-    if(Greenfoot.isKeyDown("down")){
-        if(getY() >= 690){}  else {
-        setLocation(getX(), getY() +Xspeed);
-    }
-}
+        int X = getX();  
+        int Y = getY();
+        int Speed = 3; 
+        if(Greenfoot.isKeyDown("a")){
+            setLocation(X -Speed, Y);
+        } 
+        if(Greenfoot.isKeyDown("d")){
+            setLocation(X +Speed, Y);
+        }
+        if(Greenfoot.isKeyDown("w")){
+            if(getY() <= 390){} else {
+                setLocation(X, Y -Speed);
+            }
+        }
+        if(Greenfoot.isKeyDown("s")){
+            if(getY() >= 690){}  else {
+                setLocation(X, Y +Speed);
+            }
+        }
+        if(Greenfoot.isKeyDown("left")){
+            setLocation(X -Speed, Y);
+        }
+        if(Greenfoot.isKeyDown("right")){
+            setLocation(X +Speed, Y);
+        }
+        if(Greenfoot.isKeyDown("up")){
+            if(getY() <= 390){} else {
+                setLocation(X, Y -Speed);
+            }
+        }
+        if(Greenfoot.isKeyDown("down")){
+            if(getY() >= 690){}  else {
+                setLocation(X, Y +Speed);
+            }
+        }
 
-}
+    }
 }
