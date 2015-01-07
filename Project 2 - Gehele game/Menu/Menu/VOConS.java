@@ -33,6 +33,7 @@ public class VOConS extends Actor
                      setLocation(getX(), getY());
                     }
                     if (getX() >= 1100){
+                        setLocation(getX(), getY());
                         World world;
                         world = getWorld();
                         

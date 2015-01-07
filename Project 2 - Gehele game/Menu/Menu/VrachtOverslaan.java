@@ -17,7 +17,7 @@ public class VrachtOverslaan extends World
        
         //kade
         addObject(new Kade(), 640, 360);
-        addObject(new Rails(), 640, 360);
+        addObject(new Rails(), 650, 694);
         
         // De trein
         addObject(new VOLocomotief(), 640, 695);

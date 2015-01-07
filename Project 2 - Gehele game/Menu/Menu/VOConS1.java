@@ -24,9 +24,10 @@ public class VOConS1 extends VOConS
                 
                 if (!getObjectsInRange(25, VOTrain.class).isEmpty()){
                  if (Greenfoot.isKeyDown("t") && getX() < 1100){
-                     setLocation(getX() + 3, getY());
+                     setLocation(getX(), getY());
                     }
                     if (getX() >= 1100){
+                        setLocation(getX(), getY());
                         World myWorld = getWorld();
                         VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
                         Counter counter = VrachtOverslaan.getCounter();
