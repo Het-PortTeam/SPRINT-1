@@ -30,7 +30,7 @@ public class VOConS1 extends VOConS
                         World myWorld = getWorld();
                         VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
                         Counter counter = VrachtOverslaan.getCounter();
-                        counter.addScore();
+                        counter.add(1);
                         myWorld.removeObject(this);
                     }
                 }

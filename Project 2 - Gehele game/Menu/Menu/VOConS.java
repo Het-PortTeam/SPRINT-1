@@ -30,13 +30,14 @@ public class VOConS extends Actor
                 
                 if (!getObjectsInRange(25, VOTrain.class).isEmpty()){
                  if (Greenfoot.isKeyDown("t") && getX() < 1100){
-                     setLocation(getX() + 3, getY());
+                     setLocation(getX(), getY());
                     }
                     if (getX() >= 1100){
                         World world;
                         world = getWorld();
+                        
+                        counter.add(1);
                         world.removeObjects(world.getObjects(VOConS.class));
-                        counter.add(5);
                     }
                 }
              

@@ -30,6 +30,7 @@ public class VOConB1 extends VOConB
                     if (getX() >= 1100){
                         World world;
                         world = getWorld();
+      
                         world.removeObjects(world.getObjects(VOConB1.class));
                     }
                 }
