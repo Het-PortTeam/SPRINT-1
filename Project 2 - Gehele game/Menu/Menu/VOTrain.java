@@ -14,16 +14,21 @@ public class VOTrain extends Actor
      */
     
     public int x;
+    public boolean tClicked;
     
     public void act() 
     {
         if (Greenfoot.isKeyDown("t") && getX() < 1280){
-            setLocation(getX() + 3, getY());
+            tClicked = true;           
         } 
         if (isAtEdge()){
+            tClicked = false;
             World world;
             world = getWorld();
             world.removeObjects(world.getObjects(VOTrain.class));
+        }
+        if(tClicked == true){
+           setLocation(getX() + 3, getY());
         }
     }    
 }

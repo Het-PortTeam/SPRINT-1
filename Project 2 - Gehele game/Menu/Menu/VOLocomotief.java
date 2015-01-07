@@ -15,16 +15,21 @@ public class VOLocomotief extends Actor
     
     
     public static int x;
+    public boolean tClicked;
     
     public void act() 
     {
         if (Greenfoot.isKeyDown("t") && getX() < 1280){
-            setLocation(getX() + 3, getY());
-        }
-        if (isAtEdge()) {
+            tClicked = true;           
+        } 
+        if (isAtEdge()){
+            tClicked = false;
             World world;
             world = getWorld();
             world.removeObjects(world.getObjects(VOLocomotief.class));
+        }
+        if(tClicked == true){
+           setLocation(getX() + 3, getY());
         }
     }    
 }
