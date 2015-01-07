@@ -48,8 +48,7 @@ public class ControleCentrum extends World
         
     
     public void act()
-    {
-       
+    {       
        int CounterValue = Counter.getValue();
        setBackground(gif.getCurrentImage());
        /* if(explainOnce == 1) {
@@ -59,6 +58,12 @@ public class ControleCentrum extends World
        
        if( currentTime + 1000 <  System.currentTimeMillis() )
        {
+           if(CounterValue == 25 || CounterValue == 50 || CounterValue == 75 || CounterValue == 100 || CounterValue == 125 || CounterValue == 150 || CounterValue == 175 || CounterValue == 200) 
+           {
+               Difficulty += 1;
+               Counter.add(5);
+               //System.out.print("Moeilijkheidsgraad is nu " + Difficulty + ". ");
+           }
            timer += Difficulty;
        }
     
@@ -67,12 +72,7 @@ public class ControleCentrum extends World
            timer = 0;
            
            addObject(new CCSchip(Counter, liveCounter), 1200, 200);
-           //System.out.print(Difficulty);
-       }
-       
-              if(CounterValue % 25 == 0 && CounterValue > 0)
-       {
-           Difficulty = CounterValue / 25;
+           //System.out.print(CounterValue);
        }
     }
 
