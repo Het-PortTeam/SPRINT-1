@@ -38,6 +38,9 @@ public class VrachtOverslaan extends World
         addObject(new VOConB5(), 720, 485);
         addObject(new VOConB6(), 645, 443);
         addObject(new VOConB7(), 540, 400);
+        addObject(new VOConB8(), 495, 485);
+        addObject(new VOConB9(), 420, 443);
+        addObject(new VOConB10(), 315, 400);
         
         //VOConM "Groen"
         addObject(new VOConM1(), 1005, 443);
@@ -46,6 +49,10 @@ public class VrachtOverslaan extends World
         addObject(new VOConM4(), 780, 443);
         addObject(new VOConM5(), 675, 400);
         addObject(new VOConM6(), 630, 485);
+        addObject(new VOConM7(), 555, 443); 
+        addObject(new VOConM8(), 450, 400);
+        addObject(new VOConM9(), 405, 485);
+        addObject(new VOConM10(), 330, 443);
         
         //VOConS "Geel"
         addObject(new VOConS1(), 1020, 485);
@@ -54,6 +61,10 @@ public class VrachtOverslaan extends World
         addObject(new VOConS4(), 795, 485);
         addObject(new VOConS5(), 720, 443);
         addObject(new VOConS6(), 615, 402);
+        addObject(new VOConS7(), 570, 485);
+        addObject(new VOConS8(), 495, 443);
+        addObject(new VOConS9(), 390, 400);
+        addObject(new VOConS10(), 345, 485);
        
         // Tot hier!
         
@@ -71,7 +82,7 @@ public class VrachtOverslaan extends World
         addObject(new VOGrijper(), 640,550);
         addObject(new VOCrane(), 640, 550);
         addObject(new VOgrijper20(), 500, 130);
-        addObject(new VOCrane2(), 500, 360);
+        addObject(new VOCrane2(), 500, 188);
         //Einde
         addObject(new BackButton(), 75, 50);
         addObject(new VOPlek(), 640, 400);
