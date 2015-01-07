@@ -14,6 +14,7 @@ public class VrachtOverslaan extends World
     public VrachtOverslaan()
     {
         super(1280, 720, 1); //wereld
+        //setPaintOrder(VOCrane.class, VOGrijper.class, VOCrane2.class, VOgrijper20.class, VOConS.class, VOConB.class, VOConM.class, VOTrain.class, VOLocomot.class);
        
         //kade
         addObject(new Kade(), 640, 360);

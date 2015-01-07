@@ -35,10 +35,9 @@ public class Counter extends Actor
 {
     private static final Color transparent = new Color(0,0,0,0);
     private GreenfootImage background;
-    private int value;
-    private int target;
+    public int value;
+    public int target;
     private String prefix;
-    int score = 0;
     
     public Counter()
     {
@@ -52,7 +51,7 @@ public class Counter extends Actor
     {
         background = getImage();  // get image from class
         value = 0;
-        target = 0;
+        target = 5;
         this.prefix = prefix;
         updateImage();
     }
@@ -80,7 +79,7 @@ public class Counter extends Actor
     {
         target += score;
     }
-
+    
     /**
      * Return the current counter value.
      */
@@ -126,15 +125,4 @@ public class Counter extends Actor
                         (image.getHeight()-text.getHeight())/2);
         setImage(image);
     }
-    
-    /**
-     * Add score
-     */
-     public void addScore(){
-         if(score < 19){
-             score++;
-            }else{
-                System.out.print("U heeft Gewonnen!");
-            }
-        }
 }
