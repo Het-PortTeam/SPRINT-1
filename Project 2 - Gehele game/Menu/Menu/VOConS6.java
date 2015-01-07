@@ -17,7 +17,7 @@ public class VOConS6 extends VOConS
      */
     public void act() 
     {
-        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
+        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(40, VOGrijper.class).isEmpty()){
              Xspeed = 3;   }
 
                if ((Greenfoot.isKeyDown("e"))){

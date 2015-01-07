@@ -14,6 +14,6 @@ public class VOPlek2 extends VOPlek
      */
     public void act() 
     {
-        getImage().setTransparency(100);
+        getImage().setTransparency(0);
     }    
 }
