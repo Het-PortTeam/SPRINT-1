@@ -51,7 +51,7 @@ public class Counter extends Actor
     {
         background = getImage();  // get image from class
         value = 0;
-        target = 5;
+        target = 0;
         this.prefix = prefix;
         updateImage();
     }

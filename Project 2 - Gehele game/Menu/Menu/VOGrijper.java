@@ -17,46 +17,9 @@ public class VOGrijper extends Actor
     
     public void act() 
     {
-<<<<<<< HEAD
-        int X = getX();  
-        int Y = getY();
-        int Speed = 3; 
-  
-        if(Greenfoot.isKeyDown("a")){
-            setLocation(X -Speed, Y);
-        } 
-        if(Greenfoot.isKeyDown("d")){
-            setLocation(X +Speed, Y);
-        }
-        if(Greenfoot.isKeyDown("w")){
-            if(getY() <= 390){} else {
-                setLocation(X, Y -Speed);
-            }
-        }
-        if(Greenfoot.isKeyDown("s")){
-            if(getY() >= 690){}  else {
-                setLocation(X, Y +Speed);
-            }
-        }
-        if(Greenfoot.isKeyDown("left")){
-            setLocation(X -Speed, Y);
-        }
-        if(Greenfoot.isKeyDown("right")){
-            setLocation(X +Speed, Y);
-        }
-        if(Greenfoot.isKeyDown("up")){
-            if(getY() <= 390){} else {
-                setLocation(X, Y -Speed);
-            }
-        }
-        if(Greenfoot.isKeyDown("down")){
-            if(getY() >= 690){}  else {
-                setLocation(X, Y +Speed);
-            }
-        }
-
-=======
         int Xspeed = 3;   
+        
+        
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());
     } 
@@ -78,7 +41,7 @@ public class VOGrijper extends Actor
     }
     if(Greenfoot.isKeyDown("right")){
         setLocation(getX() +Xspeed, getY());
->>>>>>> parent of 4fa0219... code verbetert
+
     }
     if(Greenfoot.isKeyDown("up")){
         if(getY() <= 390){} else {
