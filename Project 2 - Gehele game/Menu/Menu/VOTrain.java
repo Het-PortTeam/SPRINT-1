@@ -17,10 +17,10 @@ public class VOTrain extends Actor
     
     public void act() 
     {
-        if (Greenfoot.isKeyDown("t") && getX() < 1100){
+        if (Greenfoot.isKeyDown("t") && getX() < 1280){
             setLocation(getX() + 3, getY());
         } 
-        if (getX() >= 1100){
+        if (isAtEdge()){
             World world;
             world = getWorld();
             world.removeObjects(world.getObjects(VOTrain.class));

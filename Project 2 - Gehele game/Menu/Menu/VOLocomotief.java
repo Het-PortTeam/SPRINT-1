@@ -18,10 +18,10 @@ public class VOLocomotief extends Actor
     
     public void act() 
     {
-        if (Greenfoot.isKeyDown("t") && getX() < 1200){
+        if (Greenfoot.isKeyDown("t") && getX() < 1280){
             setLocation(getX() + 3, getY());
         }
-        if (getX() >= 1200) {
+        if (isAtEdge()) {
             World world;
             world = getWorld();
             world.removeObjects(world.getObjects(VOLocomotief.class));
