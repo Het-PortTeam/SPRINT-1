@@ -158,6 +158,18 @@ Wat:		Werken aan Controlecentrum
 Datum: 		30/12/2014
 Tijdsduur: 	3 uur
 
+Wat:		Werken aan Controlecentrum
+Datum: 		4/1/2015
+Tijdsduur: 	2 uur
+
+Wat:		Werken aan Vracht Overslaan
+Datum: 		6/1/2015
+Tijdsduur: 	2 uur en 30 minuten
+
+Wat:		Werken aan Vracht Overslaan
+Datum: 		8/1/2015
+Tijdsduur: 	30 minuten
+
 
 ===Oscar Veldman======
 ======================
