@@ -1,7 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
 /**
- * Write a description of class VOConS6 here.
+ * Write a description of class VOConS5 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -11,34 +12,38 @@ public class VOConS6 extends VOConS
     int Xspeed = 0;
     private Counter counter;
     public boolean tClicked;
+    
     /**
-     * Act - do whatever the VOConS6 wants to do. This method is called whenever
+     * Act - do whatever the VOConS5 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(40, VOGrijper.class).isEmpty()){
+        World myWorld = getWorld();
+        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
+        Counter counter = VrachtOverslaan.getCounter();
+        
+        
+        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
              Xspeed = 3;   }
 
                if ((Greenfoot.isKeyDown("e"))){
                  Xspeed = 0;
                 }
                 
-                if (!getObjectsInRange(25, VOTrain.class).isEmpty()){
-                 if (Greenfoot.isKeyDown("t") && getX() < 1280){
+                if (!getObjectsInRange(60, VOTrain.class).isEmpty()){
+                 if (Greenfoot.isKeyDown("t") && getX() < 1260){
                         tClicked = true;           
                     } 
-                    if (isAtEdge()){
-                        World myWorld = getWorld();
-                        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
-                        Counter counter = VrachtOverslaan.getCounter();
+                    if(tClicked == true){
+                        setLocation(getX() + 3, getY());
+                    }}
+                    if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty()){
                         counter.add(1);
                         myWorld.removeObject(this);
                     }
-                    if(tClicked == true){
-                        setLocation(getX() + 3, getY());
-                    }
-                }
+                    
+                
              
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());

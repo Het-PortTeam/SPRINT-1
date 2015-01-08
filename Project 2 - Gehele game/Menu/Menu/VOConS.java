@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
 /**
  * Write a description of class VOConS5 here.
@@ -12,13 +13,17 @@ public class VOConS extends Actor
     private Counter counter;
     public boolean tClicked;
     
-
     /**
      * Act - do whatever the VOConS5 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
+        World myWorld = getWorld();
+        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
+        Counter counter = VrachtOverslaan.getCounter();
+        
+        
         if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
              Xspeed = 3;   }
 
@@ -26,22 +31,19 @@ public class VOConS extends Actor
                  Xspeed = 0;
                 }
                 
-                if (!getObjectsInRange(40, VOTrain.class).isEmpty()){
+                if (!getObjectsInRange(60, VOTrain.class).isEmpty()){
                  if (Greenfoot.isKeyDown("t") && getX() < 1260){
                         tClicked = true;           
                     } 
                     if(tClicked == true){
                         setLocation(getX() + 3, getY());
-                    }
-                    if (getX() >= 1260){
-                        World myWorld = getWorld();
-                        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
-                        Counter counter = VrachtOverslaan.getCounter();
+                    }}
+                    if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty()){
                         counter.add(1);
                         myWorld.removeObject(this);
                     }
                     
-                }
+                
              
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());

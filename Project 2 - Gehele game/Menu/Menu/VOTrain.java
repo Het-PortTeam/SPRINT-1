@@ -21,7 +21,7 @@ public class VOTrain extends Actor
         if (Greenfoot.isKeyDown("t") && getX() < 1280){
             tClicked = true;           
         } 
-        if (isAtEdge()){
+        if (getWorld().getObjects(VOLocomotief.class).isEmpty()){
             tClicked = false;
             World world;
             world = getWorld();
