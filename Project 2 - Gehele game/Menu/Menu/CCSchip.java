@@ -145,8 +145,7 @@ public class CCSchip extends Actor
                                                     if(mouseX > 76 && mouseX < 196 && mouseY > 162 && mouseY < 262 && Greenfoot.mouseClicked(eind) ){back = true;}
                                                     if(back == true){ setLocation(getX(), getY()-2 );}
                                                     if((x <= 1024 && y == 200) || (x <= 776 && y == 200) || (x <= 528 && y == 200) || (x <= 280 && y == 200)){setRotation(0); setLocation(getX() -Speed, y );}}
-                                                    
-                    
+
              }
         }
     }

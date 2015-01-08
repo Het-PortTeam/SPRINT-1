@@ -38,7 +38,7 @@ public class VOConS10 extends VOConS
                     if(tClicked == true){
                         setLocation(getX() + 3, getY());
                     }}
-                    if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty()){
+                    if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty() && getY() >= 600 && getY() <= 694){
                         counter.add(1);
                         myWorld.removeObject(this);
                     }
