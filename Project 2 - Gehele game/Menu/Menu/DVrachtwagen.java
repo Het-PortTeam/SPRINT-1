@@ -23,6 +23,7 @@ public class DVrachtwagen extends Actor
         }
         doorgaan();
         vrachtSpawn();
+        controle();
     }    
     
     public void doorgaan(){
@@ -47,11 +48,40 @@ public class DVrachtwagen extends Actor
             World world;
             world = getWorld();
             world.removeObjects(world.getObjects(DVrachtwagen.class));
+            click = false;
             return;
         }
     }
 }
     
+public void controle() {
+    Actor con = getOneIntersectingObject(DControle.class);
+    MouseInfo mouse = Greenfoot.getMouseInfo();
+        if(mouse != null){
+        int mouseY = mouse.getY();
+        int mouseX = mouse.getX();
+        
+        if(mouseX > 855 && mouseX < 1145 && mouseY > 556 && mouseY < 644 && Greenfoot.mouseClicked(con) && getX() >= 845){
+            click = true;
+             if (DVracht1.class != null) {
+            getWorld().removeObjects(getWorld().getObjects(DVracht1.class));
+        }
+        }
+        
+        if(click == true && getX() <= 4000){
+            setLocation(getX() + 3, getY());
+        }
+        
+        if(isAtEdge()) {
+            World world;
+            world = getWorld();
+            world.removeObjects(world.getObjects(DVrachtwagen.class));
+            click = false;
+            return;
+        }
+    
+}}
+
     public void vrachtSpawn() {
         if (getX() > 848 && getX() < 852) {
          getWorld().addObject(new DVracht1(), 781, 308);
