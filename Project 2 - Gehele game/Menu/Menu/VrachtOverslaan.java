@@ -10,6 +10,13 @@ public class VrachtOverslaan extends World
     public int explainOnce = 1;
     public double Difficulty = 1; 
     Counter Counter = new Counter();
+    public VOGrijper grijper;
+    public VOConB[] containersB;
+    public VOConB currentContainerB = null;
+    public VOConM[] containersM;
+    public VOConM currentContainerM = null;
+    public VOConS[] containersS;
+    public VOConS currentContainerS = null;
     
     public VrachtOverslaan()
     {
@@ -33,41 +40,63 @@ public class VrachtOverslaan extends World
         addObject(new VOSchip2(), 640, 250);
         
         // De containers schip1:
+        
+        grijper = new VOGrijper();
+        addObject(grijper, 640,550);
+        addObject(new VOCrane(), 640, 550);
+        addObject(new VOgrijper20(), 500, 130);
+        addObject(new VOCrane2(), 500, 188);
+        
         //VOConB "Rood"
-        addObject(new VOConB1(), 990, 400);
-        addObject(new VOConB2(), 945, 485);
-        addObject(new VOConB3(), 870, 443);
-        addObject(new VOConB4(), 765, 400);
-        addObject(new VOConB5(), 720, 485);
-        addObject(new VOConB6(), 645, 443);
-        addObject(new VOConB7(), 540, 400);
-        addObject(new VOConB8(), 495, 485);
-        addObject(new VOConB9(), 420, 443);
-        addObject(new VOConB10(), 315, 400);
+        containersB = new VOConB[10];
+        for(int i = 0; i < containersB.length; i++ ){
+            containersB[i] = new VOConB();
+        }
+        
+        addObject(containersB[0], 990, 400);
+        addObject(containersB[1], 945, 485);
+        addObject(containersB[2], 870, 443);
+        addObject(containersB[3], 765, 400);
+        addObject(containersB[4], 720, 485);
+        addObject(containersB[5], 645, 443);
+        addObject(containersB[6], 540, 400);
+        addObject(containersB[7], 495, 485);
+        addObject(containersB[8], 420, 443);
+        addObject(containersB[9], 315, 400);
         
         //VOConM "Groen"
-        addObject(new VOConM1(), 1005, 443);
-        addObject(new VOConM2(), 900, 400);
-        addObject(new VOConM3(), 855, 485);
-        addObject(new VOConM4(), 780, 443);
-        addObject(new VOConM5(), 675, 400);
-        addObject(new VOConM6(), 630, 485);
-        addObject(new VOConM7(), 555, 443); 
-        addObject(new VOConM8(), 450, 400);
-        addObject(new VOConM9(), 405, 485);
-        addObject(new VOConM10(), 330, 443);
+        containersM = new VOConM[10];
+        for(int i = 0; i < containersM.length; i++ ){
+            containersM[i] = new VOConM();
+        }
+        
+        addObject(containersM[0], 1005, 443);
+        addObject(containersM[1], 900, 400);
+        addObject(containersM[2], 855, 485);
+        addObject(containersM[3], 780, 443);
+        addObject(containersM[4], 675, 400);
+        addObject(containersM[5], 630, 485);
+        addObject(containersM[6], 555, 443); 
+        addObject(containersM[7], 450, 400);
+        addObject(containersM[8], 405, 485);
+        addObject(containersM[9], 330, 443);
         
         //VOConS "Geel"
-        addObject(new VOConS1(), 1020, 485);
-        addObject(new VOConS2(), 945, 443);
-        addObject(new VOConS3(), 840, 402);
-        addObject(new VOConS4(), 795, 485);
-        addObject(new VOConS5(), 720, 443);
-        addObject(new VOConS6(), 615, 402);
-        addObject(new VOConS7(), 570, 485);
-        addObject(new VOConS8(), 495, 443);
-        addObject(new VOConS9(), 390, 400);
-        addObject(new VOConS10(), 345, 485);
+        containersS = new VOConS[10];
+        for(int i = 0; i < containersS.length; i++ ){
+            containersS[i] = new VOConS();
+        }
+
+        addObject(containersS[0], 1020, 485);
+        addObject(containersS[1], 945, 443);
+        addObject(containersS[2], 840, 402);
+        addObject(containersS[3], 795, 485);
+        addObject(containersS[4], 720, 443);
+        addObject(containersS[5], 615, 402);
+        addObject(containersS[6], 570, 485);
+        addObject(containersS[7], 495, 443);
+        addObject(containersS[8], 390, 400);
+        addObject(containersS[9], 345, 485);
        
         // Tot hier!
         
@@ -81,11 +110,7 @@ public class VrachtOverslaan extends World
         //VOConS tegenstander "Geel"
         addObject(new VOConS(), 1022, 290);
         
-        // Tot hier!
-        addObject(new VOGrijper(), 640,550);
-        addObject(new VOCrane(), 640, 550);
-        addObject(new VOgrijper20(), 500, 130);
-        addObject(new VOCrane2(), 500, 188);
+        
         //Einde
         addObject(new BackButton(), 75, 50);
         addObject(new VOPlek(), 640, 400);

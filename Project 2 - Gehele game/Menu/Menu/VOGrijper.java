@@ -14,6 +14,7 @@ public class VOGrijper extends Actor
      */
     
     private VOConB container;
+    public boolean grab;
     
     public void act() 
     {
@@ -52,6 +53,8 @@ public class VOGrijper extends Actor
         if(getY() >= 690){}  else {
         setLocation(getX(), getY() +Xspeed);
     }
+    
+    if(getObjectsInRange(25, VOGrijper.class) != null){}
 }
 
 }

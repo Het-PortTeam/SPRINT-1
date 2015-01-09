@@ -24,9 +24,11 @@ public class VOConS5 extends VOConS
         Counter counter = VrachtOverslaan.getCounter();
         
         
-        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
+        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
              Xspeed = 3;   }
 
+             VrachtOverslaan.grijper.grab = true;
+             
                if ((Greenfoot.isKeyDown("e"))){
                  Xspeed = 0;
                 }

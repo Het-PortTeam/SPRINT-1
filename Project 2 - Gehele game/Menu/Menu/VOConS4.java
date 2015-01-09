@@ -13,6 +13,7 @@ public class VOConS4 extends VOConS
     private Counter counter;
     public boolean tClicked;
     
+    
     /**
      * Act - do whatever the VOConS5 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -23,18 +24,21 @@ public class VOConS4 extends VOConS
         VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
         Counter counter = VrachtOverslaan.getCounter();
         
-        
-        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
+  
+
+        if (Greenfoot.isKeyDown("q") && VrachtOverslaan.grijper.grab == false){
              Xspeed = 3;   }
+             VrachtOverslaan.grijper.grab = true;
 
                if ((Greenfoot.isKeyDown("e"))){
                  Xspeed = 0;
                 }
-                
+      
                 if (!getObjectsInRange(60, VOTrain.class).isEmpty()){
                  if (Greenfoot.isKeyDown("t") && getX() < 1260){
                         tClicked = true;           
                     } 
+            
                     if(tClicked == true){
                         setLocation(getX() + 3, getY());
                     }}

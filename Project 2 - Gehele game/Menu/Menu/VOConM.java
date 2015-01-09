@@ -7,11 +7,15 @@ import java.util.List;
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class VOConM extends Actor
 {
     int Xspeed = 0;
     private Counter counter;
     public boolean tClicked;
+    World myWorld = getWorld();
+    VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
+    
     
     /**
      * Act - do whatever the VOConS5 wants to do. This method is called whenever
@@ -19,17 +23,22 @@ public class VOConM extends Actor
      */
     public void act() 
     {
-        World myWorld = getWorld();
-        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
-        Counter counter = VrachtOverslaan.getCounter();
+       World myWorld = getWorld();
+       VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
+       Counter counter = VrachtOverslaan.getCounter();
+ 
         
         
-        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
-             Xspeed = 3;   }
+        
+        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
+             VrachtOverslaan.grijper.grab = true;
+             Xspeed = 3;
+            }
 
+             
                if ((Greenfoot.isKeyDown("e"))){
                  Xspeed = 0;
-                }
+                } 
                 
                 if (!getObjectsInRange(60, VOTrain.class).isEmpty()){
                  if (Greenfoot.isKeyDown("t") && getX() < 1260){
