@@ -21,13 +21,8 @@ public class DVrachtwagen extends Actor
         if(getX() < 850) {
             setLocation(getX() + 3, getY());
         }
-        
-        if(getX() > 850 && Greenfoot.mouseClicked(this)) {
-            Spul = Greenfoot.getRandomNumber(90);
-            System.out.println(Spul);
-        }
-        
         doorgaan();
+        vrachtSpawn();
     }    
     
     public void doorgaan(){
@@ -39,20 +34,29 @@ public class DVrachtwagen extends Actor
         
         if(mouseX > 156 && mouseX < 445 && mouseY > 556 && mouseY < 644 && Greenfoot.mouseClicked(door) && getX() >= 845){
             click = true;
+            if (DVracht1.class != null) {
+            getWorld().removeObjects(getWorld().getObjects(DVracht1.class));
+        }
         }
         
         if(click == true && getX() <= 4000){
             setLocation(getX() + 3, getY());
         }
         
-        if(getX() > 1200) {
+        if(isAtEdge()) {
             World world;
             world = getWorld();
             world.removeObjects(world.getObjects(DVrachtwagen.class));
+            return;
         }
     }
 }
     
+    public void vrachtSpawn() {
+        if (getX() > 848 && getX() < 852) {
+         getWorld().addObject(new DVracht1(), 781, 308);
+        }
+        }
     }
 
 
