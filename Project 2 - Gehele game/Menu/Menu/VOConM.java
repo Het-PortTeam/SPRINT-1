@@ -31,12 +31,12 @@ public class VOConM extends Actor
         
         
         if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
-             VrachtOverslaan.grijper.grab = true;
-             Xspeed = 3;
+                 VrachtOverslaan.grijper.grab = true;
+                 Xspeed = 3;
             }
-
-             
-               if ((Greenfoot.isKeyDown("e"))){
+           
+               if ((Greenfoot.isKeyDown("e")) && VrachtOverslaan.grijper.grab){
+                 VrachtOverslaan.grijper.grab = false;
                  Xspeed = 0;
                 } 
                 

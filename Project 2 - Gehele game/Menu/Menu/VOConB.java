@@ -28,14 +28,12 @@ public class VOConB extends Actor
        Counter counter = VrachtOverslaan.getCounter();
  
         
-        
-        
-        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
-             VrachtOverslaan.grijper.grab = true;
-             Xspeed = 3;
+       
+            if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
+                 VrachtOverslaan.grijper.grab = true;
+                 Xspeed = 3;
             }
-
-             
+            
                if ((Greenfoot.isKeyDown("e")) && VrachtOverslaan.grijper.grab){
                  VrachtOverslaan.grijper.grab = false;
                  Xspeed = 0;

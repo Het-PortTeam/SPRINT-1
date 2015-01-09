@@ -12,6 +12,8 @@ public class VOConM1 extends VOConM
     int Xspeed = 0;
     private Counter counter;
     public boolean tClicked;
+    World myWorld = getWorld();
+    VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
     
     /**
      * Act - do whatever the VOConS5 wants to do. This method is called whenever
@@ -24,12 +26,15 @@ public class VOConM1 extends VOConM
         Counter counter = VrachtOverslaan.getCounter();
         
         
-        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty()){
-             Xspeed = 3;   }
-
-               if ((Greenfoot.isKeyDown("e"))){
+        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
+                 VrachtOverslaan.grijper.grab = true;
+                 Xspeed = 3;
+            }
+           
+               if ((Greenfoot.isKeyDown("e")) && VrachtOverslaan.grijper.grab){
+                 VrachtOverslaan.grijper.grab = false;
                  Xspeed = 0;
-                }
+                } 
                 
                 if (!getObjectsInRange(60, VOTrain.class).isEmpty()){
                  if (Greenfoot.isKeyDown("t") && getX() < 1260){

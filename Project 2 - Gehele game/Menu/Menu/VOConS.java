@@ -2,10 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
 
 /**
- * Write a description of class VOConS5 here.
+ * Write a description of class VOConS here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Oscar Veldman, Johan Bos, Kevin Verweij 
+ * @version (9-1-2015)
  */
 
 public class VOConS extends Actor
@@ -26,17 +26,14 @@ public class VOConS extends Actor
        World myWorld = getWorld();
        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
        Counter counter = VrachtOverslaan.getCounter();
- 
-        
-        
-        
-        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
-             VrachtOverslaan.grijper.grab = true;
-             Xspeed = 3;
-            }
 
-             
-               if ((Greenfoot.isKeyDown("e"))){
+        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
+                 VrachtOverslaan.grijper.grab = true;
+                 Xspeed = 3;
+            }
+           
+               if ((Greenfoot.isKeyDown("e")) && VrachtOverslaan.grijper.grab){
+                 VrachtOverslaan.grijper.grab = false;
                  Xspeed = 0;
                 } 
                 
@@ -52,8 +49,6 @@ public class VOConS extends Actor
                         myWorld.removeObject(this);
                     }
                     
-                
-             
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());
     } 
