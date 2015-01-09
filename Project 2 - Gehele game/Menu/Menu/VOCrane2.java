@@ -8,29 +8,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class VOCrane2 extends Actor
 {
+    private int xSpeed = 2;
+    
     /**
      * Act - do whatever the VOCrane2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        int A = 0;
-        if (A == 0) {
-        if (getX() < 1000) {
-            setLocation(getX() +3, getY());
-            if (getX() == 1000) {A = 1; }
-        }
-    }
-        if(A == 1) {
-        if (getX() > 0) {
-            setLocation(getX() -3, getY());
-        }
+       setLocation(getX() +xSpeed, getY());
         
-    } }   
-    
-    public void ai()
-    {
-
+       if (getX() == 298){
+          xSpeed = -xSpeed;
+        } 
+        
+        if(getX() == 1000)
+        {
+         xSpeed = -xSpeed; 
+        }
     }
     
 }
+
+

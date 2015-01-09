@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Write a description of class VOConS5 here.
  * 
- * @author (your name) 
+ * @author (Oscar Veldman, Johan Bos, Kevin Verweij) 
  * @version (a version number or a date)
  */
 public class VOConS1 extends VOConS
@@ -25,31 +25,35 @@ public class VOConS1 extends VOConS
         VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
         Counter counter = VrachtOverslaan.getCounter();
         
-        
+        //grab
         if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
                  VrachtOverslaan.grijper.grab = true;
                  Xspeed = 3;
             }
            
-               if ((Greenfoot.isKeyDown("e")) && VrachtOverslaan.grijper.grab){
+               if (Greenfoot.isKeyDown("e") && VrachtOverslaan.grijper.grab){
                  VrachtOverslaan.grijper.grab = false;
                  Xspeed = 0;
                 } 
                 
+                
+                //train
                 if (!getObjectsInRange(60, VOTrain.class).isEmpty()){
                  if (Greenfoot.isKeyDown("t") && getX() < 1260){
                         tClicked = true;           
                     } 
                     if(tClicked == true){
                         setLocation(getX() + 3, getY());
-                    }}
-                    if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty() && getY() >= 600 && getY() <= 694){
+                    }
+                }
+                   
+                if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty() && getY() >= 600 && getY() <= 694){
                         counter.add(1);
                         myWorld.removeObject(this);
                     }
                     
                 
-             
+      //besturing w,s,a,d       
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());
     } 
@@ -66,6 +70,8 @@ public class VOConS1 extends VOConS
         setLocation(getX(), getY() +Xspeed);
     }
     }
+    
+    //pijl bestuuring
     if(Greenfoot.isKeyDown("left")){
         setLocation(getX() -Xspeed, getY());
     }
@@ -82,5 +88,6 @@ public class VOConS1 extends VOConS
              setLocation(getX(), getY() +Xspeed);
          }
     }
+    
     }    
 }

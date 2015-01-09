@@ -56,8 +56,8 @@ public class VrachtOverslaan extends World
         grijper = new VOGrijper();
         addObject(grijper, 640,550);
         addObject(new VOCrane(), 640, 550);
-        addObject(new VOgrijper20(), 500, 130);
-        addObject(new VOCrane2(), 500, 188);
+        addObject(new VOgrijper20(), 298, 10);
+        addObject(new VOCrane2(), 298, 188);
         
         //VOConB "Rood"
         containersB = new VOConB[10];

@@ -26,29 +26,34 @@ public class VOConS extends Actor
        World myWorld = getWorld();
        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
        Counter counter = VrachtOverslaan.getCounter();
-
+       
+       //grab
         if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
                  VrachtOverslaan.grijper.grab = true;
                  Xspeed = 3;
             }
            
-               if ((Greenfoot.isKeyDown("e")) && VrachtOverslaan.grijper.grab){
+               if (Greenfoot.isKeyDown("e") && VrachtOverslaan.grijper.grab){
                  VrachtOverslaan.grijper.grab = false;
                  Xspeed = 0;
                 } 
                 
+               //train
                 if (!getObjectsInRange(60, VOTrain.class).isEmpty()){
                  if (Greenfoot.isKeyDown("t") && getX() < 1260){
                         tClicked = true;           
                     } 
                     if(tClicked == true){
                         setLocation(getX() + 3, getY());
-                    }}
-                    if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty() && getY() >= 600 && getY() <= 694){
+                    }
+                }    
+                
+                if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty() && getY() >= 600 && getY() <= 694){
                         counter.add(1);
                         myWorld.removeObject(this);
                     }
-                    
+    
+    // W,A,S,D Besturing
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());
     } 
@@ -65,6 +70,8 @@ public class VOConS extends Actor
         setLocation(getX(), getY() +Xspeed);
     }
     }
+    
+    //pijl besturing
     if(Greenfoot.isKeyDown("left")){
         setLocation(getX() -Xspeed, getY());
     }
@@ -81,5 +88,7 @@ public class VOConS extends Actor
              setLocation(getX(), getY() +Xspeed);
          }
     }
-    }    
+    
+    
+}
 }
