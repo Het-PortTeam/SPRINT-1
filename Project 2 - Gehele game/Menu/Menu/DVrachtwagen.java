@@ -13,6 +13,8 @@ public class DVrachtwagen extends Actor
     int Spul;
     boolean ready = true;
     public static int x;
+    
+    
     public void act() 
     {
         Actor door = getOneIntersectingObject(DDoorgaan.class);
@@ -25,7 +27,17 @@ public class DVrachtwagen extends Actor
             System.out.println(Spul);
         }
         
-        if(Greenfoot.mouseClicked(door) && getX() >= 845){
+        doorgaan();
+    }    
+    
+    public void doorgaan(){
+        Actor door = getOneIntersectingObject(DDoorgaan.class);
+        MouseInfo mouse = Greenfoot.getMouseInfo();
+        if(mouse != null){
+        int mouseY = mouse.getY();
+        int mouseX = mouse.getX();
+        
+        if(mouseX > 156 && mouseX < 445 && mouseY > 556 && mouseY < 644 && Greenfoot.mouseClicked(door) && getX() >= 845){
             click = true;
         }
         
@@ -38,8 +50,9 @@ public class DVrachtwagen extends Actor
             world = getWorld();
             world.removeObjects(world.getObjects(DVrachtwagen.class));
         }
-    }    
-    
-
-   
     }
+}
+    
+    }
+
+
