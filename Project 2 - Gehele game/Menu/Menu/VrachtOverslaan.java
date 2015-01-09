@@ -10,6 +10,7 @@ public class VrachtOverslaan extends World
     public int explainOnce = 1;
     public double Difficulty = 1; 
     Counter Counter = new Counter();
+    
     public VOGrijper grijper;
     public VOgrijper20 Grijper;
     
@@ -76,7 +77,7 @@ public class VrachtOverslaan extends World
         // Tot hier!
        
         
-        // De containers schip1:
+        // De containers schip1: "Speler"
         
         grijper = new VOGrijper();
         addObject(grijper, 640,550);
@@ -249,7 +250,7 @@ public class VrachtOverslaan extends World
        
         // Tot hier!
         
-        // De containers schip2:
+        // De containers schip2: "Computer"
         
         Grijper = new VOgrijper20();
         addObject(Grijper, 298, 10);

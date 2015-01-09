@@ -21,7 +21,6 @@ public class VOConEM2 extends VOConEM
     {
          if(!getObjectsInRange(25, VOgrijper20.class).isEmpty() && !VrachtOverslaan.Grijper.grab){
             VrachtOverslaan.Grijper.grab = true;
-            setLocation(getX() +xSpeed, getY() +vSpeed);
         }
         
         if(isAtEdge() && VrachtOverslaan.Grijper.grab){

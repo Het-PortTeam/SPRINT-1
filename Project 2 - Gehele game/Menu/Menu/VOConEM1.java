@@ -19,9 +19,8 @@ public class VOConEM1 extends VOConEM
      */
     public void act() 
     {
-         if(!getObjectsInRange(25, VOgrijper20.class).isEmpty() && !VrachtOverslaan.Grijper.grab){
+          if(!getObjectsInRange(25, VOgrijper20.class).isEmpty() && !VrachtOverslaan.Grijper.grab){
             VrachtOverslaan.Grijper.grab = true;
-            setLocation(getX() +xSpeed, getY() +vSpeed);
         }
         
         if(isAtEdge() && VrachtOverslaan.Grijper.grab){
