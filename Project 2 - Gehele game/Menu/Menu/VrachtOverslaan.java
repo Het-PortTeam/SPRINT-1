@@ -11,18 +11,38 @@ public class VrachtOverslaan extends World
     public double Difficulty = 1; 
     Counter Counter = new Counter();
     public VOGrijper grijper;
+    
+    // big array
     public VOConB[] containersB;
     public VOConB currentContainerB = null;
     public VOConB1[] containersB1;
     public VOConB1 currentContainerB1 = null;
     public VOConB2[] containersB2;
     public VOConB2 currentContainerB2 = null;
+    
+    public VOConEB[] containersEB;
+    public VOConEB currentContainerEB = null;
+    public VOConEB1[] containersEB1;
+    public VOConEB1 currentContainerEB1 = null;
+    public VOConEB2[] containersEB2;
+    public VOConEB2 currentContainerEB2 = null;
+    
+    //medium array
     public VOConM[] containersM;
     public VOConM currentContainerM = null;
     public VOConM1[] containersM1;
     public VOConM1 currentContainerM1 = null;
     public VOConM2[] containersM2;
     public VOConM2 currentContainerM2 = null;
+    
+    public VOConEM[] containersEM;
+    public VOConEM currentContainerEM = null;
+    public VOConEM1[] containersEM1;
+    public VOConEM1 currentContainerEM1 = null;
+    public VOConEM2[] containersEM2;
+    public VOConEM2 currentContainerEM2 = null;
+    
+    //small array
     public VOConS[] containersS;
     public VOConS currentContainerS = null;
     public VOConS1[] containersS1;
@@ -30,12 +50,19 @@ public class VrachtOverslaan extends World
     public VOConS2[] containersS2;
     public VOConS2 currentContainerS2 = null;
     
+    public VOConES[] containersES;
+    public VOConES currentContainerES = null;
+    public VOConES1[] containersES1;
+    public VOConES1 currentContainerES1 = null;
+    public VOConES2[] containersES2;
+    public VOConES2 currentContainerES2 = null;
+    
     public VrachtOverslaan()
     {
         super(1280, 720, 1); //wereld
         setPaintOrder(VOCrane.class, VOGrijper.class, VOCrane2.class,
-        VOgrijper20.class, VOConS.class, VOConB.class, VOConM.class,
-        VOTrain.class, VOLocomotief.class, Rails.class, VOSchip.class, VOSchip2.class);
+        VOgrijper20.class, VOConS.class, VOConB.class, VOConM.class, VOConEB.class, VOConEM.class, VOConES.class,
+        VOTrain.class, VOLocomotief.class, Rails.class, VOSchip.class, VOSchip2.class );
        
         //kade
         addObject(new Kade(), 640, 360);
@@ -46,10 +73,7 @@ public class VrachtOverslaan extends World
         addObject(new VOTrain(), 523, 698);
         addObject(new VOTrain(), 383, 698);
         // Tot hier!
-        
-        //schepen
-        addObject(new VOSchip(), 640,442);
-        addObject(new VOSchip2(), 640, 250);
+       
         
         // De containers schip1:
         
@@ -227,14 +251,154 @@ public class VrachtOverslaan extends World
         // Tot hier!
         
         // De containers schip2:
-        //VOConB tegenstander "Rood"
-        addObject(new VOConB(), 992, 203);
+        //VOConEB tegenstander "Rood"
+        containersEB = new VOConEB[10];
+        for(int i = 0; i < containersEB.length; i++ ){
+            containersEB[i] = new VOConEB();
+        }
+        addObject(containersEB[0], 992, 203);
+        addObject(containersEB[1], 949, 290);
+        addObject(containersEB[2], 873, 246);
+        addObject(containersEB[3], 769, 203);
+        addObject(containersEB[4], 724, 290);
+        addObject(containersEB[5], 650, 246);
+        addObject(containersEB[6], 546, 203);
+        addObject(containersEB[7], 500, 290);
+        addObject(containersEB[8], 428, 246);
+        addObject(containersEB[9], 322, 203);
         
-        //VOConM tegenstander "Groen"
-        addObject(new VOConM(), 1007, 246);
+        containersEB1 = new VOConEB1[10];
+        for(int i = 0; i < containersEB1.length; i++ ){
+            containersEB1[i] = new VOConEB1();
+        }
+        addObject(containersEB1[0], 992, 203);
+        addObject(containersEB1[1], 949, 290);
+        addObject(containersEB1[2], 873, 246);
+        addObject(containersEB1[3], 769, 203);
+        addObject(containersEB1[4], 724, 290);
+        addObject(containersEB1[5], 650, 246);
+        addObject(containersEB1[6], 546, 203);
+        addObject(containersEB1[7], 500, 290);
+        addObject(containersEB1[8], 428, 246);
+        addObject(containersEB1[9], 322, 203);
         
-        //VOConS tegenstander "Geel"
-        addObject(new VOConS(), 1022, 290);
+        containersEB2 = new VOConEB2[10];
+        for(int i = 0; i < containersEB2.length; i++ ){
+            containersEB2[i] = new VOConEB2();
+        }
+        addObject(containersEB2[0], 992, 203);
+        addObject(containersEB2[1], 949, 290);
+        addObject(containersEB2[2], 873, 246);
+        addObject(containersEB2[3], 769, 203);
+        addObject(containersEB2[4], 724, 290);
+        addObject(containersEB2[5], 650, 246);
+        addObject(containersEB2[6], 546, 203);
+        addObject(containersEB2[7], 500, 290);
+        addObject(containersEB2[8], 428, 246);
+        addObject(containersEB2[9], 322, 203);
+        
+        //VOConEM tegenstander "Groen"
+         containersEM = new VOConEM[10];
+        for(int i = 0; i < containersEM.length; i++ ){
+            containersEM[i] = new VOConEM();
+        }
+        
+        addObject(containersEM[0], 1007, 246);
+        addObject(containersEM[1], 903, 203);
+        addObject(containersEM[2], 859, 290);
+        addObject(containersEM[3], 784, 246);
+        addObject(containersEM[4], 679, 203);
+        addObject(containersEM[5], 633, 290);
+        addObject(containersEM[6], 561, 246);
+        addObject(containersEM[7], 456, 203);
+        addObject(containersEM[8], 410, 290);
+        addObject(containersEM[9], 338, 246);
+        
+         containersEM1 = new VOConEM1[10];
+        for(int i = 0; i < containersEM1.length; i++ ){
+            containersEM1[i] = new VOConEM1();
+        }
+        
+        addObject(containersEM1[0], 1007, 246);
+        addObject(containersEM1[1], 903, 203);
+        addObject(containersEM1[2], 859, 290);
+        addObject(containersEM1[3], 784, 246);
+        addObject(containersEM1[4], 679, 203);
+        addObject(containersEM1[5], 633, 290);
+        addObject(containersEM1[6], 561, 246);
+        addObject(containersEM1[7], 456, 203);
+        addObject(containersEM1[8], 410, 290);
+        addObject(containersEM1[9], 338, 246);
+        
+         containersEM2 = new VOConEM2[10];
+        for(int i = 0; i < containersEM2.length; i++ ){
+            containersEM2[i] = new VOConEM2();
+        }
+        
+        addObject(containersEM2[0], 1007, 246);
+        addObject(containersEM2[1], 903, 203);
+        addObject(containersEM2[2], 859, 290);
+        addObject(containersEM2[3], 784, 246);
+        addObject(containersEM2[4], 679, 203);
+        addObject(containersEM2[5], 633, 290);
+        addObject(containersEM2[6], 561, 246);
+        addObject(containersEM2[7], 456, 203);
+        addObject(containersEM2[8], 410, 290);
+        addObject(containersEM2[9], 338, 246);
+        
+        
+        //VOConES tegenstander "Geel"
+        containersES = new VOConES[10];
+        for(int i = 0; i < containersES.length; i++ ){
+            containersES[i] = new VOConES();
+        }
+        
+        addObject(containersES[0], 1022, 290);
+        addObject(containersES[1], 947, 246);
+        addObject(containersES[2], 842, 203);
+        addObject(containersES[3], 799, 290);
+        addObject(containersES[4], 724, 246);
+        addObject(containersES[5], 620, 203);
+        addObject(containersES[6], 574, 290);
+        addObject(containersES[7], 502, 246);
+        addObject(containersES[8], 396, 203);
+        addObject(containersES[9], 351, 290);
+        
+        containersES1 = new VOConES1[10];
+        for(int i = 0; i < containersES1.length; i++ ){
+            containersES1[i] = new VOConES1();
+        }
+        
+        addObject(containersES1[0], 1022, 290);
+        addObject(containersES1[1], 947, 246);
+        addObject(containersES1[2], 842, 203);
+        addObject(containersES1[3], 799, 290);
+        addObject(containersES1[4], 724, 246);
+        addObject(containersES1[5], 620, 203);
+        addObject(containersES1[6], 574, 290);
+        addObject(containersES1[7], 502, 246);
+        addObject(containersES1[8], 396, 203);
+        addObject(containersES1[9], 351, 290);
+        
+        containersES2 = new VOConES2[10];
+        for(int i = 0; i < containersES2.length; i++ ){
+            containersES2[i] = new VOConES2();
+        }
+        
+        addObject(containersES2[0], 1022, 290);
+        addObject(containersES2[1], 947, 246);
+        addObject(containersES2[2], 842, 203);
+        addObject(containersES2[3], 799, 290);
+        addObject(containersES2[4], 724, 246);
+        addObject(containersES2[5], 620, 203);
+        addObject(containersES2[6], 574, 290);
+        addObject(containersES2[7], 502, 246);
+        addObject(containersES2[8], 396, 203);
+        addObject(containersES2[9], 351, 290);
+        
+        //schepen
+        addObject(new VOSchip(), 640,442);
+        addObject(new VOSchip2(), 640, 250);
         
         
         //Einde
