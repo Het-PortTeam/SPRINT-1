@@ -10,6 +10,7 @@ public class VOgrijper20 extends VOCrane2
 {
     private int xSpeed = 2;
     private int vSpeed = 2;
+    public boolean grab;
     
     /**
      * Act - do whatever the VOgrijper20 wants to do. This method is called whenever
@@ -35,5 +36,7 @@ public class VOgrijper20 extends VOCrane2
         if (getY() >= 303){
             vSpeed = -vSpeed;
         }
+        
+        if(getObjectsInRange(25, VOgrijper20.class) != null){}
     }    
 }

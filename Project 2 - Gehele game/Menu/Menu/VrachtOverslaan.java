@@ -11,6 +11,7 @@ public class VrachtOverslaan extends World
     public double Difficulty = 1; 
     Counter Counter = new Counter();
     public VOGrijper grijper;
+    public VOgrijper20 Grijper;
     
     // big array
     public VOConB[] containersB;
@@ -80,8 +81,6 @@ public class VrachtOverslaan extends World
         grijper = new VOGrijper();
         addObject(grijper, 640,550);
         addObject(new VOCrane(), 640, 550);
-        addObject(new VOgrijper20(), 298, 10);
-        addObject(new VOCrane2(), 298, 188);
         
         //VOConB "Rood"
         containersB = new VOConB[10];
@@ -251,6 +250,12 @@ public class VrachtOverslaan extends World
         // Tot hier!
         
         // De containers schip2:
+        
+        Grijper = new VOgrijper20();
+        addObject(Grijper, 298, 10);
+        addObject(new VOCrane2(), 298, 188);
+        
+        
         //VOConEB tegenstander "Rood"
         containersEB = new VOConEB[10];
         for(int i = 0; i < containersEB.length; i++ ){
