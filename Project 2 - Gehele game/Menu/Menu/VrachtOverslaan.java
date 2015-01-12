@@ -10,6 +10,7 @@ public class VrachtOverslaan extends World
     public int explainOnce = 1;
     public double Difficulty = 1; 
     Counter Counter = new Counter();
+    Balance Balance = new Balance();
     
     public VOGrijper grijper;
     public VOgrijper20 Grijper;
@@ -415,11 +416,19 @@ public class VrachtOverslaan extends World
         //counter
         Counter = new Counter("Punten: ");
         addObject(Counter, 301, 33);
+        
+        //Balance
+        Balance = new Balance();
+        addObject(Balance, 400, 33);
     }
  
     public Counter getCounter()
     {
         return Counter;
+    }
+    
+    public Balance getBalance(){
+        return Balance;
     }
     
     public void act()
@@ -445,6 +454,10 @@ public class VrachtOverslaan extends World
               if(CounterValue % 25 == 0 && CounterValue > 0)
        {
            Difficulty = CounterValue / 25;
+        }
+        
+        if(CounterValue == 90){
+            System.out.println("U Heeft Gewonnen");
         }
     }
 }

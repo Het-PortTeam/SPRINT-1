@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class VOPlek extends Actor
 {
+    World myWorld = getWorld();
+    VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
     /**
      * Act - do whatever the VOPlek wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,5 +17,6 @@ public class VOPlek extends Actor
     public void act() 
     {
         getImage().setTransparency(0);
+        }
     }    
-}
+
