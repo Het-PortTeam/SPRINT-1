@@ -13,7 +13,7 @@ public class ControleCentrum extends World
     public long currentTime = System.currentTimeMillis();   // Later (for example in an act() method), do:
     public int timer = 0;
     public int explainOnce = 1;
-    public double Difficulty = 1; 
+    public int Difficulty = 1; 
     Counter Counter = new Counter();
     Lives liveCounter = new Lives();
 
@@ -55,6 +55,9 @@ public class ControleCentrum extends World
            Greenfoot.playSound("CC.mp3");
            explainOnce = 0;
        }*/
+       if(liveCounter.getValue() <= 0){
+           Greenfoot.setWorld(new menu());
+       }
        
        if( currentTime + 1000 <  System.currentTimeMillis() )
        {
@@ -67,7 +70,7 @@ public class ControleCentrum extends World
            timer += Difficulty;
        }
     
-       if( timer == 500)
+       if( timer >= 500)
        {
            timer = 0;
            

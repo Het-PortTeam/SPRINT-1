@@ -68,7 +68,7 @@ public class CCSchip extends Actor
         else{liveCounter.add(0);}
     
     
-        if(liveCounter.getValue() <= 0){getWorld().removeObject(this); W.removeObjects(W.getObjects(CCSchip.class));}
+        
 
     
     }
