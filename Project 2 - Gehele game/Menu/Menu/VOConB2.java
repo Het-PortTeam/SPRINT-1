@@ -31,7 +31,7 @@ public class VOConB2 extends VOConB
                  Xspeed = 3;
             }
            
-               if ((Greenfoot.isKeyDown("e")) && VrachtOverslaan.grijper.grab){
+               if ((Greenfoot.isKeyDown("e")) && VrachtOverslaan.grijper.grab && !getObjectsInRange(60, VOTrain.class).isEmpty()){
                  VrachtOverslaan.grijper.grab = false;
                  Xspeed = 0;
                 } 

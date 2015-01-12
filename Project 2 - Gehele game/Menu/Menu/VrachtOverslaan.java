@@ -400,7 +400,7 @@ public class VrachtOverslaan extends World
         addObject(containersES2[6], 574, 290);
         addObject(containersES2[7], 502, 246);
         addObject(containersES2[8], 396, 203);
-        addObject(containersES2[9], 351, 290);
+        addObject(containersES2[9], 351, 290); 
         
         //schepen
         addObject(new VOSchip(), 640,442);
