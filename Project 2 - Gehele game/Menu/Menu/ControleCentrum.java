@@ -56,7 +56,7 @@ public class ControleCentrum extends World
            explainOnce = 0;
        }*/
        if(liveCounter.getValue() <= 0){
-           Greenfoot.setWorld(new menu());
+           Greenfoot.setWorld(new GameOver());
        }
        
        if( currentTime + 1000 <  System.currentTimeMillis() )
