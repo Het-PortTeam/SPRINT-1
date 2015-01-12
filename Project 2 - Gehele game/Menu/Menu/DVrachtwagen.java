@@ -13,6 +13,7 @@ public class DVrachtwagen extends Actor
     int Spul;
     boolean ready = true;
     public static int x;
+    int volg = 0;
     
     
     public void act() 
@@ -83,8 +84,18 @@ public void controle() {
 }}
 
     public void vrachtSpawn() {
-        if (getX() > 848 && getX() < 852) {
-         getWorld().addObject(new DVracht1(), 781, 308);
+        if (getX() > 848 && getX() < 852 && volg == 0) {
+         
+         String [] avracht = {"new DVracht1()", "new DVracht2()"};
+         
+         double i = Math.floor(Math.random()*2);
+         
+         int x = (int) i;
+         
+         String cvracht = avracht[x];
+         
+         getWorld().addObject(avracht[x], 781, 308);
+         volg = volg + 1;
         }
         }
     }
