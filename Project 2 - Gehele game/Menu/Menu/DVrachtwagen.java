@@ -14,74 +14,55 @@ int Spul;
 boolean ready = true;
 public static int x;
 int volg = 0;
+public boolean otherClicked;
     
 public void act() 
 {
+    Actor door = getOneIntersectingObject(DDoorgaan.class);
+    Actor con = getOneIntersectingObject(DControle.class);
     if(getX() < 850) {
         setLocation(getX() + 3, getY());
     }
     vrachtSpawn();
-    doorgaan();
-    controle();
+    if(Greenfoot.mouseClicked(con)){
+        controle();
+    }
+    if(Greenfoot.mouseClicked(door)){
+        doorgaan();
+    }
+    moveToEdge();
+    checkAtEdge();
 }    
     
-public void doorgaan(){
-    Actor door = getOneIntersectingObject(DDoorgaan.class);
+public void doorgaan(){    
     MouseInfo mouse = Greenfoot.getMouseInfo();
     if(mouse != null){
         int mouseY = mouse.getY();
         int mouseX = mouse.getX();
         
-        if(mouseX > 156 && mouseX < 445 && mouseY > 556 && mouseY < 644 && Greenfoot.mouseClicked(door) && getX() >= 845){
-            click = true;
+        if(mouseX > 156 && mouseX < 445 && mouseY > 556 && mouseY < 644 && getX() >= 845){
             if (DVracht1.class != null) {
                 getWorld().removeObjects(getWorld().getObjects(DVracht.class));
+                click = true;
             }
-        }
-        
-        if(click == true && !isAtEdge()){
-            setLocation(getX() + 3, getY());
-        }
-        
-        if(isAtEdge()) {
-            World world;
-            world = getWorld();
-            world.removeObjects(world.getObjects(DVrachtwagen.class));
-            click = false;
-            volg = 0;
-            return;
         }
     }
 }
 
     
 public void controle() {
-    Actor con = getOneIntersectingObject(DControle.class);
+    
     MouseInfo mouse = Greenfoot.getMouseInfo();
         if(mouse != null){
             int mouseY = mouse.getY();
             int mouseX = mouse.getX();
         
-            if(mouseX > 855 && mouseX < 1145 && mouseY > 556 && mouseY < 644 && Greenfoot.mouseClicked(con) && getX() >= 845){
-            
+            if(mouseX > 855 && mouseX < 1145 && mouseY > 556 && mouseY < 644 && getX() >= 845){            
                 if (DVracht1.class != null) {
                     getWorld().removeObjects(getWorld().getObjects(DVracht.class));
                     click = true;
                 }
             }
-        
-            if(click == true && !isAtEdge()){
-                setLocation(getX() + 3, getY());
-            }
-        
-            if(isAtEdge()) {
-                World world;
-                world = getWorld();
-                world.removeObjects(world.getObjects(DVrachtwagen.class));
-                click = false;
-                volg = 0;
-            }
-    
         }
 }
 
@@ -92,16 +73,31 @@ public void vrachtSpawn() {
         DVracht[0] = new DVracht1();
         DVracht[1] = new DVracht2();
          
-        double i = Math.floor(Math.random()*2);
-         
+        double i = Math.floor(Math.random()*2);         
         int x = (int) i;
-        
-         
+             
         getWorld().addObject(DVracht[x], 781, 308);
         volg = 1;
     }
 }
 
+public void moveToEdge()
+{
+    if(click == true && !isAtEdge()){
+        setLocation(getX() + 3, getY());
+    }
+}
+
+public void checkAtEdge()
+{
+    if(click == true && isAtEdge()){
+        click = false;
+        volg = 0;
+        World world;
+        world = getWorld();
+        world.removeObject(this);
+    }
+}
 }
 
 
