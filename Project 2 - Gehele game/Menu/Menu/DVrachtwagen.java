@@ -14,7 +14,6 @@ int Spul;
 boolean ready = true;
 public static int x;
 int volg = 0;
-public boolean otherClicked;
     
 public void act() 
 {
