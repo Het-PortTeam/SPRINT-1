@@ -11,6 +11,7 @@ public class VrachtOverslaan extends World
     public double Difficulty = 1; 
     Counter Counter = new Counter();
     Balance Balance = new Balance();
+    Balloons Balloons = new Balloons();
     
     public VOGrijper grijper;
     public VOgrijper20 Grijper;
@@ -420,6 +421,11 @@ public class VrachtOverslaan extends World
         //Balance
         Balance = new Balance();
         addObject(Balance, 400, 33);
+        
+        //NPC
+        addObject(new Oscar(), 1218, 607);
+        Balloons = new Balloons();
+        addObject(Balloons, 954, 319);
     }
  
     public Counter getCounter()

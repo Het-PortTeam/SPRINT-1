@@ -19,6 +19,7 @@ public class Douane extends World
         addObject(new DControle(), 1000, 600);
         addObject(new DScanner(), 850, 310);
         addObject(new DVrachtwagen(), 200, 350);
+        addObject(new Oscar(), 727, 613);
     }
     
     public void act()
