@@ -1,7 +1,9 @@
 import greenfoot.*; 
 
 public class menu extends World
-{   
+{ 
+    public long currentTime = System.currentTimeMillis();
+    public int timer = 0;
     public menu()
     {    
         super(1280, 720, 1); 
@@ -22,6 +24,13 @@ public class menu extends World
         prepare();
     }
 
+    public void act(){
+        if( timer == 500){
+            removeObjects(getObjects(Oscar.class));
+            removeObjects(getObjects(Balloons.class));
+        }
+    }
+    
     /**
      * Prepare the world for the start of the program. That is: create the initial
      * objects and add them to the world.

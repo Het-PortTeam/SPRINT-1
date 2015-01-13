@@ -34,8 +34,11 @@ public class Douane extends World
     if( timer == 500)
     {
         addObject(new DVrachtwagen(), 200, 350);
+        removeObjects(getObjects(Oscar.class));
+        removeObjects(getObjects(Balloons.class));
         timer = 0;
     }
+    
     }
     
 }

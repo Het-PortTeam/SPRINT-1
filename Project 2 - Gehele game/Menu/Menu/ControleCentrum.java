@@ -77,8 +77,11 @@ public class ControleCentrum extends World
            timer = 0;
            
            addObject(new CCSchip(Counter, liveCounter), 1200, 200);
+           removeObjects(getObjects(Oscar.class));
+           removeObjects(getObjects(Balloons.class));
            //System.out.print(CounterValue);
        }
+
     }
 
 }

@@ -465,5 +465,10 @@ public class VrachtOverslaan extends World
         if(CounterValue == 90){
             System.out.println("U Heeft Gewonnen");
         }
+        
+        if( timer == 500){
+            removeObjects(getObjects(Oscar.class));
+            removeObjects(getObjects(Balloons.class));
+        }
     }
 }
