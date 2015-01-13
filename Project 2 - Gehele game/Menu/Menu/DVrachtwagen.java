@@ -71,8 +71,16 @@ public void vrachtSpawn() {
         DVracht = new DVracht[10];
         DVracht[0] = new DVracht1();
         DVracht[1] = new DVracht2();
-         
-        double i = Math.floor(Math.random()*2);         
+        DVracht[2] = new DVracht3();
+        DVracht[3] = new DVracht4();
+        DVracht[4] = new DVracht2();
+        DVracht[5] = new DVracht5();
+        DVracht[6] = new DVracht4();
+        DVracht[7] = new DVracht6();
+        DVracht[8] = new DVracht2();
+        DVracht[9] = new DVracht7();
+        
+        double i = Math.floor(Math.random()*10);         
         int x = (int) i;
              
         getWorld().addObject(DVracht[x], 781, 308);
