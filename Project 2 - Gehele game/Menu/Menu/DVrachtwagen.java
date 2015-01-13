@@ -18,12 +18,11 @@ public class DVrachtwagen extends Actor
     
     public void act() 
     {
-        Actor door = getOneIntersectingObject(DDoorgaan.class);
         if(getX() < 850) {
             setLocation(getX() + 3, getY());
         }
-        doorgaan();
         vrachtSpawn();
+        doorgaan();
         controle();
     }    
     
@@ -37,11 +36,11 @@ public class DVrachtwagen extends Actor
         if(mouseX > 156 && mouseX < 445 && mouseY > 556 && mouseY < 644 && Greenfoot.mouseClicked(door) && getX() >= 845){
             click = true;
             if (DVracht1.class != null) {
-            getWorld().removeObjects(getWorld().getObjects(DVracht1.class));
+            getWorld().removeObjects(getWorld().getObjects(DVracht.class));
         }
         }
         
-        if(click == true && getX() <= 4000){
+        if(click == true && !isAtEdge()){
             setLocation(getX() + 3, getY());
         }
         
@@ -50,10 +49,11 @@ public class DVrachtwagen extends Actor
             world = getWorld();
             world.removeObjects(world.getObjects(DVrachtwagen.class));
             click = false;
+            volg = 0;
             return;
-        }
-    }
-}
+        }}
+   }
+
     
 public void controle() {
     Actor con = getOneIntersectingObject(DControle.class);
@@ -65,11 +65,11 @@ public void controle() {
         if(mouseX > 855 && mouseX < 1145 && mouseY > 556 && mouseY < 644 && Greenfoot.mouseClicked(con) && getX() >= 845){
             click = true;
              if (DVracht1.class != null) {
-            getWorld().removeObjects(getWorld().getObjects(DVracht1.class));
+            getWorld().removeObjects(getWorld().getObjects(DVracht.class));
         }
         }
         
-        if(click == true && getX() <= 4000){
+        if(click == true && !isAtEdge()){
             setLocation(getX() + 3, getY());
         }
         
@@ -78,6 +78,7 @@ public void controle() {
             world = getWorld();
             world.removeObjects(world.getObjects(DVrachtwagen.class));
             click = false;
+            volg = 0;
             return;
         }
     
@@ -85,17 +86,18 @@ public void controle() {
 
     public void vrachtSpawn() {
         if (getX() > 848 && getX() < 852 && volg == 0) {
-         
-         String [] avracht = {"new DVracht1()", "new DVracht2()"};
+         DVracht[] DVracht;
+         DVracht = new DVracht[10];
+         DVracht[0] = new DVracht1();
+         DVracht[1] = new DVracht2();
          
          double i = Math.floor(Math.random()*2);
          
          int x = (int) i;
+        
          
-         String cvracht = avracht[x];
-         
-         getWorld().addObject(avracht[x], 781, 308);
-         volg = volg + 1;
+         getWorld().addObject(DVracht[x], 781, 308);
+         volg = 1;
         }
         }
     }
