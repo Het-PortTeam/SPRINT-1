@@ -31,6 +31,7 @@ public void act()
     }
     moveToEdge();
     checkAtEdge();
+    touch();
 }    
     
 public void doorgaan(){    
@@ -105,6 +106,17 @@ public void checkAtEdge()
         world.removeObject(this);
     }
 }
+
+public void touch()
+{
+    if(isTouching(DVrachtwagen.class)){
+         if (DVracht1.class != null) {
+                    getWorld().removeObjects(getWorld().getObjects(DVracht.class));
+                    click = true;
+                }
+    }
+}
+
 }
 
 
