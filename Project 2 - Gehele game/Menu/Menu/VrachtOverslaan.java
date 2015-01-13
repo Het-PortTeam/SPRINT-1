@@ -64,7 +64,7 @@ public class VrachtOverslaan extends World
     public VrachtOverslaan()
     {
         super(1280, 720, 1); //wereld
-        setPaintOrder(VOCrane.class, VOGrijper.class, VOCrane2.class,
+        setPaintOrder(Balloons.class, VOCrane.class, VOGrijper.class, VOCrane2.class,
         VOgrijper20.class, VOConS.class, VOConB.class, VOConM.class, VOConEB.class, VOConEM.class, VOConES.class,
         VOTrain.class, VOLocomotief.class, Rails.class, VOSchip.class, VOSchip2.class );
        
@@ -425,7 +425,7 @@ public class VrachtOverslaan extends World
         //NPC
         addObject(new Oscar(), 1218, 607);
         Balloons = new Balloons();
-        addObject(Balloons, 954, 319);
+        addObject(Balloons, 1086, 456);
     }
  
     public Counter getCounter()
