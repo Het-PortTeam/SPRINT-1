@@ -31,7 +31,9 @@ public void act()
     }
     moveToEdge();
     checkAtEdge();
+    if(click == false){
     touch();
+}
 }    
     
 public void doorgaan(){    
@@ -91,14 +93,14 @@ public void vrachtSpawn() {
 
 public void moveToEdge()
 {
-    if(click == true && !isAtEdge()){
+    if(click == true && getX() > 848){
         setLocation(getX() + 3, getY());
     }
 }
 
 public void checkAtEdge()
 {
-    if(click == true && isAtEdge()){
+    if(isAtEdge()){
         click = false;
         volg = 0;
         World world;
