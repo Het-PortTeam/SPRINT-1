@@ -190,6 +190,14 @@ Wat:		Werken aan Vracht Overslaan
 Datum: 		9/1/2015
 Tijdsduur: 	2 uur en 30 minuten
 
+Wat:		Werken aan Vracht Overslaan
+Datum: 		13/1/2015
+Tijdsduur: 	2 uur en 30 minuten
+
+Wat:		Werken aan Vracht Overslaan
+Datum: 		14/1/2015
+Tijdsduur: 	2 uur
+
 
 ===Oscar Veldman======
 ======================
