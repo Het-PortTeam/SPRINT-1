@@ -15,17 +15,15 @@ public class DVrachtwagen extends Actor
     public static int x;
     int volg = 0;
     boolean isDocked;
+    int goed = 0;
     
     private Counter counter;
     World myWorld = getWorld();
     Douane Douane = (Douane)myWorld;
     
+    
     public void act() 
-    {
-       World myWorld = getWorld();
-       Douane Douane = (Douane)myWorld;
-       Counter counter = Douane.getCounter();        
-        
+    {       
         Actor door = getOneIntersectingObject(DDoorgaan.class);
         Actor con = getOneIntersectingObject(DControle.class);
         if(getX() < 850) {
@@ -66,7 +64,11 @@ public class DVrachtwagen extends Actor
             
             if(mouseX > 156 && mouseX < 445 && mouseY > 556 && mouseY < 644 && getX() >= 845){
                 if (DVracht.class != null) {
-                    counter.add(10);
+                    World myWorld = getWorld();
+                    Douane Douane = (Douane)myWorld;
+                    Counter counter = Douane.getCounter();
+                    if(goed == 2 || goed == 5 || goed == 8){
+                    counter.add(-10); } else {counter.add(10); }
                     getWorld().removeObjects(getWorld().getObjects(DVracht.class));
                     click = true;
                 }
@@ -84,6 +86,11 @@ public class DVrachtwagen extends Actor
             
                 if(mouseX > 855 && mouseX < 1145 && mouseY > 556 && mouseY < 644 && getX() >= 845){            
                     if (DVracht.class != null) {
+                    World myWorld = getWorld();
+                    Douane Douane = (Douane)myWorld;
+                    Counter counter = Douane.getCounter();
+                    if(goed == 2 || goed == 5 || goed == 8){
+                    counter.add(10); } else {counter.add(-10); }
                         getWorld().removeObjects(getWorld().getObjects(DVracht.class));
                         click = true;
                     }
@@ -105,9 +112,10 @@ public class DVrachtwagen extends Actor
             DVracht[7] = new DVracht(false, 10);
             DVracht[8] = new DVracht(true, 10);
             DVracht[9] = new DVracht(false, 10);
-            
+           
             double i = Math.floor(Math.random()*10);         
             int x = (int) i;
+            goed = x;
                  
             getWorld().addObject(DVracht[x], 781, 308);
             volg = 1;
@@ -139,6 +147,12 @@ public class DVrachtwagen extends Actor
         {
             if(getIntersectingObjects(DVrachtwagen.class).size() != 0){
                  if (DVracht.class != null) {
+                     
+                     World myWorld = getWorld();
+                     Douane Douane = (Douane)myWorld;
+                     Counter counter = Douane.getCounter(); 
+                    counter.add(-20);
+                     
                      getWorld().removeObjects(getWorld().getObjects(DVracht.class));
                      click = true;
                  }    
