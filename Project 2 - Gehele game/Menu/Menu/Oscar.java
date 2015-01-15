@@ -8,17 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Oscar extends Actor
 {
-    public int timer = 0;
+    int currentWorld;  
+    long currentTime = System.currentTimeMillis();
     /**
      * Act - do whatever the Oscar wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-           if(timer == 1000){
-            World world;
-            world = getWorld();
-            world.removeObjects(world.getObjects(Oscar.class));
+           if(currentTime + 12000 < System.currentTimeMillis()){
+               World world;
+               world = getWorld();
+               world.removeObjects(world.getObjects(Oscar.class));
+               world.removeObjects(world.getObjects(Balloons.class));
            }
     }    
 }

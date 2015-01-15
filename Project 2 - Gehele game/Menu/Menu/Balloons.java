@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Balloons extends Actor
 {
     int currentWorld;  
+    long currentTime = System.currentTimeMillis();
     
     /*
      * 1 = Menu
@@ -22,6 +23,7 @@ public class Balloons extends Actor
         if(currentWorld == 1){
             //System.out.println("TEST menu");
             setImage(new GreenfootImage("Textballon_M.png"));
+            
         }
         
         if(currentWorld == 2){
@@ -39,5 +41,28 @@ public class Balloons extends Actor
             //System.out.println("TEST d");
         }
     }
+    
+    public void act()
+    {
+        if(currentTime + 4000 <  System.currentTimeMillis())
+        {
+            if(currentWorld == 2){
+                setImage(new GreenfootImage("Textballon_CC2.png"));
+            }
+            
+            if(currentWorld == 3){
+                setImage(new GreenfootImage("Textballon_VO2.png"));
+            }
+            
+            if(currentWorld == 4){
+                setImage(new GreenfootImage("Textballon_D2.png"));
+            }
+        }
+        if(currentTime + 8000 < System.currentTimeMillis())
+        {
+            if(currentWorld == 4){
+                setImage(new GreenfootImage("Textballon_D3.png"));
+            }
+        }
+    }    
 }
-

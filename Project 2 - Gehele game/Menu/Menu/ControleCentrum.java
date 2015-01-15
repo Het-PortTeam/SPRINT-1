@@ -10,7 +10,7 @@ public class ControleCentrum extends World
 {    
     private String img;  
     private GifImage gif = new GifImage("water_gif_test2.gif");  
-    public long currentTime = System.currentTimeMillis();   // Later (for example in an act() method), do:
+    public long currentTime = System.currentTimeMillis();
     public int timer = 0;
     public int explainOnce = 1;
     public int Difficulty = 1; 
@@ -53,10 +53,7 @@ public class ControleCentrum extends World
     {       
        int CounterValue = Counter.getValue();
        setBackground(gif.getCurrentImage());
-       /* if(explainOnce == 1) {
-           Greenfoot.playSound("CC.mp3");
-           explainOnce = 0;
-       }*/
+
        if(liveCounter.getValue() <= 0){
            Greenfoot.setWorld(new GameOver());
        }
