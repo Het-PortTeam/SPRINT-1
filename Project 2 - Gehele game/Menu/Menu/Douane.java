@@ -20,25 +20,25 @@ public class Douane extends World
         addObject(new DScanner(), 850, 310);
         addObject(new DVrachtwagen(), 200, 350);
         addObject(new Oscar(), 727, 613);
-        addObject(new Balloons(), 593, 462);
+        addObject(new Balloons(4), 593, 462);
     }
     
     public void act()
     {
 
-       if( currentTime + 1000 <  System.currentTimeMillis() )
-    {
-        timer += 1;
-    }
-    
-    if( timer == 500)
-    {
-        addObject(new DVrachtwagen(), 200, 350);
-        removeObjects(getObjects(Oscar.class));
-        removeObjects(getObjects(Balloons.class));
-        timer = 0;
-    }
-    
+        if( currentTime + 1000 <  System.currentTimeMillis() )
+        {
+            timer += 1;
+        }
+        
+        if( timer == 500)
+        {
+            addObject(new DVrachtwagen(), 200, 350);
+            removeObjects(getObjects(Oscar.class));
+            removeObjects(getObjects(Balloons.class));
+            timer = 0;
+        }
+        
     }
     
 }
