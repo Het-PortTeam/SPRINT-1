@@ -64,7 +64,7 @@ public class CCSchip extends Actor
         
         Actor touching = getOneIntersectingObject(CCSchip.class);
     
-        if(touching != null){liveCounter.add(-1); this.removeTouching(CCSchip.class);}
+        if(touching != null && getX() != 1200 && getY() != 200){liveCounter.add(-1); this.removeTouching(CCSchip.class);}
         else{liveCounter.add(0);}
     
     
