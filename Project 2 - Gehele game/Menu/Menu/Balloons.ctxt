@@ -4,4 +4,6 @@ comment0.target=Balloons(int)
 comment0.text=\r\n\ 1\ \=\ Menu\r\n\ 2\ \=\ ControleCentrum\r\n\ 3\ \=\ VrachtOverslaan\r\n\ 4\ \=\ Douane\r\n
 comment1.params=
 comment1.target=void\ act()
-numComments=2
+comment2.params=changeWorldId
+comment2.target=void\ setCurrentWorld(int)
+numComments=3

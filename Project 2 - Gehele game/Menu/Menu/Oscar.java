@@ -16,7 +16,7 @@ public class Oscar extends Actor
      */
     public void act() 
     {
-           if(currentTime + 12000 < System.currentTimeMillis()){
+           if(currentTime + 16000 < System.currentTimeMillis()){
                World world;
                world = getWorld();
                world.removeObjects(world.getObjects(Oscar.class));

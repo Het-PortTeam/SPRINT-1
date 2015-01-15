@@ -21,24 +21,23 @@ public class Balloons extends Actor
     public Balloons(int currentWorld)
     {       
         if(currentWorld == 1){
-            //System.out.println("TEST menu");
             setImage(new GreenfootImage("Textballon_M.png"));
-            
+            setCurrentWorld(1);           
         }
         
         if(currentWorld == 2){
             setImage(new GreenfootImage("Textballon_CC1.png"));
-            //System.out.println("TEST cc");
+            setCurrentWorld(2);
         }
         
         if(currentWorld == 3){          
             setImage(new GreenfootImage("Textballon_VO1.png"));
-            //System.out.println("TEST vo");
+            setCurrentWorld(3);
         }
         
         if(currentWorld == 4){            
             setImage(new GreenfootImage("Textballon_D1.png"));
-            //System.out.println("TEST d");
+            setCurrentWorld(4);
         }
     }
     
@@ -65,4 +64,9 @@ public class Balloons extends Actor
             }
         }
     }    
+    
+    public void setCurrentWorld(int changeWorldId)
+    {
+        currentWorld = changeWorldId;
+    }
 }
