@@ -42,11 +42,20 @@ public class ControleCentrum extends World
         addObject(new CCEind(), 106, 194);
         addObject(new CCExit(), 82, 300);
         addObject(new Oscar(), 1228, 608);
-        addObject(new Balloons(), 1097, 456);
+        addObject(new Balloons(2), 1097, 456);
 
         
     }
+    
+    public void gameover()
+    {
+        Saver scoreSaver = new Saver();
+        scoreSaver.saveHighscore(Counter.getValue());
         
+        ScoreBoard finalScore = new ScoreBoard(getWidth(), getHeight());
+        
+        addObject(finalScore, getWidth() /2, getHeight() / 2); 
+    }
         
     
     public void act()
@@ -58,7 +67,7 @@ public class ControleCentrum extends World
            explainOnce = 0;
        }*/
        if(liveCounter.getValue() <= 0){
-           Greenfoot.setWorld(new GameOver());
+           gameover();
        }
        
        if( currentTime + 1000 <  System.currentTimeMillis() )
