@@ -46,7 +46,16 @@ public class ControleCentrum extends World
 
         
     }
+    
+    public void gameover()
+    {
+        Saver scoreSaver = new Saver();
+        scoreSaver.saveHighscore(Counter.getValue());
         
+        ScoreBoard finalScore = new ScoreBoard(getWidth(), getHeight());
+        
+        addObject(finalScore, getWidth() /2, getHeight() / 2); 
+    }
         
     
     public void act()
@@ -55,7 +64,7 @@ public class ControleCentrum extends World
        setBackground(gif.getCurrentImage());
 
        if(liveCounter.getValue() <= 0){
-           Greenfoot.setWorld(new GameOver());
+           gameover();
        }
        
        if( currentTime + 1000 <  System.currentTimeMillis() )

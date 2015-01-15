@@ -42,6 +42,7 @@ public class ScoreBoard extends Actor
         setImage(new GreenfootImage(Math.max(600, width), height)); 
         
         drawScores();
+          
     }
     
     private void drawString(String text, int x, int y, Color color, int height)
@@ -51,6 +52,7 @@ public class ScoreBoard extends Actor
     
     private void drawScores()
     {
+ 
         // 50 pixels is the max height of the user image
         final int pixelsPerUser = 50 + 2*GAP;
         // Calculate how many users we have room for:
@@ -60,11 +62,11 @@ public class ScoreBoard extends Actor
         getImage().setColor(BACKGROUND_COLOR);
         getImage().fill();
 
-        drawString("All Players", 100, topSpace - HEADER_TEXT_HEIGHT - 5, MAIN_COLOR, HEADER_TEXT_HEIGHT);
-        drawString("Near You", 100 + getImage().getWidth() / 2, topSpace - HEADER_TEXT_HEIGHT - 5, MAIN_COLOR, HEADER_TEXT_HEIGHT);        
+        drawString("High Scores List", 100, topSpace - HEADER_TEXT_HEIGHT - 5, MAIN_COLOR, HEADER_TEXT_HEIGHT);
+      //  drawString("Near You", 100 + getImage().getWidth() / 2, topSpace - HEADER_TEXT_HEIGHT - 5, MAIN_COLOR, HEADER_TEXT_HEIGHT);        
         
         drawUserPanel(GAP, topSpace, (getImage().getWidth() / 2) - GAP, topSpace + numUsers * pixelsPerUser, UserInfo.getTop(numUsers));
-        drawUserPanel(GAP + getImage().getWidth() / 2, topSpace, getImage().getWidth() - GAP, topSpace + numUsers * pixelsPerUser, UserInfo.getNearby(numUsers));
+        //drawUserPanel(GAP + getImage().getWidth() / 2, topSpace, getImage().getWidth() - GAP, topSpace + numUsers * pixelsPerUser, UserInfo.getNearby(numUsers));
     }
     
     private void drawUserPanel(int left, int top, int right, int bottom, List users)
@@ -99,8 +101,8 @@ public class ScoreBoard extends Actor
             x += 50;
             drawString(Integer.toString(playerData.getScore()), x, y+18, SCORE_COLOR, 14);
             x += 80;
-            getImage().drawImage(playerData.getUserImage(), x, y);
-            x += 55;
+//             getImage().drawImage(playerData.getUserImage(), x, y);
+//             x += 55;
             drawString(playerData.getUserName(), x, y + 18, MAIN_COLOR, 14);
             y += 50 + 2*GAP;
         }
