@@ -437,6 +437,16 @@ public class VrachtOverslaan extends World
         return Balance;
     }
     
+    public void gameover()
+    {
+        Saver scoreSaver = new Saver();
+        scoreSaver.saveHighscore(Counter.getValue());
+        
+        ScoreBoard finalScore = new ScoreBoard(getWidth(), getHeight());
+        
+        addObject(finalScore, getWidth() /2, getHeight() / 2); 
+    }
+    
     public void act()
     {
         int CounterValue = Counter.getValue();
@@ -462,8 +472,8 @@ public class VrachtOverslaan extends World
            Difficulty = CounterValue / 25;
         }
         
-        if(CounterValue == 90){
-            System.out.println("U Heeft Gewonnen");
+        if(Counter.getValue() == 90){
+            gameover();
         }
         
         if( timer == 500){
