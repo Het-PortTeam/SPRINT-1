@@ -116,17 +116,20 @@ Datum:		27/12/2014
 Tijdsduur: 	180 min.
 
 Wat:		Werken aan CC
-Datum:		03/01/2014
+Datum:		03/01/2015
 Tijdsduur:	120 min.
 
 Wat:		Fixen CC
-Datum:		12/01/2014
+Datum:		12/01/2015
 Tijdsduur:	120 min.
 
 Wat: 		Werken aan douane
-Datum:		13/01/2014
+Datum:		13/01/2015
 Tijdsduur:	160 min.
 
+Wat:		Werken aan douane en tutorial
+Datum:		15/01/2015
+Tijdsduur:	230 min.
 
 
 ======Johan Bos=======
