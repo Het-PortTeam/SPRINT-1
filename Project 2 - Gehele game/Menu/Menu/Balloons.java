@@ -8,50 +8,36 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Balloons extends Actor
 {
-        // wereld inlaaden
-        World myWorld = getWorld();
-        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
-        menu menu = (menu)myWorld;
-        Douane Douane = (Douane)myWorld;
-        ControleCentrum ControleCentrum = (ControleCentrum)myWorld;
-        
-        
-    /**
-     * Act - do whatever the Balloons wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+    int currentWorld;  
+    
+    /*
+     * 1 = Menu
+     * 2 = ControleCentrum
+     * 3 = VrachtOverslaan
+     * 4 = Douane
      */
-    
-    static void setImagesM(){
-       GreenfootImage drawedImage = new GreenfootImage("Textballon_M.png");
+        
+    public Balloons(int currentWorld)
+    {       
+        if(currentWorld == 1){
+            //System.out.println("TEST menu");
+            setImage(new GreenfootImage("Textballon_M.png"));
+        }
+        
+        if(currentWorld == 2){
+            setImage(new GreenfootImage("Textballon_CC1.png"));
+            //System.out.println("TEST cc");
+        }
+        
+        if(currentWorld == 3){          
+            setImage(new GreenfootImage("Textballon_VO1.png"));
+            //System.out.println("TEST vo");
+        }
+        
+        if(currentWorld == 4){            
+            setImage(new GreenfootImage("Textballon_D1.png"));
+            //System.out.println("TEST d");
+        }
     }
-    
-    
-   
-    
-    public void act() 
-    {
-        if(myWorld == VrachtOverslaan){
-            //System.out.println("TEST");
-        }else{
-           return;
-        }
-        
-        if(myWorld == menu){
-            setImagesM();
-        }else{
-           return;
-        }
-        
-        if(myWorld == Douane){
-            // System.out.println("TEST");
-        }else{
-           return;
-        }
-        
-        if(myWorld == ControleCentrum){
-            // System.out.println("TEST");
-        }else{
-           return;
-        }
-    }    
 }
+
