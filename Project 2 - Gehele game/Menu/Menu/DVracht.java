@@ -25,7 +25,7 @@ public class DVracht extends Actor
     public void setImage()
     {
         int randFour = randInt(1, 4);
-        int randThree = randInt(1, 3);
+        int randThree = randInt(1, 4);
         if(getIllegal() == true)
         {            
             if(randFour == 1){
@@ -51,6 +51,9 @@ public class DVracht extends Actor
             }
             if(randThree == 3){
                 setImage(new GreenfootImage("Vracht5.png"));
+            }
+            if(randThree == 4){
+                setImage(new GreenfootImage("Vracht8.png"));
             }
         }
     }

@@ -11,6 +11,7 @@ public class Douane extends World
 
     public long currentTime = System.currentTimeMillis();   // Later (for example in an act() method), do:
     public int timer = 0;
+    Counter Counter = new Counter();
     public Douane()
     {    
         super(1280, 720, 1); 
@@ -21,11 +22,14 @@ public class Douane extends World
         addObject(new DVrachtwagen(), 200, 350);
         addObject(new Oscar(), 727, 613);
         addObject(new Balloons(4), 593, 462);
+        Counter = new Counter("Punten: ");
+        addObject(Counter, 850, 155);
     }
     
     public void act()
     {
-
+        int CounterValue = Counter.getValue();
+        
         if( currentTime + 1000 <  System.currentTimeMillis() )
         {
             timer += 1;
@@ -39,6 +43,11 @@ public class Douane extends World
             timer = 0;
         }
         
+    }
+    
+    public Counter getCounter()
+    {
+        return Counter;
     }
     
 }
