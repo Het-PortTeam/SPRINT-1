@@ -10,8 +10,10 @@ public class Douane extends World
 {
 
     public long currentTime = System.currentTimeMillis();   // Later (for example in an act() method), do:
-    public int timer = 0;
+    private int timer = 0;
+    private int moeilijk = 0;
     Counter Counter = new Counter();
+    private int wagenNummer = 0;
     public Douane()
     {    
         super(1280, 720, 1); 
@@ -34,15 +36,19 @@ public class Douane extends World
         {
             timer += 1;
         }
-        
-        if( timer == 500)
+        if(wagenNummer < 20){
+        if( timer == 400)
         {
             addObject(new DVrachtwagen(), 200, 350);
             removeObjects(getObjects(Oscar.class));
             removeObjects(getObjects(Balloons.class));
-            timer = 0;
+            if(moeilijk < 150){
+            moeilijk += 15;
+        } else {moeilijk = 150;}
+            timer = 0 + moeilijk;
+            wagenNummer += 1;
         }
-        
+    }
     }
     
     public Counter getCounter()
