@@ -1,4 +1,14 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
-numComments=1
+comment0.params=Illegal\ PointValue
+comment0.target=DVracht(boolean,\ int)
+comment1.params=
+comment1.target=void\ setImage()
+comment2.params=min\ max
+comment2.target=int\ randInt(int,\ int)
+comment3.params=
+comment3.target=boolean\ getIllegal()
+comment4.params=theLaw
+comment4.target=boolean\ setIllegal(boolean)
+comment5.params=
+comment5.target=int\ getPointValue()
+numComments=6
