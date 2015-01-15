@@ -47,7 +47,7 @@ public class VOConB extends Actor
                         setLocation(getX() + 3, getY());
                     }}
                     if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty() && getY() >= 600 && getY() <= 694){
-                        counter.add(1);
+                        counter.add(10);
                         myWorld.removeObject(this);
                     }
                     
