@@ -20,6 +20,7 @@ public class menu extends World
         addObject(new HMenu(), 890, 500);
         addObject(new Oscar(), 1090, 469);
         addObject(new Balloons(1), 954, 319);
+        addObject(new POR(), 1044, 83);
 
         prepare();
     }
