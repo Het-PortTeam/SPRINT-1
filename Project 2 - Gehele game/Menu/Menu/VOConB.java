@@ -2,10 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
 
 /**
- * Write a description of class VOConS5 here.
+ * Write a description of class VOConS here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Oscar Veldman, Johan Bos, Kevin Verweij 
+ * @version (9-1-2015)
  */
 
 public class VOConB extends Actor
@@ -26,33 +26,37 @@ public class VOConB extends Actor
        World myWorld = getWorld();
        VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
        Counter counter = VrachtOverslaan.getCounter();
- 
-        
        
-            if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
+       //grab
+        if (Greenfoot.isKeyDown("q") && !getObjectsInRange(25, VOGrijper.class).isEmpty() && !VrachtOverslaan.grijper.grab){
                  VrachtOverslaan.grijper.grab = true;
                  Xspeed = 3;
             }
-            
-               if (Greenfoot.isKeyDown("e") && !getObjectsInRange(60, VOTrain.class).isEmpty() && VrachtOverslaan.grijper.grab){
-                 VrachtOverslaan.grijper.grab = false;
-                 Xspeed = 0;
-                } 
-                
+           
+
+        if (Greenfoot.isKeyDown("e") && VrachtOverslaan.grijper.grab && !getObjectsInRange(60, VOTrain.class).isEmpty() || (getX() >= 361 && getX() <= 405 && getY() == 692) || (getX() >= 501 && getX() <= 545 && getY() == 692))
+        {
+            VrachtOverslaan.grijper.grab = false;
+            Xspeed = 0;
+        } 
+
+  
+               //train
                 if (!getObjectsInRange(60, VOTrain.class).isEmpty()){
                  if (Greenfoot.isKeyDown("t") && getX() < 1260){
                         tClicked = true;           
                     } 
                     if(tClicked == true){
                         setLocation(getX() + 3, getY());
-                    }}
-                    if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty() && getY() >= 600 && getY() <= 694){
-                        counter.add(10);
+                    }
+                }    
+                
+                if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty() && getY() >= 600 && getY() <= 694){
+                        counter.add(1);
                         myWorld.removeObject(this);
                     }
-                    
-                
-             
+    
+    // W,A,S,D Besturing
        if(Greenfoot.isKeyDown("a")){
             setLocation(getX() -Xspeed, getY());
     } 
@@ -69,6 +73,8 @@ public class VOConB extends Actor
         setLocation(getX(), getY() +Xspeed);
     }
     }
+    
+    //pijl besturing
     if(Greenfoot.isKeyDown("left")){
         setLocation(getX() -Xspeed, getY());
     }
@@ -85,5 +91,7 @@ public class VOConB extends Actor
              setLocation(getX(), getY() +Xspeed);
          }
     }
-    }    
+    
+    
+}
 }

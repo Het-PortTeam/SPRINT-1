@@ -33,7 +33,7 @@ public class VOConS extends Actor
                  Xspeed = 3;
             }
            
-               if (Greenfoot.isKeyDown("e") && VrachtOverslaan.grijper.grab && !getObjectsInRange(60, VOTrain.class).isEmpty()){
+               if (Greenfoot.isKeyDown("e") && VrachtOverslaan.grijper.grab && !getObjectsInRange(60, VOTrain.class).isEmpty() && (getX() >= 361 && getX() <= 405 && getY() >=675 && getY() <= 721) || (getX() >= 501 && getX() <= 545 && getY() >=675 && getY() <= 721)){
                  VrachtOverslaan.grijper.grab = false;
                  Xspeed = 0;
                 } 

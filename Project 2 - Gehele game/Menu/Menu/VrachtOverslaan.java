@@ -83,9 +83,12 @@ public class VrachtOverslaan extends World
         addObject(new Rails(), 650, 694);
         
         // De trein
+        VOTrain Train = new VOTrain();
+        VOTrain Train2 = new VOTrain();
         addObject(new VOLocomotief(), 640, 692);
-        addObject(new VOTrain(), 523, 692);
-        addObject(new VOTrain(), 383, 692);
+        addObject(Train2, 523, 692);
+        addObject(Train, 383, 692);
+       
         // Tot hier!
        
         
