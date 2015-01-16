@@ -14,6 +14,7 @@ public class Douane extends World
     private int moeilijk = 0;
     Counter Counter = new Counter();
     private int wagenNummer = 0;
+    private boolean wait = true;
     //Alle voorwerpen die weergeven op de wereld
     public Douane()
     {    
@@ -22,7 +23,6 @@ public class Douane extends World
         addObject(new DDoorgaan(), 300, 600);
         addObject(new DControle(), 1000, 600);
         addObject(new DScanner(), 850, 310);
-        addObject(new DVrachtwagen(), 200, 350);
         addObject(new Oscar(), 727, 613);
         addObject(new Balloons(4), 593, 462);
         Counter = new Counter("Punten: ");
@@ -38,6 +38,12 @@ public class Douane extends World
             timer += 1;
         }
         //De wagen die steeds spawnen tot 20
+        if(timer == 300 && wait == true){
+        timer = 0;
+        wait = false;
+    }
+        
+        if(wait == false){
         if(wagenNummer < 20){
         if( timer == 400)
         {
@@ -53,7 +59,8 @@ public class Douane extends World
         }
     }
     }
-    //Puntne telling
+}
+    //Punten telling
     public Counter getCounter()
     {
         return Counter;
