@@ -16,6 +16,16 @@ public class ControleCentrum extends World
     public int Difficulty = 1; 
     Counter Counter = new Counter();
     Lives liveCounter = new Lives();
+    
+     public void gameover()
+    {
+        Saver scoreSaver = new Saver();
+        scoreSaver.saveHighscore(Counter.getValue());
+        
+        ScoreBoard finalScore = new ScoreBoard(getWidth()/3, getHeight()/3);
+        
+        addObject(finalScore, getWidth() /3, getHeight() / 3); 
+    }
 
     public ControleCentrum()
     {    
@@ -47,17 +57,6 @@ public class ControleCentrum extends World
         
     }
     
-    public void gameover()
-    {
-        Saver scoreSaver = new Saver();
-        scoreSaver.saveHighscore(Counter.getValue());
-        
-        ScoreBoard finalScore = new ScoreBoard(getWidth(), getHeight());
-        
-        addObject(finalScore, getWidth() /2, getHeight() / 2); 
-    }
-        
-    
     public void act()
     {       
        int CounterValue = Counter.getValue();
@@ -65,6 +64,7 @@ public class ControleCentrum extends World
 
        if(liveCounter.getValue() <= 0){
            gameover();
+           Greenfoot.stop();
        }
        
        if( currentTime + 1000 <  System.currentTimeMillis() )
