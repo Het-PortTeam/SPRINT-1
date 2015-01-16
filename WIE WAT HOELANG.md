@@ -198,6 +198,9 @@ Wat:		Werken aan Vracht Overslaan
 Datum: 		14/1/2015
 Tijdsduur: 	2 uur
 
+Wat:		Werken aan Vracht Overslaan bij peercoach
+Datum: 		16/1/2015
+Tijdsduur: 	2 uur en 30 minuten
 
 ===Oscar Veldman======
 ======================
