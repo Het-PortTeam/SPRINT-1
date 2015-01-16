@@ -75,17 +75,17 @@ public class VrachtOverslaan extends World
     {
         super(1280, 720, 1); //wereld
         setPaintOrder(Balloons.class, VOCrane.class, VOGrijper.class, VOCrane2.class,
-        VOgrijper20.class, VOConS.class, VOConB.class, VOConM.class, VOConEB.class, VOConEM.class, VOConES.class,
-        VOTrain.class, VOLocomotief.class, Rails.class, VOSchip.class, VOSchip2.class );
+        VOgrijper20.class, VOConS.class, VOConB.class, VOConM.class, VOTrain.class, VOConEB.class, VOConEM.class, VOConES.class,
+        VOLocomotief.class, Rails.class, VOSchip.class, VOSchip2.class );
        
         //kade
         addObject(new Kade(), 640, 360);
         addObject(new Rails(), 650, 694);
         
         // De trein
-        addObject(new VOLocomotief(), 640, 695);
-        addObject(new VOTrain(), 523, 698);
-        addObject(new VOTrain(), 383, 698);
+        addObject(new VOLocomotief(), 640, 692);
+        addObject(new VOTrain(), 523, 692);
+        addObject(new VOTrain(), 383, 692);
         // Tot hier!
        
         
@@ -265,7 +265,7 @@ public class VrachtOverslaan extends World
         // De containers schip2: "Computer"
         
         Grijper = new VOgrijper20();
-        addObject(Grijper, 298, 10);
+       // addObject(Grijper, 298, 10);
         addObject(new VOCrane2(), 298, 188);
         
         

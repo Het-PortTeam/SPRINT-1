@@ -15,6 +15,8 @@ public class VOGrijper extends Actor
     
     private VOConB container;
     public boolean grab;
+    World myWorld = getWorld();
+       VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
     
     public void act() 
     {
@@ -54,7 +56,7 @@ public class VOGrijper extends Actor
         setLocation(getX(), getY() +Xspeed);
     }
     
-    if(getObjectsInRange(25, VOGrijper.class) != null){}
+    if(!getObjectsInRange(25, VOGrijper.class).isEmpty() && VrachtOverslaan.grijper.grab == true){}
 }
 
 }

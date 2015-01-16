@@ -34,7 +34,7 @@ public class VOConB extends Actor
                  Xspeed = 3;
             }
             
-               if (Greenfoot.isKeyDown("e") && VrachtOverslaan.grijper.grab && !getObjectsInRange(60, VOTrain.class).isEmpty()){
+               if (Greenfoot.isKeyDown("e") && !getObjectsInRange(60, VOTrain.class).isEmpty() && VrachtOverslaan.grijper.grab){
                  VrachtOverslaan.grijper.grab = false;
                  Xspeed = 0;
                 } 
