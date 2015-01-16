@@ -77,7 +77,7 @@ public class ControleCentrum extends World
            }
            timer += Difficulty;
        }
-    
+       
        if( timer >= 500)
        {
            timer = 0;
@@ -85,6 +85,7 @@ public class ControleCentrum extends World
            addObject(new CCSchip(Counter, liveCounter), 1200, 200);
            removeObjects(getObjects(Oscar.class));
            removeObjects(getObjects(Balloons.class));
+           Greenfoot.start();
            //System.out.print(CounterValue);
        }
 

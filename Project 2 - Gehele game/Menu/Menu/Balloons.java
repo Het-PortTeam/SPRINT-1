@@ -26,7 +26,7 @@ public class Balloons extends Actor
         }
         
         if(currentWorld == 2){
-            setImage(new GreenfootImage("Textballon_CC1.png"));
+            setImage(new GreenfootImage("Textballon_CC.png"));
             setCurrentWorld(2);
         }
         
@@ -45,10 +45,6 @@ public class Balloons extends Actor
     {
         if(currentTime + 4000 <  System.currentTimeMillis())
         {
-            if(currentWorld == 2){
-                setImage(new GreenfootImage("Textballon_CC2.png"));
-            }
-            
             if(currentWorld == 3){
                 setImage(new GreenfootImage("Textballon_VO2.png"));
             }
@@ -59,8 +55,18 @@ public class Balloons extends Actor
         }
         if(currentTime + 8000 < System.currentTimeMillis())
         {
+            if(currentWorld == 3){
+                setImage(new GreenfootImage("Textballon_VO3.png"));
+            }
+            
             if(currentWorld == 4){
                 setImage(new GreenfootImage("Textballon_D3.png"));
+            }
+        }
+        if(currentTime + 12000 < System.currentTimeMillis())
+        {
+            if(currentWorld == 3){
+                setImage(new GreenfootImage("Textballon_VO4.png"));
             }
         }
     }    
