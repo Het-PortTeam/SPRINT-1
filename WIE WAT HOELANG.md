@@ -1,8 +1,24 @@
 ===Kevin Verweij=====
 =====================
+Wat:		Werken aan overslag
+Datum:		16/1/2015
+Tijdsduur:	100 minuten
+
+Wat:		Werken aan overslag
+Datum:		15/1/2015
+Tijdsduur:	6uur
+
+Wat:		Projectles
+Datum:		13/1/2015
+Tijdsduur:	2 uur 50 minuten
+
 Wat:		Werken aan Overslag
 Datum: 		9/1/2015
 Tijdsduur: 	4 uur
+
+wat:		Projectles
+Datum:		6/1/2015
+tijdsduur:	2 uur 50 minuten
 
 
 Wat:		Werken aan Overslag
