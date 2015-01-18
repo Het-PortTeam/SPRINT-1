@@ -25,6 +25,7 @@ public class Douane extends World
         addObject(new DScanner(), 850, 310);
         addObject(new Oscar(), 727, 613);
         addObject(new Balloons(4), 593, 462);
+        addObject(new DVrachtlijst(), 226, 264);
         Counter = new Counter("Punten: ");
         addObject(Counter, 850, 155);
     }

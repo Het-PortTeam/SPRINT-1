@@ -16,6 +16,7 @@ public class DVrachtwagen extends Actor
     int volg = 0;
     boolean isDocked;
     int goed = 0;
+    private int conAan = 0; 
     
     private Counter counter;
     World myWorld = getWorld();
@@ -32,8 +33,12 @@ public class DVrachtwagen extends Actor
         }
         vrachtSpawn();
         //Bij controleren moet de vrachtwagen doorrijden maar er zit iets verdacht in.
-        if(Greenfoot.mouseClicked(con)){
+        if(Greenfoot.mouseClicked(con) && conAan < 8){
             controle();
+            conAan += 1;
+            if(conAan == 7){
+            getWorld().removeObjects(getWorld().getObjects(DControle.class));
+        }
         }
         //Als je op doorgaan klikt moet de vrachtwagen zonder problemen doorrijden
         if(Greenfoot.mouseClicked(door)){
