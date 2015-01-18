@@ -140,11 +140,11 @@ Tijdsduur:	20 min
 
 Wat: 		Vergaderen over samenwerkingscontract & Brainstormen over user stories game 1 & 2 & software op de computer zetten.
 Datum:		18/11/2014
-Tijdsduur:	130 min.
+Tijdsduur:	2 uur en 10 min.
 
 Wat:		Vergaderen over welke game 3 & 4, sprint 1 afgerond.
 Datum: 		23/11/2014	
-Tijdsduur:	115 min.
+Tijdsduur:	1 uur en 55 min.
 
 Wat:		Pokerplanning
 Datum: 		24/11/2014
@@ -201,6 +201,12 @@ Tijdsduur: 	2 uur
 Wat:		Werken aan Vracht Overslaan bij peercoach
 Datum: 		16/1/2015
 Tijdsduur: 	2 uur en 30 minuten
+
+Wat:		Werken aan documenten voor inleveren
+Datum: 		18/1/2015
+Tijdsduur: 	30 minuten
+
+Totaal aantal uren en minuten: 33 uur en 55min.
 
 ===Oscar Veldman======
 ======================
