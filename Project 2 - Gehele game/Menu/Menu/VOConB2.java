@@ -35,7 +35,7 @@ public class VOConB2 extends VOConB
            
 
             if(Greenfoot.isKeyDown("e")){
-        if (VrachtOverslaan.grijper.grab || (getX() >= 361 && getX() <= 405 && getY() == 692) || (getX() >= 501 && getX() <= 545 && getY() == 692) || (getX() >= 12 && getX() <= 283 && getY() > 540 && getY() < 610))
+        if (VrachtOverslaan.grijper.grab || (getX() >= 361 && getX() <= 405 && getY() >= 633 && getY() <= 751 ) || (getX() >= 501 && getX() <= 545 && getY() >= 633 && getY() <= 751 ) || (getX() >= 12 && getX() <= 283 && getY() > 540 && getY() < 610))
         {
             VrachtOverslaan.grijper.grab = false;
             Xspeed = 0;
@@ -54,7 +54,7 @@ public class VOConB2 extends VOConB
                 }    
                 
                 if (getWorld().getObjects(VOLocomotief.class).isEmpty() && getWorld().getObjects(VOTrain.class).isEmpty() && getY() >= 600 && getY() <= 694){
-                        counter.add(1);
+                        counter.add(10);
                         myWorld.removeObject(this);
                     }
     
