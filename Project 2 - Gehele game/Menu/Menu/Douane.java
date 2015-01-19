@@ -59,6 +59,11 @@ public class Douane extends World
             wagenNummer += 1;
         }
     }
+    
+    if (wagenNummer > 19){
+            GameOver GameOver= new GameOver();
+            Greenfoot.setWorld(GameOver);
+    }
     }
 }
     //Punten telling
