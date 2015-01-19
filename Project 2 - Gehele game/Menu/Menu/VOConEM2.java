@@ -24,24 +24,35 @@ public class VOConEM2 extends VOConEM
         vrachtOverslaan = (VrachtOverslaan)w;
         super.addedToWorld(w);
     }
+   
     
     public void act() 
     {
-        if(vrachtOverslaan.Grijper.grab == true && !getObjectsInRange(25, VOgrijper20.class).isEmpty()) {
-             setLocation(getX() -xSpeed, getY() -vSpeed);
+            if(!getObjectsInRange(25, VOgrijper20.class).isEmpty() && !vrachtOverslaan.Grijper.grab){
+            vrachtOverslaan.Grijper.grab = true; 
+        }
+        
+        
+        if(vrachtOverslaan.Grijper.grab == true && !getObjectsInRange(25, VOgrijper20.class).isEmpty() && vrachtOverslaan.Grijper.grab) {
+            int xSpeed = ( (VOgrijper20)getWorld().getObjects(VOgrijper20.class).get(0)).getxSpeed();
+            int vSpeed = ((VOgrijper20)getWorld().getObjects(VOgrijper20.class).get(0)).getvSpeed();
+            setLocation(getX() +xSpeed, getY() +vSpeed);
             
-            if(getX() == 298){
+         /**   if(getX() == 298){
                 xSpeed = -xSpeed;
             }
             
             if (getY() >= 303){
                 vSpeed = -vSpeed;
-            }
+            }**/
         }
         
-        if(isAtEdge() && vrachtOverslaan.Grijper.grab){
+        
+        
+        if(getY() < 50 && vrachtOverslaan.Grijper.grab){
             vrachtOverslaan.Grijper.grab = false;
             myWorld.removeObject(this);
         }
+        }
     }    
-}
+

@@ -39,4 +39,14 @@ public class VOgrijper20 extends VOCrane2
         
         if(getObjectsInRange(25, VOgrijper20.class) != null){}
     }    
+    
+    public int getxSpeed()
+    {
+        return xSpeed;
+    }
+    
+        public int getvSpeed()
+    {
+        return vSpeed;
+    } 
 }
