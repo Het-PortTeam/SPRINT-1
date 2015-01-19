@@ -63,8 +63,9 @@ public class ControleCentrum extends World
        setBackground(gif.getCurrentImage());
 
        if(liveCounter.getValue() <= 0){
-           gameover();
-           Greenfoot.stop();
+            GameOver GameOver= new GameOver();
+            Greenfoot.setWorld(GameOver);
+  
        }
        
        if( currentTime + 1000 <  System.currentTimeMillis() )

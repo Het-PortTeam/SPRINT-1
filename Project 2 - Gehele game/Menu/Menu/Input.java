@@ -9,7 +9,7 @@ import javax.swing.JInternalFrame;
  * @version 1.0
  */
   public class Input{
-      private String input;
+      public String input;
        
       public Input(String _input){
           this.input = JOptionPane.showInputDialog(_input);
