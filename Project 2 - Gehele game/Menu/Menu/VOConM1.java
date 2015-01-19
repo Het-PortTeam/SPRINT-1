@@ -34,11 +34,13 @@ public class VOConM1 extends VOConM
             }
            
 
-        if (Greenfoot.isKeyDown("e") && VrachtOverslaan.grijper.grab || (getX() >= 361 && getX() <= 405 && getY() == 692) || (getX() >= 501 && getX() <= 545 && getY() == 692))
+            if(Greenfoot.isKeyDown("e")){
+        if (VrachtOverslaan.grijper.grab || (getX() >= 361 && getX() <= 405 && getY() == 692) || (getX() >= 501 && getX() <= 545 && getY() == 692) || (getX() >= 12 && getX() <= 283 && getY() > 540 && getY() < 610))
         {
             VrachtOverslaan.grijper.grab = false;
             Xspeed = 0;
         } 
+    }
 
   
                //train

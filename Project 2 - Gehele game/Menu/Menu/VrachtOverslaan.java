@@ -76,9 +76,10 @@ public class VrachtOverslaan extends World
         super(1280, 720, 1); //wereld
         setPaintOrder(Balloons.class, VOCrane.class, VOGrijper.class, VOCrane2.class,
         VOgrijper20.class, VOConS.class, VOConB.class, VOConM.class, VOTrain.class, VOConEB.class, VOConEM.class, VOConES.class,
-        VOLocomotief.class, Rails.class, VOSchip.class, VOSchip2.class );
+        VOLocomotief.class, Rails.class, VOreserveplek.class, VOSchip.class, VOSchip2.class );
        
         //kade
+        addObject(new VOreserveplek(), 147, 575);
         addObject(new Kade(), 640, 360);
         addObject(new Rails(), 650, 694);
         
