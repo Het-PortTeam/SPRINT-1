@@ -269,7 +269,7 @@ public class VrachtOverslaan extends World
         // De containers schip2: "Computer"
         
         Grijper = new VOgrijper20();
-       // addObject(Grijper, 298, 10);
+        addObject(Grijper, 298, 10);
         addObject(new VOCrane2(), 298, 188);
         
         

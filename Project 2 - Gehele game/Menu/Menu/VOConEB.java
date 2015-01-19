@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class VOConEB extends Actor
 {
     World myWorld = getWorld();
-    VrachtOverslaan VrachtOverslaan = (VrachtOverslaan)myWorld;
+    VrachtOverslaan vrachtOverslaan = (VrachtOverslaan)myWorld;
     private int xSpeed = 2;
     private int vSpeed = 2;
     
@@ -17,14 +17,40 @@ public class VOConEB extends Actor
      * Act - do whatever the VOConEB wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    protected void addedToWorld(World w)
+    {
+        
+        myWorld = w;
+        vrachtOverslaan = (VrachtOverslaan)w;
+        super.addedToWorld(w);
+    }
+    
     public void act() 
     {
-         if(!getObjectsInRange(25, VOgrijper20.class).isEmpty() && !VrachtOverslaan.Grijper.grab){
-            VrachtOverslaan.Grijper.grab = true;
+         if(!getObjectsInRange(25, VOgrijper20.class).isEmpty() && !vrachtOverslaan.Grijper.grab){
+            vrachtOverslaan.Grijper.grab = true;
+            setLocation(getX() +xSpeed, getY() +vSpeed);
+        
+       if (getX() == 2){
+          xSpeed = -xSpeed;
+        } 
+        
+        if(getX() == 1000)
+        {
+         xSpeed = -xSpeed; 
         }
         
-        if(isAtEdge() && VrachtOverslaan.Grijper.grab){
-            VrachtOverslaan.Grijper.grab = false;
+        if (getY() == 3){
+            vSpeed = -vSpeed;
+        }
+        
+        if (getY() == 1000){
+            vSpeed = -vSpeed;
+        }
+        }
+        
+        if(isAtEdge() && vrachtOverslaan.Grijper.grab){
+            vrachtOverslaan.Grijper.grab = false;
             myWorld.removeObject(this);
         }
     }    
