@@ -12,6 +12,7 @@ public class VOConEM2 extends VOConEM
     VrachtOverslaan vrachtOverslaan = (VrachtOverslaan)myWorld;
     private int xSpeed = 2;
     private int vSpeed = 2;
+    private int ad = 0;
     
     /**
      * Act - do whatever the VOConEM2 wants to do. This method is called whenever
@@ -30,10 +31,11 @@ public class VOConEM2 extends VOConEM
     {
             if(!getObjectsInRange(25, VOgrijper20.class).isEmpty() && !vrachtOverslaan.Grijper.grab){
             vrachtOverslaan.Grijper.grab = true; 
+            ad = 1;
         }
         
         
-        if(vrachtOverslaan.Grijper.grab == true && !getObjectsInRange(25, VOgrijper20.class).isEmpty() && vrachtOverslaan.Grijper.grab) {
+        if(ad == 1 && vrachtOverslaan.Grijper.grab == true && !getObjectsInRange(25, VOgrijper20.class).isEmpty() && vrachtOverslaan.Grijper.grab) {
             int xSpeed = ( (VOgrijper20)getWorld().getObjects(VOgrijper20.class).get(0)).getxSpeed();
             int vSpeed = ((VOgrijper20)getWorld().getObjects(VOgrijper20.class).get(0)).getvSpeed();
             setLocation(getX() +xSpeed, getY() +vSpeed);
@@ -52,6 +54,7 @@ public class VOConEM2 extends VOConEM
         if(getY() < 50 && vrachtOverslaan.Grijper.grab){
             vrachtOverslaan.Grijper.grab = false;
             myWorld.removeObject(this);
+            ad = 0;
         }
         }
     }    
