@@ -28,9 +28,14 @@ public class VOConEM1 extends VOConEM
     
     public void act() 
     {
+         
+        if(vrachtOverslaan.Grijper.grab == true && !getObjectsInRange(25, VOgrijper20.class).isEmpty()) {
+            setLocation(getX() +xSpeed, getY() +vSpeed);
+        }
+        
           if(!getObjectsInRange(25, VOgrijper20.class).isEmpty() && !vrachtOverslaan.Grijper.grab){
             vrachtOverslaan.Grijper.grab = true;
-          setLocation(getX() +xSpeed, getY() +vSpeed);
+        }
         
        if (getX() == 2){
           xSpeed = -xSpeed;
@@ -48,7 +53,7 @@ public class VOConEM1 extends VOConEM
         if (getY() == 1000){
             vSpeed = -vSpeed;
         }
-        }
+        
         
         if(isAtEdge() && vrachtOverslaan.Grijper.grab){
             vrachtOverslaan.Grijper.grab = false;
@@ -56,3 +61,4 @@ public class VOConEM1 extends VOConEM
         }
     }    
 }
+
